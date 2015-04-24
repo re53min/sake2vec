@@ -1,0 +1,2402 @@
+2015-04-21 22:10:49,609 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:11:01,149 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.526799926757812
+
+2015-04-21 22:11:01,905 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:11:02,116 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:11:02,123 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:11:02,223 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:11:02,235 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:11:02,746 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:11:13,744 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.528200073242187
+
+2015-04-21 22:11:14,481 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:11:14,746 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:11:14,753 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:11:14,848 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:11:14,848 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:11:15,337 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:11:26,893 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.5077001953125
+
+2015-04-21 22:11:27,693 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:11:27,899 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:11:27,906 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:11:28,004 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:11:28,004 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:11:28,525 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:11:39,914 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.5472998046875
+
+2015-04-21 22:11:40,647 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:11:40,874 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:11:40,881 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:11:40,974 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:11:40,975 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:11:41,453 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:11:52,712 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.553499755859375
+
+2015-04-21 22:11:53,502 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:11:53,737 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:11:53,743 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:11:53,844 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:11:53,844 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:11:54,332 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:12:05,938 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.557100219726562
+
+2015-04-21 22:12:06,734 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:12:07,008 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:12:07,015 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:12:07,120 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:12:07,120 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:12:07,640 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:12:19,997 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.541599731445313
+
+2015-04-21 22:12:20,807 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:12:21,324 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -5.960464344312299E-12
+
+2015-04-21 22:12:21,556 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:12:21,655 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:12:21,655 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:12:22,200 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:12:34,344 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.425
+
+2015-04-21 22:12:35,084 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:12:35,371 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:12:35,380 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:12:35,484 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:12:35,484 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:12:35,941 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:12:49,287 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.470399780273437
+
+2015-04-21 22:12:51,883 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:12:53,729 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:12:53,928 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:12:54,032 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:12:54,032 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:12:54,669 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:13:06,473 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.49719970703125
+
+2015-04-21 22:13:07,448 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:13:07,653 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:13:07,663 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:13:07,766 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:13:07,766 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:13:08,255 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:13:21,739 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.62280029296875
+
+2015-04-21 22:13:22,594 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:13:23,068 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -1.1920928688624598E-11
+
+2015-04-21 22:13:23,306 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:13:23,416 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:13:23,416 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:13:23,918 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:13:35,780 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.563099975585938
+
+2015-04-21 22:13:36,740 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:13:37,069 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:13:37,079 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:13:37,277 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:13:37,277 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:13:37,950 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:13:49,831 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.300800170898437
+
+2015-04-21 22:13:50,638 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:13:50,863 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:13:50,871 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:13:50,973 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:13:50,973 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:13:51,485 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:14:03,466 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.296599731445313
+
+2015-04-21 22:14:04,258 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:14:04,491 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:14:04,498 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:14:04,617 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:14:04,617 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:14:05,137 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:14:19,914 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.513200073242188
+
+2015-04-21 22:14:20,750 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:14:20,966 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:14:20,972 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:14:21,083 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:14:21,083 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:14:21,631 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:14:33,475 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.536300048828125
+
+2015-04-21 22:14:34,279 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:14:34,520 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:14:34,527 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:14:34,629 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:14:34,629 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:14:35,111 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:14:47,178 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.58989990234375
+
+2015-04-21 22:14:48,068 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:14:48,310 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:14:48,319 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:14:48,431 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:14:48,431 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:14:48,936 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:15:00,633 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.528599853515625
+
+2015-04-21 22:15:01,437 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:15:01,870 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -1.192092913271381E-10
+
+2015-04-21 22:15:02,104 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:15:02,204 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:15:02,204 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:15:02,673 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:15:14,179 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.5175
+
+2015-04-21 22:15:14,946 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:15:15,178 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:15:15,185 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:15:15,304 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:15:15,304 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:15:15,800 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:15:27,671 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.435999755859375
+
+2015-04-21 22:15:28,465 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:15:28,711 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:15:28,718 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:15:28,834 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:15:28,834 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:15:29,379 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:15:41,198 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.418699951171875
+
+2015-04-21 22:15:41,965 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:15:42,199 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:15:42,207 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:15:42,310 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:15:42,310 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:15:42,810 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:15:54,295 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.501199951171875
+
+2015-04-21 22:15:55,128 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:15:55,379 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:15:55,385 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:15:55,499 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:15:55,499 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:15:56,031 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:16:07,727 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.448499755859375
+
+2015-04-21 22:16:08,489 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:16:08,722 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:16:08,728 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:16:08,830 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:16:08,830 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:16:09,367 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:16:21,104 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.537000122070313
+
+2015-04-21 22:16:21,884 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:16:22,348 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -4.5299529460862685E-10
+
+2015-04-21 22:16:22,570 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:16:22,668 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:16:22,669 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:16:23,139 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:16:35,039 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.49989990234375
+
+2015-04-21 22:16:35,875 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:16:36,127 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:16:36,134 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:16:36,242 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:16:36,242 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:16:36,745 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:16:48,509 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.419600219726562
+
+2015-04-21 22:16:49,264 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:16:49,487 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:16:49,493 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:16:49,589 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:16:49,590 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:16:50,081 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:17:01,825 - [INFO] - from org.deeplearning4j.optimize.listeners.ScoreIterationListener in main
+                
+Score at iteration 0 is -6.48739990234375
+
+2015-04-21 22:17:02,626 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 2 with 100 examples
+
+2015-04-21 22:17:02,865 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:17:02,872 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 3 with 100 examples
+
+2015-04-21 22:17:02,984 - [INFO] - from org.deeplearning4j.optimize.solvers.BaseOptimizer in main
+                
+Hit termination condition org.deeplearning4j.optimize.terminations.ZeroDirection
+
+2015-04-21 22:17:02,985 - [WARN] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Output layer not instance of output layer returning.
+
+2015-04-21 22:17:03,493 - [INFO] - from org.deeplearning4j.nn.multilayer.MultiLayerNetwork in main
+                
+Training on layer 1 with 100 examples
+
+2015-04-21 22:18:31,232 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-21 22:18:31,656 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-21 22:18:31,659 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-21 22:18:44,172 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-21 22:18:44,395 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-21 22:18:44,467 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-21 22:18:44,559 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-21 22:18:44,610 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-21 22:18:44,673 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-21 22:18:44,722 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-21 22:18:44,842 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-21 22:18:44,904 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-21 22:18:54,979 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 66124 with queued 97162
+
+2015-04-21 22:19:04,981 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-21 22:19:04,981 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-21 22:19:11,116 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-21 22:19:11,116 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-21 22:19:11,119 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-21 22:19:11,120 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-21 22:19:11,840 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-21 22:19:11,863 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-21 22:19:28,598 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 323199 with alpha at 0.021015007390507306
+
+2015-04-21 22:19:38,599 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 642829 with alpha at 0.0170740199871671
+
+2015-04-21 22:19:49,690 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 988771 with alpha at 0.01280860978072116
+
+2015-04-21 22:19:59,691 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1310735 with alpha at 0.01
+
+2015-04-21 22:20:11,029 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1647193 with alpha at 0.01
+
+2015-04-21 22:20:21,030 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1937808 with alpha at 0.01
+
+2015-04-21 22:20:24,629 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-21 22:20:26,323 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-22 08:03:57,365 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path to0b39822b-23d4-4ad3-b7d2-c828339e9e59
+
+2015-04-22 08:03:57,420 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 08:03:58,637 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 08:03:58,638 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 08:04:23,824 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 08:04:24,080 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 08:04:24,210 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 08:04:24,357 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 08:04:24,425 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 08:04:24,574 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 08:04:24,637 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 08:04:24,748 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 08:04:24,903 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 08:04:35,009 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 60404 with queued 97162
+
+2015-04-22 08:04:45,010 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 08:04:45,010 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 08:04:54,239 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 08:04:54,240 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 08:04:54,243 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 08:04:54,243 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 08:04:54,557 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 08:04:54,576 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 08:05:11,324 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 309647 with alpha at 0.021181497414466264
+
+2015-04-22 08:05:21,325 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 640933 with alpha at 0.017095994013538597
+
+2015-04-22 08:05:32,473 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1003505 with alpha at 0.012624744665286465
+
+2015-04-22 08:05:42,474 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1325403 with alpha at 0.01
+
+2015-04-22 08:05:53,184 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 1684264 with alpha at 0.01
+
+2015-04-22 08:06:06,740 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-22 08:06:09,089 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-22 09:20:40,914 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path to289105ef-90e5-4a02-a780-bd2a13185499
+
+2015-04-22 09:20:40,941 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 09:20:42,634 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 09:20:42,635 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 09:20:59,314 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 09:20:59,414 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 09:20:59,559 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 09:20:59,615 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 09:20:59,652 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 09:20:59,727 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 09:20:59,760 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 09:20:59,894 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 09:20:59,993 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 09:21:10,026 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 68908 with queued 97162
+
+2015-04-22 09:21:20,026 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 09:21:20,026 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 09:21:28,869 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 09:21:28,869 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 09:21:28,871 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 09:21:28,871 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 09:21:29,438 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 09:21:29,456 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 09:21:46,113 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 339958 with alpha at 0.02080827233616088
+
+2015-04-22 09:22:05,805 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 981392 with alpha at 0.01289930522161443
+
+2015-04-22 09:22:15,809 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1290705 with alpha at 0.01
+
+2015-04-22 09:22:27,474 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1660044 with alpha at 0.01
+
+2015-04-22 09:22:37,475 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1994484 with alpha at 0.01
+
+2015-04-22 09:22:38,609 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-22 09:22:40,098 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-22 12:17:55,678 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path to46056acf-caab-4e71-b7dd-d448f22e03cc
+
+2015-04-22 12:17:55,722 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 12:17:56,269 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 12:17:56,270 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 12:18:02,981 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 12:18:03,057 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 12:18:03,092 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 12:18:03,201 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 12:18:03,224 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 12:18:03,277 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 12:18:03,301 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 12:18:03,346 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 12:18:03,371 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 12:18:13,504 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 65415 with queued 97162
+
+2015-04-22 12:18:23,505 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 12:18:23,505 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 12:18:29,530 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 12:18:29,530 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 12:18:29,536 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 12:18:29,537 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 12:18:29,691 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 12:18:29,710 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 12:18:46,265 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 336625 with alpha at 0.020849841501856217
+
+2015-04-22 12:18:56,266 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 674287 with alpha at 0.016686898111435932
+
+2015-04-22 12:19:06,408 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 994769 with alpha at 0.012735762290263658
+
+2015-04-22 12:19:16,409 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1323266 with alpha at 0.01
+
+2015-04-22 12:19:27,390 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 1670661 with alpha at 0.01
+
+2015-04-22 12:19:37,391 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1969258 with alpha at 0.01
+
+2015-04-22 12:19:39,907 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-22 12:19:42,064 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-22 14:55:32,875 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path toec8c6afc-f012-4e21-8f31-75c9fff43ac4
+
+2015-04-22 14:55:32,901 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 14:55:33,640 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 14:55:33,641 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 14:55:46,664 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 14:55:46,799 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 14:55:46,980 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 14:55:47,021 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 14:55:47,089 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 14:55:47,150 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 14:55:47,190 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 14:55:47,301 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 14:55:47,391 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 14:55:57,451 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 66225 with queued 97162
+
+2015-04-22 14:56:07,451 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 14:56:07,451 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 14:56:15,134 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 14:56:15,134 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 14:56:15,139 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 14:56:15,139 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 14:56:15,749 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 14:56:15,764 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 14:56:32,600 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 323896 with alpha at 0.021007057449771396
+
+2015-04-22 14:56:42,601 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 665366 with alpha at 0.016797465196003013
+
+2015-04-22 14:56:52,956 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 964821 with alpha at 0.013105827721694264
+
+2015-04-22 14:57:02,957 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 1281942 with alpha at 0.01
+
+2015-04-22 14:57:15,210 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1668277 with alpha at 0.01
+
+2015-04-22 14:57:25,211 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 1941795 with alpha at 0.01
+
+2015-04-22 14:57:28,429 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-22 14:57:30,096 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-22 17:28:44,180 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path toa873ea55-ceef-4a36-ae83-ea1444c35c69
+
+2015-04-22 17:28:44,214 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 17:28:44,989 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 17:28:44,991 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 17:28:52,857 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 17:28:52,918 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 17:28:52,969 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 17:28:53,170 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 17:28:53,188 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 17:28:53,288 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 17:28:53,359 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 17:28:53,397 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 17:28:53,517 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 17:29:03,533 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 66305 with queued 97162
+
+2015-04-22 17:29:13,534 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 17:29:13,534 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 17:29:16,433 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 17:29:16,433 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 17:29:16,436 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 17:29:16,436 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 17:29:16,904 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 17:29:16,929 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 17:29:34,006 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 336916 with alpha at 0.02084629071280135
+
+2015-04-22 17:29:43,971 - [ERROR] - from akka.actor.OneForOneStrategy in default-akka.actor.default-dispatcher-4
+                
+Cannot instantiate transport [akka.remote.transport.netty.NettyTransport]. Make sure it extends [akka.remote.transport.Transport] and has constructor with [akka.actor.ExtendedActorSystem] and [com.typesafe.config.Config] parameters
+java.lang.IllegalArgumentException: Cannot instantiate transport [akka.remote.transport.netty.NettyTransport]. Make sure it extends [akka.remote.transport.Transport] and has constructor with [akka.actor.ExtendedActorSystem] and [com.typesafe.config.Config] parameters
+	at akka.remote.EndpointManager$$anonfun$9$$anonfun$3.applyOrElse(Remoting.scala:694) ~[akka-remote_2.10-2.3.4-spark.jar:na]
+	at akka.remote.EndpointManager$$anonfun$9$$anonfun$3.applyOrElse(Remoting.scala:692) ~[akka-remote_2.10-2.3.4-spark.jar:na]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) ~[scala-library-2.10.4.jar:na]
+	at akka.remote.EndpointManager$$anonfun$9.apply(Remoting.scala:692) ~[akka-remote_2.10-2.3.4-spark.jar:na]
+	at akka.remote.EndpointManager$$anonfun$9.apply(Remoting.scala:684) ~[akka-remote_2.10-2.3.4-spark.jar:na]
+	at scala.collection.TraversableLike$WithFilter$$anonfun$map$2.apply(TraversableLike.scala:722) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.Iterator$class.foreach(Iterator.scala:727) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1157) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.IterableLike$class.foreach(IterableLike.scala:72) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:54) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.TraversableLike$WithFilter.map(TraversableLike.scala:721) ~[scala-library-2.10.4.jar:na]
+	at akka.remote.EndpointManager.akka$remote$EndpointManager$$listens(Remoting.scala:684) ~[akka-remote_2.10-2.3.4-spark.jar:na]
+	at akka.remote.EndpointManager$$anonfun$receive$2.applyOrElse(Remoting.scala:492) ~[akka-remote_2.10-2.3.4-spark.jar:na]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:465) ~[akka-actor_2.10-2.3.4-spark.jar:na]
+	at akka.remote.EndpointManager.aroundReceive(Remoting.scala:395) ~[akka-remote_2.10-2.3.4-spark.jar:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:516) [akka-actor_2.10-2.3.4-spark.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:487) [akka-actor_2.10-2.3.4-spark.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:238) [akka-actor_2.10-2.3.4-spark.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:220) [akka-actor_2.10-2.3.4-spark.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.10-2.3.4-spark.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: org.jboss.netty.channel.ChannelException: Failed to create a selector.
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.openSelector(AbstractNioSelector.java:343) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.<init>(AbstractNioSelector.java:100) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.<init>(NioClientBoss.java:63) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioClientBossPool.newBoss(NioClientBossPool.java:61) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioClientBossPool.newBoss(NioClientBossPool.java:27) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioBossPool.init(AbstractNioBossPool.java:75) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioClientBossPool.<init>(NioClientBossPool.java:45) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioClientSocketChannelFactory.<init>(NioClientSocketChannelFactory.java:185) ~[netty-3.8.0.Final.jar:na]
+	at akka.remote.transport.netty.NettyTransport.<init>(NettyTransport.scala:283) ~[akka-remote_2.10-2.3.4-spark.jar:na]
+	at akka.remote.transport.netty.NettyTransport.<init>(NettyTransport.scala:240) ~[akka-remote_2.10-2.3.4-spark.jar:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_25]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[na:1.8.0_25]
+	at akka.actor.ReflectiveDynamicAccess$$anonfun$createInstanceFor$2.apply(DynamicAccess.scala:78) ~[akka-actor_2.10-2.3.4-spark.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) ~[scala-library-2.10.4.jar:na]
+	at akka.actor.ReflectiveDynamicAccess.createInstanceFor(DynamicAccess.scala:73) ~[akka-actor_2.10-2.3.4-spark.jar:na]
+	at akka.actor.ReflectiveDynamicAccess$$anonfun$createInstanceFor$3.apply(DynamicAccess.scala:84) ~[akka-actor_2.10-2.3.4-spark.jar:na]
+	at akka.actor.ReflectiveDynamicAccess$$anonfun$createInstanceFor$3.apply(DynamicAccess.scala:84) ~[akka-actor_2.10-2.3.4-spark.jar:na]
+	at scala.util.Success.flatMap(Try.scala:200) ~[scala-library-2.10.4.jar:na]
+	at akka.actor.ReflectiveDynamicAccess.createInstanceFor(DynamicAccess.scala:84) ~[akka-actor_2.10-2.3.4-spark.jar:na]
+	... 21 common frames omitted
+Caused by: java.io.IOException: Unable to establish loopback connection
+	at sun.nio.ch.PipeImpl$Initializer.run(PipeImpl.java:101) ~[na:1.8.0_25]
+	at sun.nio.ch.PipeImpl$Initializer.run(PipeImpl.java:68) ~[na:1.8.0_25]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_25]
+	at sun.nio.ch.PipeImpl.<init>(PipeImpl.java:170) ~[na:1.8.0_25]
+	at sun.nio.ch.SelectorProviderImpl.openPipe(SelectorProviderImpl.java:50) ~[na:1.8.0_25]
+	at java.nio.channels.Pipe.open(Pipe.java:155) ~[na:1.8.0_25]
+	at sun.nio.ch.WindowsSelectorImpl.<init>(WindowsSelectorImpl.java:127) ~[na:1.8.0_25]
+	at sun.nio.ch.WindowsSelectorProvider.openSelector(WindowsSelectorProvider.java:44) ~[na:1.8.0_25]
+	at java.nio.channels.Selector.open(Selector.java:227) ~[na:1.8.0_25]
+	at org.jboss.netty.channel.socket.nio.SelectorUtil.open(SelectorUtil.java:63) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.openSelector(AbstractNioSelector.java:341) ~[netty-3.8.0.Final.jar:na]
+	... 41 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_25]
+	at sun.nio.ch.Net.bind(Net.java:436) ~[na:1.8.0_25]
+	at sun.nio.ch.Net.bind(Net.java:428) ~[na:1.8.0_25]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) ~[na:1.8.0_25]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_25]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:67) ~[na:1.8.0_25]
+	at sun.nio.ch.PipeImpl$Initializer$LoopbackConnector.run(PipeImpl.java:124) ~[na:1.8.0_25]
+	at sun.nio.ch.PipeImpl$Initializer.run(PipeImpl.java:83) ~[na:1.8.0_25]
+	... 51 common frames omitted
+
+2015-04-22 17:30:42,830 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path to6e4fd63b-7bb1-4e33-ad3d-bb0eb23f7b19
+
+2015-04-22 17:30:42,834 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 17:48:09,251 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path tofec094fc-048d-4c1e-8709-505339f76d5f
+
+2015-04-22 17:48:09,255 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 17:48:09,355 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 17:48:09,358 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 17:48:11,792 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 17:48:11,878 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 17:48:11,986 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 17:48:12,010 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 17:48:12,048 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 17:48:12,092 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 17:48:12,220 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 17:48:12,256 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 17:48:12,281 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 17:48:22,312 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 48714 with queued 97162
+
+2015-04-22 17:48:32,313 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 17:48:32,313 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 17:48:36,558 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 17:48:36,558 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 17:48:36,561 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 17:48:36,561 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 17:48:36,629 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 17:48:36,644 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 17:48:53,283 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 332993 with alpha at 0.02089458300415334
+
+2015-04-22 17:49:13,083 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1016530 with alpha at 0.012467365563876702
+
+2015-04-22 17:49:33,034 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1677697 with alpha at 0.01
+
+2015-04-22 17:49:43,308 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-22 17:49:44,748 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-22 18:09:50,348 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path toc25f0364-9d11-4a89-be29-138cd052a674
+
+2015-04-22 18:09:50,456 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:09:51,822 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 18:09:51,823 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:10:21,016 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 18:10:21,261 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 18:10:21,323 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 18:10:21,437 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 18:10:21,495 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 18:10:21,568 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 18:10:21,654 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 18:10:21,757 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 18:10:21,898 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 18:10:31,942 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 65572 with queued 97162
+
+2015-04-22 18:10:41,942 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 18:10:41,942 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 18:10:46,128 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 18:10:46,128 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 18:10:46,131 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 18:10:46,131 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 18:10:46,350 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 18:10:46,372 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 18:11:02,927 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 352293 with alpha at 0.0206559937379961
+
+2015-04-22 18:11:21,859 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1021728 with alpha at 0.012401416349275402
+
+2015-04-22 18:11:41,325 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1698183 with alpha at 0.01
+
+2015-04-22 18:11:51,060 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-22 18:11:52,433 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-22 18:18:22,496 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path toc3f8550b-5e99-40de-ab18-83d9ad89aaa0
+
+2015-04-22 18:18:22,500 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:18:22,568 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 18:18:22,569 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:18:24,473 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 18:18:24,513 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 18:18:24,584 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 18:18:24,618 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 18:18:24,661 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 18:18:24,713 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 18:18:24,850 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 18:18:24,901 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 18:18:24,991 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 18:18:35,042 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 67972 with queued 97162
+
+2015-04-22 18:18:45,044 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 18:18:45,044 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 18:18:46,906 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 18:18:46,907 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 18:18:46,910 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 18:18:46,910 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 18:18:46,968 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 18:18:46,989 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 18:19:03,480 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 354033 with alpha at 0.02063534567059252
+
+2015-04-22 18:19:22,412 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1011345 with alpha at 0.012531751749767362
+
+2015-04-22 18:19:46,627 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path to23f1f216-b53a-46ea-b55e-5c5b879236d3
+
+2015-04-22 18:19:46,631 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:19:46,697 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 18:19:46,698 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:19:48,394 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 18:19:48,429 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 18:19:48,493 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 18:19:48,522 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 18:19:48,612 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 18:19:48,632 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 18:19:48,735 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 18:19:48,764 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 18:19:48,825 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 18:19:58,847 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 72657 with queued 97162
+
+2015-04-22 18:20:08,848 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 18:20:08,848 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 18:20:10,784 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 18:20:10,785 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 18:20:10,789 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 18:20:10,790 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 18:20:10,853 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 18:20:10,872 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 18:20:27,246 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 351098 with alpha at 0.020671045791670242
+
+2015-04-22 18:20:46,536 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1011244 with alpha at 0.012531355205777939
+
+2015-04-22 18:20:56,537 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 1335654 with alpha at 0.01
+
+2015-04-22 18:21:07,135 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1688468 with alpha at 0.01
+
+2015-04-22 18:21:17,136 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 2027437 with alpha at 0.01
+
+2015-04-22 18:21:17,384 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-22 18:21:18,742 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-22 18:22:09,165 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path to30260c28-11b7-4e28-a0c4-a302635ed9c7
+
+2015-04-22 18:22:09,168 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:22:09,238 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 18:22:09,239 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:22:10,982 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 18:22:11,019 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 18:22:11,087 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 18:22:11,139 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 18:22:11,177 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 18:22:11,199 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 18:22:11,319 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 18:22:11,347 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 18:22:11,392 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 18:22:21,468 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 74639 with queued 97162
+
+2015-04-22 18:22:31,469 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 18:22:31,469 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 18:22:33,061 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 18:22:33,062 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 18:22:33,065 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 18:22:33,065 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 18:22:33,128 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 18:22:33,151 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 18:22:49,576 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 354732 with alpha at 0.020626003388401017
+
+2015-04-22 18:23:08,682 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1007304 with alpha at 0.012579512750893342
+
+2015-04-22 18:23:18,683 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1350963 with alpha at 0.01
+
+2015-04-22 18:23:28,784 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1688148 with alpha at 0.01
+
+2015-04-22 18:23:38,785 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 2025449 with alpha at 0.01
+
+2015-04-22 18:23:38,984 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-22 18:23:40,286 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-22 18:25:33,697 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path to3e70f179-3fc1-47ce-b3bd-09b2ec3b47bf
+
+2015-04-22 18:25:33,700 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:25:33,769 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 18:25:33,770 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:25:35,593 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 18:25:35,643 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 18:25:35,713 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 18:25:35,794 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 18:25:35,869 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 18:25:35,935 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 18:25:36,007 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 18:25:36,142 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 18:25:36,170 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 18:25:46,236 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 74592 with queued 97162
+
+2015-04-22 18:25:56,237 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 18:25:56,237 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 18:25:57,895 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 18:25:57,895 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 18:25:57,899 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 18:25:57,900 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 18:25:57,950 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 18:25:57,979 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 18:26:14,450 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 357353 with alpha at 0.020594897693020385
+
+2015-04-22 18:26:33,068 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1021719 with alpha at 0.012405235932019865
+
+2015-04-22 18:26:52,578 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-8
+                
+Words so far 1685318 with alpha at 0.01
+
+2015-04-22 18:27:02,579 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 2024829 with alpha at 0.01
+
+2015-04-22 18:27:02,692 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-22 18:27:03,945 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-22 18:28:55,924 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path to681f1720-c185-46ec-bf2f-357d853e85e5
+
+2015-04-22 18:28:55,928 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:28:55,996 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 18:28:55,997 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:28:57,774 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 18:28:57,810 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 18:28:57,887 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 18:28:57,902 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 18:28:57,950 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 18:28:58,098 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 18:28:58,150 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 18:28:58,185 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 18:28:58,327 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 18:29:08,349 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 75801 with queued 97162
+
+2015-04-22 18:29:18,350 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 18:29:18,350 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 18:29:23,027 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 18:29:23,027 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 18:29:23,030 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 18:29:23,030 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 18:29:23,090 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 18:29:23,117 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 18:29:39,769 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 355555 with alpha at 0.020606253157323954
+
+2015-04-22 18:29:58,558 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 1022495 with alpha at 0.012364587256818091
+
+2015-04-22 18:30:17,933 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1691893 with alpha at 0.01
+
+2015-04-22 18:30:27,765 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-22 18:30:29,063 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-22 18:40:37,676 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path toea823fd7-5ded-4b62-914d-935e4e263048
+
+2015-04-22 18:40:37,982 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:40:38,994 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-22 18:40:38,995 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-22 18:40:51,579 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-22 18:40:51,627 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-22 18:40:51,774 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-22 18:40:51,812 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-22 18:40:51,846 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-22 18:40:51,878 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-22 18:40:51,908 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-22 18:40:52,010 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-22 18:40:52,118 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-22 18:41:02,131 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 65591 with queued 97162
+
+2015-04-22 18:41:12,132 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-22 18:41:12,132 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-22 18:41:21,579 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-22 18:41:21,579 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-22 18:41:21,582 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-22 18:41:21,583 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-22 18:41:21,800 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-22 18:41:21,823 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-22 18:41:38,338 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 350879 with alpha at 0.020673550928892052
+
+2015-04-22 18:41:57,598 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 1024860 with alpha at 0.012363151983972562
+
+2015-04-22 18:42:17,333 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1661585 with alpha at 0.01
+
+2015-04-22 18:42:27,334 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1992272 with alpha at 0.01
+
+2015-04-22 18:42:28,941 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-22 18:42:30,362 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
