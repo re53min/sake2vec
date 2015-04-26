@@ -2400,3 +2400,1871 @@ Calculating probabilities of data similarities..
                 
 Mean value of sigma 3.3554432E7
 
+2015-04-25 14:41:32,532 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path todfcf318f-9eec-4d6f-a6dc-157621e009cb
+
+2015-04-25 14:41:32,579 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-25 14:41:33,294 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-25 14:41:33,295 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-25 14:41:45,084 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-25 14:41:45,218 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-25 14:41:45,409 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-25 14:41:45,579 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-25 14:41:45,695 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-25 14:41:45,903 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-25 14:41:46,052 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-25 14:41:46,138 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-25 14:41:46,189 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-25 14:41:56,331 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 64156 with queued 97162
+
+2015-04-25 14:42:06,331 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-25 14:42:06,331 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-25 14:42:21,760 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-25 14:42:21,760 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-25 14:42:21,763 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-25 14:42:21,763 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-25 14:42:22,312 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-25 14:42:22,328 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-25 14:42:38,776 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 353584 with alpha at 0.020640803726196554
+
+2015-04-25 14:42:57,751 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1017139 with alpha at 0.012460098480869708
+
+2015-04-25 14:43:07,752 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1323688 with alpha at 0.01
+
+2015-04-25 14:43:18,579 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1670368 with alpha at 0.01
+
+2015-04-25 14:43:28,580 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1997156 with alpha at 0.01
+
+2015-04-25 14:43:31,956 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-25 14:43:34,242 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-25 14:46:57,574 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path to22a1fee5-f976-4e3d-804c-616e5ccef9af
+
+2015-04-25 14:46:57,821 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-25 14:47:03,654 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-25 14:47:03,656 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-25 15:03:28,934 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path to7b93b2cf-b0a8-4e45-b191-dec225fa3a32
+
+2015-04-25 15:03:29,014 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory C:\Users\b1012059\sake2vec\word2vec-index
+
+2015-04-25 15:03:29,704 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-25 15:03:29,707 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory C:\Users\b1012059\sake2vec\word2vec-index
+
+2015-04-25 15:03:43,222 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-25 15:03:43,416 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 20000
+
+2015-04-25 15:03:43,450 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 30000
+
+2015-04-25 15:03:43,528 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 40000
+
+2015-04-25 15:03:43,557 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 50000
+
+2015-04-25 15:03:43,610 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 60000
+
+2015-04-25 15:03:43,698 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 70000
+
+2015-04-25 15:03:43,742 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 80000
+
+2015-04-25 15:03:43,816 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 90000
+
+2015-04-25 15:03:53,980 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 80056 with queued 97162
+
+2015-04-25 15:04:03,981 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 97162 with queued 97162
+
+2015-04-25 15:04:03,981 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-25 15:04:18,360 - [INFO] - from org.deeplearning4j.models.glove.CoOccurrences in main
+                
+Done processing co occurrences: ended with 10890
+
+2015-04-25 15:04:18,616 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processing # of co occurrences 10890
+
+2015-04-25 15:04:18,616 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 0
+
+2015-04-25 15:04:20,052 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-2-thread-1
+                
+Processed 10000 co occurrences
+
+2015-04-25 15:04:20,248 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 10890.0 out of 326700 error was 19.787323557310746
+
+2015-04-25 15:04:20,249 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 1
+
+2015-04-25 15:04:21,410 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-3-thread-2
+                
+Processed 20000 co occurrences
+
+2015-04-25 15:04:21,722 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 21780.0 out of 326700 error was 8.366702688504558
+
+2015-04-25 15:04:21,722 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 2
+
+2015-04-25 15:04:22,737 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-4-thread-1
+                
+Processed 30000 co occurrences
+
+2015-04-25 15:04:23,226 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 32670.0 out of 326700 error was 5.027026197095024
+
+2015-04-25 15:04:23,226 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 3
+
+2015-04-25 15:04:24,165 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-5-thread-3
+                
+Processed 40000 co occurrences
+
+2015-04-25 15:04:24,723 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 43560.0 out of 326700 error was 3.7883969044207855
+
+2015-04-25 15:04:24,724 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 4
+
+2015-04-25 15:04:25,509 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-6-thread-3
+                
+Processed 50001 co occurrences
+
+2015-04-25 15:04:26,132 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 54450.0 out of 326700 error was 2.651428173341189
+
+2015-04-25 15:04:26,132 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 5
+
+2015-04-25 15:04:26,853 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-7-thread-4
+                
+Processed 60000 co occurrences
+
+2015-04-25 15:04:27,576 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 65340.0 out of 326700 error was 2.0026439324542364
+
+2015-04-25 15:04:27,576 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 6
+
+2015-04-25 15:04:28,159 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-8-thread-1
+                
+Processed 70000 co occurrences
+
+2015-04-25 15:04:29,031 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 76230.0 out of 326700 error was 1.4405201678683464
+
+2015-04-25 15:04:29,031 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 7
+
+2015-04-25 15:04:29,591 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-9-thread-2
+                
+Processed 80000 co occurrences
+
+2015-04-25 15:04:30,544 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 87120.0 out of 326700 error was 1.77402568041967
+
+2015-04-25 15:04:30,544 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 8
+
+2015-04-25 15:04:30,951 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-10-thread-1
+                
+Processed 90000 co occurrences
+
+2015-04-25 15:04:31,979 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 98010.0 out of 326700 error was 1.0018688395890978
+
+2015-04-25 15:04:31,979 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 9
+
+2015-04-25 15:04:32,269 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-11-thread-3
+                
+Processed 100000 co occurrences
+
+2015-04-25 15:04:33,492 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 108900.0 out of 326700 error was 1.054078734108041
+
+2015-04-25 15:04:33,492 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 10
+
+2015-04-25 15:04:33,704 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-12-thread-3
+                
+Processed 110000 co occurrences
+
+2015-04-25 15:04:35,015 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 119790.0 out of 326700 error was 0.8033603269733557
+
+2015-04-25 15:04:35,015 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 11
+
+2015-04-25 15:04:35,087 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-13-thread-3
+                
+Processed 120001 co occurrences
+
+2015-04-25 15:04:36,257 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-13-thread-1
+                
+Processed 130000 co occurrences
+
+2015-04-25 15:04:36,384 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 130680.0 out of 326700 error was 0.5804393185997864
+
+2015-04-25 15:04:36,384 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 12
+
+2015-04-25 15:04:37,545 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-14-thread-4
+                
+Processed 140000 co occurrences
+
+2015-04-25 15:04:37,850 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 141570.0 out of 326700 error was 0.45473037025294377
+
+2015-04-25 15:04:37,850 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 13
+
+2015-04-25 15:04:38,900 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-15-thread-2
+                
+Processed 150000 co occurrences
+
+2015-04-25 15:04:39,353 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 152460.0 out of 326700 error was 0.6873601321157087
+
+2015-04-25 15:04:39,354 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 14
+
+2015-04-25 15:04:40,289 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-16-thread-4
+                
+Processed 160000 co occurrences
+
+2015-04-25 15:04:40,898 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 163350.0 out of 326700 error was 0.4395131334230199
+
+2015-04-25 15:04:40,898 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 15
+
+2015-04-25 15:04:41,719 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-17-thread-4
+                
+Processed 170000 co occurrences
+
+2015-04-25 15:04:42,332 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 174240.0 out of 326700 error was 0.38758088855258593
+
+2015-04-25 15:04:42,333 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 16
+
+2015-04-25 15:04:43,052 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-18-thread-2
+                
+Processed 180000 co occurrences
+
+2015-04-25 15:04:43,869 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 185130.0 out of 326700 error was 0.4915540715836869
+
+2015-04-25 15:04:43,870 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 17
+
+2015-04-25 15:04:44,499 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-19-thread-4
+                
+Processed 190000 co occurrences
+
+2015-04-25 15:04:45,458 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 196020.0 out of 326700 error was -0.005034208488080146
+
+2015-04-25 15:04:45,458 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 18
+
+2015-04-25 15:04:45,987 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-20-thread-3
+                
+Processed 200000 co occurrences
+
+2015-04-25 15:04:46,861 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 206910.0 out of 326700 error was 0.29797666646906745
+
+2015-04-25 15:04:46,862 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 19
+
+2015-04-25 15:04:47,279 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-21-thread-4
+                
+Processed 210000 co occurrences
+
+2015-04-25 15:04:48,335 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 217800.0 out of 326700 error was 0.4507684101103421
+
+2015-04-25 15:04:48,336 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 20
+
+2015-04-25 15:04:48,644 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-22-thread-1
+                
+Processed 220000 co occurrences
+
+2015-04-25 15:04:49,784 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 228690.0 out of 326700 error was 0.20405100873871682
+
+2015-04-25 15:04:49,784 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 21
+
+2015-04-25 15:04:49,961 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-23-thread-1
+                
+Processed 230000 co occurrences
+
+2015-04-25 15:04:51,323 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 239580.0 out of 326700 error was -0.15209684631676806
+
+2015-04-25 15:04:51,323 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 22
+
+2015-04-25 15:04:51,415 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-24-thread-1
+                
+Processed 240001 co occurrences
+
+2015-04-25 15:04:52,623 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-24-thread-4
+                
+Processed 250000 co occurrences
+
+2015-04-25 15:04:52,776 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 250470.0 out of 326700 error was 0.2105183525014832
+
+2015-04-25 15:04:52,777 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 23
+
+2015-04-25 15:04:54,109 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-25-thread-2
+                
+Processed 260000 co occurrences
+
+2015-04-25 15:04:54,359 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 261360.0 out of 326700 error was 0.17833675219293743
+
+2015-04-25 15:04:54,359 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 24
+
+2015-04-25 15:04:55,484 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-26-thread-2
+                
+Processed 270000 co occurrences
+
+2015-04-25 15:04:55,812 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 272250.0 out of 326700 error was 0.21876445380347634
+
+2015-04-25 15:04:55,812 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 25
+
+2015-04-25 15:04:56,804 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-27-thread-1
+                
+Processed 280000 co occurrences
+
+2015-04-25 15:04:57,329 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 283140.0 out of 326700 error was 0.20175825867412714
+
+2015-04-25 15:04:57,329 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 26
+
+2015-04-25 15:04:58,235 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-28-thread-2
+                
+Processed 290000 co occurrences
+
+2015-04-25 15:04:58,889 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 294030.0 out of 326700 error was 0.47203827359428746
+
+2015-04-25 15:04:58,889 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 27
+
+2015-04-25 15:04:59,682 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-29-thread-2
+                
+Processed 300000 co occurrences
+
+2015-04-25 15:05:00,457 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 304920.0 out of 326700 error was 0.07020452370024802
+
+2015-04-25 15:05:00,458 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 28
+
+2015-04-25 15:05:01,158 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-30-thread-1
+                
+Processed 310000 co occurrences
+
+2015-04-25 15:05:01,982 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 315810.0 out of 326700 error was -0.10453643507620737
+
+2015-04-25 15:05:01,983 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Iteration 29
+
+2015-04-25 15:05:02,581 - [INFO] - from org.deeplearning4j.models.glove.Glove in pool-31-thread-1
+                
+Processed 320000 co occurrences
+
+2015-04-25 15:05:03,527 - [INFO] - from org.deeplearning4j.models.glove.Glove in main
+                
+Processed 326700.0 out of 326700 error was 0.22906088624650645
+
+2015-04-25 15:05:03,671 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-25 15:05:05,396 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-25 17:06:36,965 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path tof9c113cd-20fc-4d32-9c55-2b2cdae9aa98
+
+2015-04-25 17:06:37,008 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-04-25 17:06:53,063 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path tod1a953b8-baeb-49a3-8c21-0b46038f0967
+
+2015-04-25 17:06:53,066 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-04-25 17:06:55,065 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-04-25 17:06:55,068 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-04-25 17:07:10,663 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-04-25 17:07:10,721 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-04-25 17:07:11,020 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-04-25 17:07:11,138 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-04-25 17:07:11,180 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-04-25 17:07:11,287 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-04-25 17:07:11,503 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-04-25 17:07:11,554 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-04-25 17:07:11,607 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-04-25 17:07:21,703 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 41471 with queued 97162
+
+2015-04-25 17:07:31,709 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 95662 with queued 97162
+
+2015-04-25 17:07:41,712 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-04-25 17:07:41,713 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-04-25 17:07:44,604 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-04-25 17:07:44,604 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-04-25 17:07:44,610 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-04-25 17:07:44,610 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-04-25 17:07:45,314 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-04-25 17:07:45,340 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-04-25 17:08:04,259 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 291129 with alpha at 0.021410871498081963
+
+2015-04-25 17:08:14,259 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-8
+                
+Words so far 594248 with alpha at 0.017673926561737958
+
+2015-04-25 17:08:26,989 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-7
+                
+Words so far 979825 with alpha at 0.012920413856428448
+
+2015-04-25 17:08:36,990 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1291131 with alpha at 0.01
+
+2015-04-25 17:08:48,955 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1656204 with alpha at 0.01
+
+2015-04-25 17:08:58,956 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 1953277 with alpha at 0.01
+
+2015-04-25 17:09:03,327 - [INFO] - from org.deeplearning4j.plot.Tsne in AWT-EventQueue-0
+                
+Calculating probabilities of data similarities..
+
+2015-04-25 17:09:05,844 - [INFO] - from org.deeplearning4j.plot.Tsne in AWT-EventQueue-0
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-25 17:33:17,060 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path tofa047afe-e5b0-4965-8b2e-025c40af83a2
+
+2015-04-25 17:33:17,097 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-04-25 17:33:18,944 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-04-25 17:33:18,946 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-04-25 17:34:06,528 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-04-25 17:34:06,806 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-04-25 17:34:06,971 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-04-25 17:34:07,310 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-04-25 17:34:07,728 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-04-25 17:34:07,846 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-04-25 17:34:07,970 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-04-25 17:34:08,195 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-04-25 17:34:08,517 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-04-25 17:34:18,573 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 46931 with queued 97162
+
+2015-04-25 17:34:28,574 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-04-25 17:34:28,574 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-04-25 17:34:57,165 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-04-25 17:34:57,165 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-04-25 17:34:57,168 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-04-25 17:34:57,168 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-04-25 17:34:57,376 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-04-25 17:34:57,397 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-04-25 17:35:13,936 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 344607 with alpha at 0.020751351871167237
+
+2015-04-25 17:35:33,805 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 991443 with alpha at 0.012776532552170023
+
+2015-04-25 17:35:43,806 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1296146 with alpha at 0.01
+
+2015-04-25 17:35:55,440 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-11
+                
+Words so far 1663133 with alpha at 0.01
+
+2015-04-25 17:36:05,441 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 1988395 with alpha at 0.01
+
+2015-04-25 17:36:07,887 - [INFO] - from org.deeplearning4j.plot.Tsne in AWT-EventQueue-0
+                
+Calculating probabilities of data similarities..
+
+2015-04-25 17:36:09,664 - [INFO] - from org.deeplearning4j.plot.Tsne in AWT-EventQueue-0
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-25 18:01:45,493 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to39b2fa04-2e26-4db3-9e0b-9ba3628118e0
+
+2015-04-25 18:01:45,526 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-04-25 18:01:45,964 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-04-25 18:01:45,965 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-04-25 18:01:56,854 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-04-25 18:01:56,938 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-04-25 18:01:57,051 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-04-25 18:01:57,161 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-04-25 18:01:57,190 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-04-25 18:01:57,259 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-04-25 18:01:57,301 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-04-25 18:01:57,423 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-04-25 18:01:57,450 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-04-25 18:02:07,475 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 70292 with queued 97162
+
+2015-04-25 18:02:17,475 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-04-25 18:02:17,475 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-04-25 18:02:28,492 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-04-25 18:02:28,493 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-04-25 18:02:28,497 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-04-25 18:02:28,497 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-04-25 18:02:28,621 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-04-25 18:02:28,644 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-04-25 18:02:45,273 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 322529 with alpha at 0.02102285058410132
+
+2015-04-25 18:02:55,274 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 629111 with alpha at 0.01724234581639035
+
+2015-04-25 18:03:07,010 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 982269 with alpha at 0.01288750599293278
+
+2015-04-25 18:03:17,011 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 1290394 with alpha at 0.01
+
+2015-04-25 18:03:28,989 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1633854 with alpha at 0.01
+
+2015-04-25 18:03:38,990 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1931798 with alpha at 0.01
+
+2015-04-25 18:03:42,262 - [INFO] - from org.deeplearning4j.plot.Tsne in AWT-EventQueue-0
+                
+Calculating probabilities of data similarities..
+
+2015-04-25 18:03:43,721 - [INFO] - from org.deeplearning4j.plot.Tsne in AWT-EventQueue-0
+                
+Mean value of sigma 3.3554432E7
+
+2015-04-25 18:36:42,268 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Changing index path to7c6e0658-b9a9-4cfc-9b0c-422a7126e219
+
+2015-04-25 18:36:42,273 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-25 18:36:42,542 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating new index writer
+
+2015-04-25 18:36:42,547 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in main
+                
+Creating directory word2vec-index
+
+2015-04-25 18:36:47,926 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Sent 10000
+
+2015-04-25 18:36:58,221 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 18551 with queued 19255
+
+2015-04-25 18:37:08,222 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+latch count 19255 with queued 19255
+
+2015-04-25 18:37:08,222 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in main
+                
+Invoking finish on index
+
+2015-04-25 18:37:10,293 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Building binary tree
+
+2015-04-25 18:37:10,293 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Constructing priority queue
+
+2015-04-25 18:37:10,309 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Built tree
+
+2015-04-25 18:37:10,309 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Resetting weights
+
+2015-04-25 18:37:10,728 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Training word2vec multithreaded
+
+2015-04-25 18:37:10,755 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in main
+                
+Processing sentences...
+
+2015-04-25 18:37:24,050 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 7554 with alpha at 0.024887378119688705
+
+2015-04-25 18:37:34,090 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 16015 with alpha at 0.024761233861108626
+
+2015-04-25 18:37:44,141 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 23909 with alpha at 0.024643542952559862
+
+2015-04-25 18:37:54,265 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 32095 with alpha at 0.024521498643289504
+
+2015-04-25 18:38:04,280 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 40319 with alpha at 0.024398887795569077
+
+2015-04-25 18:38:14,285 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 48015 with alpha at 0.024284148850523303
+
+2015-04-25 18:38:24,310 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 55756 with alpha at 0.0241687390046814
+
+2015-04-25 18:38:34,324 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 64388 with alpha at 0.024040045323076006
+
+2015-04-25 18:38:44,352 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 72506 with alpha at 0.023919014819453143
+
+2015-04-25 18:38:54,365 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-14
+                
+Words so far 80680 with alpha at 0.023797149417061753
+
+2015-04-25 18:39:04,390 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 89103 with alpha at 0.02367157169693175
+
+2015-04-25 18:39:14,416 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 97251 with alpha at 0.02355009392611146
+
+2015-04-25 18:39:24,423 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 105107 with alpha at 0.02343296955601276
+
+2015-04-25 18:39:34,563 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 112745 with alpha at 0.02331909532754868
+
+2015-04-25 18:39:44,599 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 120844 with alpha at 0.02319834809315085
+
+2015-04-25 18:39:54,609 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 128667 with alpha at 0.02308171571696932
+
+2015-04-25 18:40:04,614 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 136714 with alpha at 0.022961743745713692
+
+2015-04-25 18:40:14,623 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 144939 with alpha at 0.02283911798908668
+
+2015-04-25 18:40:24,653 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 153034 with alpha at 0.022718430390315177
+
+2015-04-25 18:40:34,722 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 161328 with alpha at 0.022594775919134093
+
+2015-04-25 18:40:44,757 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 169040 with alpha at 0.02247979843158303
+
+2015-04-25 18:40:54,766 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 177181 with alpha at 0.022358425023108808
+
+2015-04-25 18:41:04,795 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 185574 with alpha at 0.022233294570176226
+
+2015-04-25 18:41:14,833 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 193927 with alpha at 0.022108760473506874
+
+2015-04-25 18:41:24,850 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 202040 with alpha at 0.02198780451441691
+
+2015-04-25 18:41:34,853 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 210100 with alpha at 0.021867638727375738
+
+2015-04-25 18:41:44,956 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 217957 with alpha at 0.02175049944837046
+
+2015-04-25 18:41:54,983 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 226507 with alpha at 0.02162302829710469
+
+2015-04-25 18:42:05,008 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 234551 with alpha at 0.021503101052568807
+
+2015-04-25 18:42:15,019 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 243211 with alpha at 0.021373989921579153
+
+2015-04-25 18:42:25,054 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 250393 with alpha at 0.021266914154515912
+
+2015-04-25 18:42:35,077 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 258962 with alpha at 0.02113915973402511
+
+2015-04-25 18:42:45,155 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 266758 with alpha at 0.02102292989832126
+
+2015-04-25 18:42:55,156 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 274709 with alpha at 0.020904389182097388
+
+2015-04-25 18:43:05,203 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-14
+                
+Words so far 282762 with alpha at 0.02078432775740227
+
+2015-04-25 18:43:15,231 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 291391 with alpha at 0.020655678802516626
+
+2015-04-25 18:43:25,287 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 300099 with alpha at 0.020525852044011094
+
+2015-04-25 18:43:35,339 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 308544 with alpha at 0.02039994632793631
+
+2015-04-25 18:43:45,348 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 316442 with alpha at 0.020282195783761222
+
+2015-04-25 18:43:55,404 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 324553 with alpha at 0.020161269642484422
+
+2015-04-25 18:44:05,416 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 332634 with alpha at 0.020040790768405047
+
+2015-04-25 18:44:15,422 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 340848 with alpha at 0.019918329009750425
+
+2015-04-25 18:44:25,438 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 348825 with alpha at 0.019799400661955454
+
+2015-04-25 18:44:35,486 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 356653 with alpha at 0.019682693741241018
+
+2015-04-25 18:44:45,488 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 364527 with alpha at 0.019565301010823866
+
+2015-04-25 18:44:55,509 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 372303 with alpha at 0.019449369353251634
+
+2015-04-25 18:45:05,515 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 380374 with alpha at 0.019329039568238067
+
+2015-04-25 18:45:15,523 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 388399 with alpha at 0.019209395592927215
+
+2015-04-25 18:45:25,584 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 396224 with alpha at 0.019092733398932523
+
+2015-04-25 18:45:35,601 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 404521 with alpha at 0.018969034201031697
+
+2015-04-25 18:45:45,606 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 412742 with alpha at 0.01884646808003101
+
+2015-04-25 18:45:55,632 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 421046 with alpha at 0.01872266451978412
+
+2015-04-25 18:46:05,657 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 428946 with alpha at 0.01860488415779587
+
+2015-04-25 18:46:15,700 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-14
+                
+Words so far 437486 with alpha at 0.01847756209559591
+
+2015-04-25 18:46:25,709 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 444707 with alpha at 0.018369904881176014
+
+2015-04-25 18:46:35,859 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 452735 with alpha at 0.018250216179145424
+
+2015-04-25 18:46:45,862 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 460629 with alpha at 0.018132525270596656
+
+2015-04-25 18:46:55,879 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 468099 with alpha at 0.018021155738438144
+
+2015-04-25 18:47:05,915 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 476578 with alpha at 0.017894743119539615
+
+2015-04-25 18:47:15,948 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-14
+                
+Words so far 484327 with alpha at 0.01777921400244506
+
+2015-04-25 18:47:25,977 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 492013 with alpha at 0.017664624146465097
+
+2015-04-25 18:47:35,991 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 499606 with alpha at 0.01755142081879715
+
+2015-04-25 18:47:46,083 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 507937 with alpha at 0.017427214718072577
+
+2015-04-25 18:47:56,146 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 516116 with alpha at 0.017305274771148283
+
+2015-04-25 18:48:06,166 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 523721 with alpha at 0.017191892536601368
+
+2015-04-25 18:48:16,171 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 532180 with alpha at 0.01706577809583445
+
+2015-04-25 18:48:26,209 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 539458 with alpha at 0.01695727107373945
+
+2015-04-25 18:48:36,211 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 547444 with alpha at 0.016838208545785254
+
+2015-04-25 18:48:46,233 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 556063 with alpha at 0.016709708679965414
+
+2015-04-25 18:48:59,630 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-7
+                
+Words so far 566330 with alpha at 0.01655663893610043
+
+2015-04-25 18:49:09,634 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 574363 with alpha at 0.016436875689536928
+
+2015-04-25 18:49:19,646 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 581880 with alpha at 0.01632480543876912
+
+2015-04-25 18:49:29,674 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 588985 with alpha at 0.0162188776575126
+
+2015-04-25 18:49:39,681 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-7
+                
+Words so far 596536 with alpha at 0.016106300503921044
+
+2015-04-25 18:49:49,712 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 604220 with alpha at 0.01599174046575424
+
+2015-04-25 18:49:59,717 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 612251 with alpha at 0.015872007037003904
+
+2015-04-25 18:50:09,791 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 619973 with alpha at 0.015756880460387035
+
+2015-04-25 18:50:19,798 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-8
+                
+Words so far 627442 with alpha at 0.015645525837135105
+
+2015-04-25 18:50:29,808 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 635690 with alpha at 0.015522557175656738
+
+2015-04-25 18:50:39,839 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 643365 with alpha at 0.015408131317649166
+
+2015-04-25 18:50:50,003 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-7
+                
+Words so far 650967 with alpha at 0.015294793809821988
+
+2015-04-25 18:51:00,075 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 659487 with alpha at 0.015167769925753645
+
+2015-04-25 18:51:10,115 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 667268 with alpha at 0.01505176372364851
+
+2015-04-25 18:51:20,116 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 675276 with alpha at 0.014932373199749533
+
+2015-04-25 18:51:30,147 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 683450 with alpha at 0.014810507797358142
+
+2015-04-25 18:51:40,150 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-7
+                
+Words so far 691071 with alpha at 0.014696887020305933
+
+2015-04-25 18:51:50,151 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 699247 with alpha at 0.014574991800101382
+
+2015-04-25 18:52:00,158 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 706599 with alpha at 0.014465381518919402
+
+2015-04-25 18:52:10,186 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 714441 with alpha at 0.014348465873512836
+
+2015-04-25 18:52:20,192 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-8
+                
+Words so far 722437 with alpha at 0.01422925425649283
+
+2015-04-25 18:52:30,196 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 730516 with alpha at 0.014108805200226615
+
+2015-04-25 18:52:40,197 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 738521 with alpha at 0.013989459403047381
+
+2015-04-25 18:52:50,218 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 746894 with alpha at 0.013864627128246416
+
+2015-04-25 18:53:00,224 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 755013 with alpha at 0.01374358171571697
+
+2015-04-25 18:53:10,251 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 762816 with alpha at 0.013627247517667055
+
+2015-04-25 18:53:20,263 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 770441 with alpha at 0.013513567104988522
+
+2015-04-25 18:53:30,555 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 779062 with alpha at 0.013385037421355517
+
+2015-04-25 18:53:40,576 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 787682 with alpha at 0.013256522646629097
+
+2015-04-25 18:53:50,610 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 795498 with alpha at 0.013139994632793632
+
+2015-04-25 18:54:00,622 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 803077 with alpha at 0.013027000029817815
+
+2015-04-25 18:54:10,700 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 810893 with alpha at 0.01291047201598235
+
+2015-04-25 18:54:20,758 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 819014 with alpha at 0.01278939678563974
+
+2015-04-25 18:54:30,845 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 827943 with alpha at 0.012656275158779857
+
+2015-04-25 18:54:40,871 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-7
+                
+Words so far 835814 with alpha at 0.012538927155082447
+
+2015-04-25 18:54:50,923 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 843834 with alpha at 0.0124193577243045
+
+2015-04-25 18:55:00,935 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 851074 with alpha at 0.01231141724065957
+
+2015-04-25 18:55:11,030 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 859963 with alpha at 0.012178891970062916
+
+2015-04-25 18:55:21,108 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 868352 with alpha at 0.012053821152756659
+
+2015-04-25 18:55:31,266 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 876016 with alpha at 0.011939559292721473
+
+2015-04-25 18:55:41,275 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 883559 with alpha at 0.011827101410382563
+
+2015-04-25 18:55:51,300 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 890681 with alpha at 0.011720920177714167
+
+2015-04-25 18:56:01,374 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 898729 with alpha at 0.011600933297551958
+
+2015-04-25 18:56:11,406 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 907303 with alpha at 0.011473104332528253
+
+2015-04-25 18:56:21,427 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 914981 with alpha at 0.011358633747800937
+
+2015-04-25 18:56:31,465 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 923588 with alpha at 0.011230312788860065
+
+2015-04-25 18:56:41,639 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-7
+                
+Words so far 931180 with alpha at 0.011117124370098697
+
+2015-04-25 18:56:51,655 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 939959 with alpha at 0.01098623907922593
+
+2015-04-25 18:57:01,712 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 948034 with alpha at 0.010865849658586038
+
+2015-04-25 18:57:11,776 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 955814 with alpha at 0.010749858365387483
+
+2015-04-25 18:57:21,780 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 963320 with alpha at 0.010637952112592062
+
+2015-04-25 18:57:31,801 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 970889 with alpha at 0.010525106598682053
+
+2015-04-25 18:57:41,828 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 979613 with alpha at 0.010395041297671229
+
+2015-04-25 18:57:51,829 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 987340 with alpha at 0.010279840176521456
+
+2015-04-25 18:58:01,832 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 995419 with alpha at 0.01015939112025524
+
+2015-04-25 18:58:11,986 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1003114 with alpha at 0.010044667084116053
+
+2015-04-25 18:58:22,052 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1010851 with alpha at 0.01
+
+2015-04-25 18:58:32,093 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1018270 with alpha at 0.01
+
+2015-04-25 18:58:42,099 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1026352 with alpha at 0.01
+
+2015-04-25 18:58:52,102 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1033727 with alpha at 0.01
+
+2015-04-25 18:59:02,134 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1041190 with alpha at 0.01
+
+2015-04-25 18:59:12,161 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1049280 with alpha at 0.01
+
+2015-04-25 18:59:22,238 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 1056900 with alpha at 0.01
+
+2015-04-25 18:59:32,253 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1064768 with alpha at 0.01
+
+2015-04-25 18:59:42,257 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 1072287 with alpha at 0.01
+
+2015-04-25 18:59:52,266 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 1080176 with alpha at 0.01
+
+2015-04-25 19:00:02,304 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1088169 with alpha at 0.01
+
+2015-04-25 19:00:12,317 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1095775 with alpha at 0.01
+
+2015-04-25 19:00:22,323 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1103530 with alpha at 0.01
+
+2015-04-25 19:00:32,368 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1110871 with alpha at 0.01
+
+2015-04-25 19:00:50,992 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1125588 with alpha at 0.01
+
+2015-04-25 19:01:01,033 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1133147 with alpha at 0.01
+
+2015-04-25 19:01:11,043 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1140319 with alpha at 0.01
+
+2015-04-25 19:01:21,062 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1148019 with alpha at 0.01
+
+2015-04-25 19:01:31,103 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1155393 with alpha at 0.01
+
+2015-04-25 19:01:41,123 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1163254 with alpha at 0.01
+
+2015-04-25 19:01:51,134 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1171217 with alpha at 0.01
+
+2015-04-25 19:02:01,187 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1178955 with alpha at 0.01
+
+2015-04-25 19:02:11,382 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1186862 with alpha at 0.01
+
+2015-04-25 19:02:21,400 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1194619 with alpha at 0.01
+
+2015-04-25 19:02:31,527 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1202790 with alpha at 0.01
+
+2015-04-25 19:02:41,613 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1210323 with alpha at 0.01
+
+2015-04-25 19:02:51,622 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1218129 with alpha at 0.01
+
+2015-04-25 19:03:01,652 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1226134 with alpha at 0.01
+
+2015-04-25 19:03:11,668 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1233626 with alpha at 0.01
+
+2015-04-25 19:03:21,754 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1241808 with alpha at 0.01
+
+2015-04-25 19:03:31,761 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1249571 with alpha at 0.01
+
+2015-04-25 19:03:41,781 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1257588 with alpha at 0.01
+
+2015-04-25 19:03:51,814 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1265427 with alpha at 0.01
+
+2015-04-25 19:04:01,937 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1272130 with alpha at 0.01
+
+2015-04-25 19:04:12,059 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1278828 with alpha at 0.01
+
+2015-04-25 19:04:22,076 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1286658 with alpha at 0.01
+
+2015-04-25 19:04:32,084 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1294097 with alpha at 0.01
+
+2015-04-25 19:04:42,152 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1301772 with alpha at 0.01
+
+2015-04-25 19:04:52,166 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1309117 with alpha at 0.01
+
+2015-04-25 19:05:02,173 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1316987 with alpha at 0.01
+
+2015-04-25 19:05:12,200 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1324558 with alpha at 0.01
+
+2015-04-25 19:05:22,242 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 1332516 with alpha at 0.01
+
+2015-04-25 19:05:32,247 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1340398 with alpha at 0.01
+
+2015-04-25 19:05:42,257 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 1348393 with alpha at 0.01
+
+2015-04-25 19:05:52,363 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1355901 with alpha at 0.01
+
+2015-04-25 19:06:02,374 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 1363939 with alpha at 0.01
+
+2015-04-25 19:06:12,416 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1371691 with alpha at 0.01
+
+2015-04-25 19:06:22,429 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1380148 with alpha at 0.01
+
+2015-04-25 19:06:32,480 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1387978 with alpha at 0.01
+
+2015-04-25 19:06:42,495 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1395794 with alpha at 0.01
+
+2015-04-25 19:06:52,532 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1403884 with alpha at 0.01
+
+2015-04-25 19:07:02,552 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1412176 with alpha at 0.01
+
+2015-04-25 19:07:12,568 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1419792 with alpha at 0.01
+
+2015-04-25 19:07:22,604 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1427802 with alpha at 0.01
+
+2015-04-25 19:07:32,615 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1436452 with alpha at 0.01
+
+2015-04-25 19:07:42,807 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 1444053 with alpha at 0.01
+
+2015-04-25 19:07:52,815 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1452086 with alpha at 0.01
+
+2015-04-25 19:08:02,843 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1460322 with alpha at 0.01
+
+2015-04-25 19:08:12,852 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1468075 with alpha at 0.01
+
+2015-04-25 19:08:22,869 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1476237 with alpha at 0.01
+
+2015-04-25 19:08:32,881 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1484171 with alpha at 0.01
+
+2015-04-25 19:08:42,908 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1492119 with alpha at 0.01
+
+2015-04-25 19:08:52,926 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 1500034 with alpha at 0.01
+
+2015-04-25 19:09:02,934 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1508312 with alpha at 0.01
+
+2015-04-25 19:09:12,965 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1516078 with alpha at 0.01
+
+2015-04-25 19:09:22,974 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1523886 with alpha at 0.01
+
+2015-04-25 19:09:33,024 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1531366 with alpha at 0.01
+
+2015-04-25 19:09:43,025 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1538839 with alpha at 0.01
+
+2015-04-25 19:09:53,046 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1546092 with alpha at 0.01
+
+2015-04-25 19:10:03,064 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1555342 with alpha at 0.01
+
+2015-04-25 19:10:13,099 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1563229 with alpha at 0.01
+
+2015-04-25 19:10:23,167 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1570931 with alpha at 0.01
+
+2015-04-25 19:10:33,196 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 1578471 with alpha at 0.01
+
+2015-04-25 19:10:43,220 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1586160 with alpha at 0.01
+
+2015-04-25 19:10:53,277 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1594040 with alpha at 0.01
+
+2015-04-25 19:11:03,400 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1601622 with alpha at 0.01
+
+2015-04-25 19:11:13,478 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1609493 with alpha at 0.01
+
+2015-04-25 19:11:23,513 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1617212 with alpha at 0.01
+
+2015-04-25 19:11:33,516 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1625467 with alpha at 0.01
+
+2015-04-25 19:11:43,582 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1633010 with alpha at 0.01
+
+2015-04-25 19:11:53,624 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1640756 with alpha at 0.01
+
+2015-04-25 19:12:03,654 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1648308 with alpha at 0.01
+
+2015-04-25 19:12:13,724 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1656514 with alpha at 0.01
+
+2015-04-25 19:12:23,730 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1664129 with alpha at 0.01
+
+2015-04-25 19:12:33,784 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1671772 with alpha at 0.01
+
+2015-04-25 19:12:47,853 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Calculating probabilities of data similarities..
+
+2015-04-25 19:14:00,551 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Handled 500 records
+
+2015-04-25 19:15:14,909 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Handled 1000 records
+
+2015-04-25 19:16:46,901 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Handled 1500 records
+
+2015-04-25 19:18:00,809 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Handled 2000 records
+
+2015-04-25 19:18:39,259 - [INFO] - from org.deeplearning4j.plot.Tsne in main
+                
+Mean value of sigma 3.3554432E7
+
