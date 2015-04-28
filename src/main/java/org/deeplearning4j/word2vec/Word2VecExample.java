@@ -53,12 +53,12 @@ public class Word2VecExample {
                 .iterate(iter).tokenizerFactory(t).build();
         vec.fit();
 
-        //similarity(string, string):w’è‚µ‚½’PŒê‚Ì—Ş—’l
-        double sim = vec.similarity("‹à„", "–¶“‡");
-        System.out.println("Similarity between ‹à„ and –¶“‡ " + sim);
+        //similarity(stringã€€A, stringã€€B):Aã¨Bã®è¿‘ä¼¼å€¤
+        double sim = vec.similarity("åˆ©æ ¹", "ç­‘æ‘©");
+        System.out.println("Similarity between åˆ©æ ¹ and ç­‘æ‘© " + sim);
 
-        //wordsNearest(string, int):w’è‚µ‚½’PŒê‚É‹ß‚¢’PŒê‚ğint”•\¦
-        Collection<String> similar = vec.wordsNearest("–kã",20);
+        //wordsNearest(stringã€€A, intã€€N):Aã«è¿‘ã„å˜èªã‚’Nå€‹æŠ½å‡º
+        Collection<String> similar = vec.wordsNearest("æ­¦è”µ",20);
         System.out.println(similar);
 
 
@@ -68,11 +68,11 @@ public class Word2VecExample {
                 .learningRate(200).useAdaGrad(false)
                 .normalize(false).usePca(false).build();
 
-
+        System.out.println("ã“ã“ã¾ã§å‡¦ç†ã—ãŸ");
 
         vec.lookupTable().plotVocab(tsne);
 
-
+        System.out.println("ã»ã¨ã‚“ã©å‡¦ç†ãŒçµ‚ã‚ã£ãŸ");
 
     }
 

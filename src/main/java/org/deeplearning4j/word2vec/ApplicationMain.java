@@ -10,7 +10,7 @@ import java.io.*;
 
 public class ApplicationMain{
     public static void main(String[] args) {
-        OpenFrame frm = new OpenFrame("Test Window");
+        OpenFrame frm = new OpenFrame("Test sake2vec");
         frm.setLocation(300, 200);
         frm.setSize(600, 400);
         frm.setBackground(Color.LIGHT_GRAY);
@@ -83,8 +83,8 @@ class OpenFrame extends Frame implements ActionListener {
         if(fileName == null) {
         } else {
             sake2vec = new Sake2vec(fileName);
-            double result = sake2vec.sake2vecResult();
-            txtar1.append(String.valueOf(result) + "\n");
+            String result = sake2vec.sake2vecResult();
+            txtar1.append(result + "\n");
         }
 
         try{

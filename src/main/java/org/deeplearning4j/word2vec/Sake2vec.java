@@ -17,18 +17,19 @@ import org.springframework.core.io.ClassPathResource;
 
 import java.util.Collection;
 
-/**
- * Created by agibsonccc on 10/9/14.
- */
 public class Sake2vec {
     String fileName;
-    Word2Vec vec;
+
 
     public Sake2vec(String fileName) {
         this.fileName = fileName;
     }
 
-    public void Sake2vecExample() throws Exception {
+    public double Sake2vecExample() throws Exception {
+
+        double sim;
+
+
         ClassPathResource resource = new ClassPathResource(this.fileName);
         SentenceIterator iter = new LineSentenceIterator(resource.getFile());
         iter.setPreProcessor(new SentencePreProcessor() {
@@ -55,38 +56,42 @@ public class Sake2vec {
 
         int layerSize = 300;
 
-        vec = new Word2Vec.Builder().sampling(1e-5)
+        Word2Vec vec = new Word2Vec.Builder().sampling(1e-5)
                 .minWordFrequency(5).batchSize(1000).useAdaGrad(false).layerSize(layerSize)
                 .iterations(3).learningRate(0.025).minLearningRate(1e-2).negativeSample(10)
                 .iterate(iter).tokenizerFactory(t).build();
         vec.fit();
 
+        //similarity(string縲A, string縲B):A縺ｨB縺ｮ霑台ｼｼ蛟､
+        sim = vec.similarity("people", "money");
+        System.out.println("Similarity between people and money " + sim);
 
-        Tsne tsne = new Tsne.Builder().setMaxIter(200)
+        //wordsNearest(string縲A, int縲N):A縺ｫ霑代＞蜊倩ｪ槭ｒN蛟区歓蜃ｺ
+        Collection<String> similar = vec.wordsNearest("people",20);
+        System.out.println(similar);
+
+        /*Tsne tsne = new Tsne.Builder().setMaxIter(200)
                 .learningRate(200).useAdaGrad(false)
                 .normalize(false).usePca(false).build();
 
 
-        vec.lookupTable().plotVocab(tsne);
+        vec.lookupTable().plotVocab(tsne);*/
 
-
+    return sim;
     }
 
-    public double sake2vecResult() {
-        double sim = 0;
-        try {
-            Sake2vecExample();
-            //similarity(string, string):指定した単語の類似値
-            sim = vec.similarity("people", "money");
-            System.out.println("Similarity between people and money " + sim);
+    /*
 
-            //wordsNearest(string, int):指定した単語に近い単語をint数表示
-            Collection<String> similar = vec.wordsNearest("money", 20);
-            System.out.println(similar);
+     */
+    public String sake2vecResult() {
+        String result = "繝�繝舌ャ繧ｯ逕ｨ";
+        try {
+            double temp = Sake2vecExample();
+            result = "Similarity between people and money " + String.valueOf(temp);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return sim;
+        return result;
     }
 }
