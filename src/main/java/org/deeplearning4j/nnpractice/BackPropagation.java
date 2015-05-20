@@ -64,7 +64,7 @@ public class BackPropagation {
     /**
      * BP前向き計算
      */
-    public void frontCal(int inputData[]){
+    public void frontCal(){
         int i,j;
         //各層の長さ
         int lengthIn = input.length;
@@ -235,7 +235,7 @@ public class BackPropagation {
             for(i = 0; i < inputData.length; i++){
 
                 bp.input = inputData[i];
-                bp.frontCal(inputData[i]);
+                bp.frontCal();
                 bp.errorCal();
                 bp.backCal();
 
