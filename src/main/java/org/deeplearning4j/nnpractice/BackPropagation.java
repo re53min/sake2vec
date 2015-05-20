@@ -82,7 +82,7 @@ public class BackPropagation {
         for(i = 0; i < lengthHid; i++){
             tmpData = -threshHid[i];
             for(j = 0; j < lengthIn; j++){
-                tmpData += input[j] * wIH[i][j];
+                tmpData = tmpData + input[j] * wIH[i][j];
                 //System.out.println("デバッグポイント5:" + tmpData);
             }
             hidden[i] = funSigmoid(tmpData);
@@ -92,7 +92,7 @@ public class BackPropagation {
         for(i = 0; i < lengthOut; i++){
             tmpData = -threshOut[i];
             for(j = 0; j < lengthHid; j++){
-                tmpData += hidden[j] * wHO[i][j];
+                tmpData = tmpData + hidden[j] * wHO[i][j];
                 //System.out.println("デバッグポイント7:" + tmpData);
             }
             output[i] = funSigmoid(tmpData);
@@ -145,7 +145,7 @@ public class BackPropagation {
         for(i = 0; i < lengthHid; i++){
             tmpData = 0.0;
             for(j = 0; j < lengthOut; j++){
-                tmpData += errorOut[j] * wHO[j][i];
+                tmpData = tmpData + errorOut[j] * wHO[j][i];
                 //System.out.println("デバッグポイント10:" + tmpData);
             }
             errorHid[i] = hidden[i] * tmpData * (1 - hidden[i]);
@@ -165,17 +165,17 @@ public class BackPropagation {
 
         //出力層と中間層の学習
         for(i = 0; i < lengthOut; i++){
-            threshOut[i] -= alpha * errorOut[i];
+            threshOut[i] = threshOut[i] - alpha * errorOut[i];
             for(j = 0; j < lengthHid; j++){
-                wHO[i][j] += alpha * errorOut[i] * hidden[j];
+                wHO[i][j] = wHO[i][j] + alpha * errorOut[i] * hidden[j];
                 //System.out.println("中間層→出力層の重み:" + wHO[i][j]);
             }
         }
         //中間層と入力層の学習
         for(i = 0; i < lengthHid; i++){
-            threshHid[i] -= alpha * errorHid[i];
+            threshHid[i] = threshHid[i] - alpha * errorHid[i];
             for(j = 0; j < lengthIn; j++){
-                wIH[i][j] += alpha * errorHid[i] * input[j];
+                wIH[i][j] = + wIH[i][j] + alpha * errorHid[i] * input[j];
                 //System.out.println("入力層→中間層の重み:" + wIH[i][j]);
             }
         }
@@ -192,7 +192,7 @@ public class BackPropagation {
         int i;
 
         for(i = 0; i < lengthOut; i++){
-            e += Math.pow(teach[i] - output[i], 2.0);
+            e = e + Math.pow(teach[i] - output[i], 2.0);
         }
         e *= 0.5;
         return e;
@@ -242,14 +242,14 @@ public class BackPropagation {
                 System.out.println("INPUT:" + inputData[i][0] + "," + inputData[i][1] +
                         " -> " + bp.output[0] + "(" + resultData[i][0] + ")");
 
-                e += bp.calcError(resultData[i]);
+                e = e + bp.calcError(resultData[i]);
             }
 
             count++;
             System.out.println("Error = " + e);
             System.out.println(count + "回目");
 
-            if(e < 0.001) {
+            if(e < 0.001 || count == 10000) {
                 System.out.println("Error < 0.001");
                 System.out.println("学習回数:" + count);
                 break;
