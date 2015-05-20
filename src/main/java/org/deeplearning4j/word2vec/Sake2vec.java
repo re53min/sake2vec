@@ -19,10 +19,16 @@ import java.util.Collection;
 
 public class Sake2vec {
     String fileName;
+    String word1;
+    String word2;
 
 
-    public Sake2vec(String fileName) {
+    public Sake2vec(String fileName, String word1, String word2) {
+
         this.fileName = fileName;
+        this.word1 = word1;
+        this.word2 = word2;
+
     }
 
     public double Sake2vecExample() throws Exception {
@@ -63,11 +69,11 @@ public class Sake2vec {
         vec.fit();
 
         //similarity(string　A, string　B):AとBの近似値
-        sim = vec.similarity("people", "money");
+        sim = vec.similarity(word1, word2);
         System.out.println("Similarity between people and money " + sim);
 
         //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
-        Collection<String> similar = vec.wordsNearest("people",20);
+        Collection<String> similar = vec.wordsNearest(word1, 20);
         System.out.println(similar);
 
         /*Tsne tsne = new Tsne.Builder().setMaxIter(200)
@@ -77,6 +83,7 @@ public class Sake2vec {
 
         vec.lookupTable().plotVocab(tsne);*/
 
+
     return sim;
     }
 
@@ -84,10 +91,10 @@ public class Sake2vec {
 
      */
     public String sake2vecResult() {
-        String result = "デバック用";
+        String result = "デバッグ用";
         try {
             double temp = Sake2vecExample();
-            result = "Similarity between people and money " + String.valueOf(temp);
+            result = word1 + "と" + word2 + "の類似値は" + String.valueOf(temp);
 
         } catch (Exception e) {
             e.printStackTrace();

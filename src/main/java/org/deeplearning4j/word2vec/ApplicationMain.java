@@ -24,6 +24,7 @@ class OpenFrame extends Frame implements ActionListener {
     //Label lb1;
     TextArea txtar1;
     Sake2vec sake2vec;
+    String word1, word2;
 
     public OpenFrame(String title) {
         setTitle(title);
@@ -54,7 +55,7 @@ class OpenFrame extends Frame implements ActionListener {
         setMenuBar(mb);
 
         txtar1 = new TextArea();
-        txtar1.setFont(new Font("Dialog", Font.PLAIN, 14));
+        txtar1.setFont(new Font("Dialog", Font.PLAIN, 18));
         txtar1.setForeground(new Color(64, 64, 64));
         add(txtar1, BorderLayout.CENTER);
 
@@ -68,13 +69,15 @@ class OpenFrame extends Frame implements ActionListener {
         Object obj = e.getSource();
 
         if (obj == mil1) {
-            System.out.println("とりあえず");
+            System.out.println("デバッグ用");
         } else if (obj == mil2) {
-            WindowTest();
+            word1 = "people";
+            word2 = "money";
+            WindowTest(word1, word2);
         }
     }
 
-    private void WindowTest(){
+    private void WindowTest(String setWord1, String setWord2){
         FileDialog fileDialog = new FileDialog(this);
         fileDialog.setVisible(true);
         String dir = fileDialog.getDirectory();
@@ -82,9 +85,9 @@ class OpenFrame extends Frame implements ActionListener {
 
         if(fileName == null) {
         } else {
-            sake2vec = new Sake2vec(fileName);
-            String result = sake2vec.sake2vecResult();
-            txtar1.append(result + "\n");
+            sake2vec = new Sake2vec(fileName, setWord1, setWord2);
+            txtar1.append(sake2vec.sake2vecResult() + "\n");
+            txtar1.append("\n");
         }
 
         try{
@@ -93,6 +96,7 @@ class OpenFrame extends Frame implements ActionListener {
             FileReader rd = new FileReader(dir + fileName);
             BufferedReader br = new BufferedReader(rd);
 
+            txtar1.append("ファイル読み込みデバッグ用\n");
             while((s = br.readLine()) != null){
                 if(i != 100) {
                     txtar1.append(s + "\n");
