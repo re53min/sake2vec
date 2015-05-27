@@ -2,6 +2,7 @@ package org.deeplearning4j.nnpractice;
 
 /**
  * バックプロパゲーションの練習問題2
+ * 数字が閉じているか閉じていないかの判別
  * Created by b1012059 on 2015/05/27.
  * @author b1012059 Wataru Matsudate
  */
@@ -112,7 +113,8 @@ public class BackPropagation2 {
 
     /**
      * 教師信号
-     * @return 出力結果と教師データとを比較した結果
+     * @param teachData 正解データ
+     * @return 正解データと出力結果を比較
      */
     public double teach(double teachData) {
         double t;
@@ -127,8 +129,9 @@ public class BackPropagation2 {
 
     /**
      * 中間層、出力層の誤差計算
-     * 教師信号teach()をもとに出力層の誤差を求める
+     * 教師信号teachをもとに出力層の誤差を求める
      * その後出力層の誤差をもとに中間層の誤差を求める
+     * @param teachData 正解データ
      */
     public void errorCal(double teachData[]){
         int i,j;
@@ -325,8 +328,8 @@ public class BackPropagation2 {
                  0,  0,  0,  0,  0,  0,  0}
         };
 
-        //出力データの正解例
-        double resultData[][] = {
+        //教師データ
+        double teachData[][] = {
                 {1.0},                  //0
                 {0.0},                  //1
                 {0.0},                  //2
@@ -352,12 +355,12 @@ public class BackPropagation2 {
 
                 bp.input = inputData[i];
                 bp.frontCal();
-                bp.errorCal(resultData[i]);
+                bp.errorCal(teachData[i]);
                 bp.backCal();
 
-                System.out.println("INPUT:" + i + " -> " + bp.output[0] + "(" + resultData[i][0] + ")");
+                System.out.println("INPUT:" + i + " -> " + bp.output[0] + "(" + teachData[i][0] + ")");
 
-                e = e + bp.calcError(resultData[i]);
+                e = e + bp.calcError(teachData[i]);
             }
 
             count++;
@@ -372,5 +375,5 @@ public class BackPropagation2 {
         }
     }
 
-    
+
 }
