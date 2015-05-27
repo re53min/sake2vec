@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="618d74e4-cdf9-48a5-a755-0d947147203a" name="Default" comment="Rejected commit: Default">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/deeplearning4j/nnpractice/BackPropagation2.java" />
-      <change type="MOVED" beforePath="C:\Users\b1012059\sake2vec\src\main\java\org\deeplearning4j\word2vec\Sake2vec.java" afterPath="$PROJECT_DIR$/src/main/java/org/deeplearning4j/word2vec/Sake2Vec.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/deeplearning4j/word2vec/ApplicationMain.java" afterPath="$PROJECT_DIR$/src/main/java/org/deeplearning4j/word2vec/ApplicationMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/deeplearning4j/nnpractice/BackPropagation.java" afterPath="$PROJECT_DIR$/src/main/java/org/deeplearning4j/nnpractice/BackPropagation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/deeplearning4j/word2vec/Word2VecExample.java" afterPath="$PROJECT_DIR$/src/main/java/org/deeplearning4j/word2vec/Word2VecExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_0.cfe" afterPath="$PROJECT_DIR$/word2vec-index/_0.cfe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_0.cfs" afterPath="$PROJECT_DIR$/word2vec-index/_0.cfs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_0.si" afterPath="$PROJECT_DIR$/word2vec-index/_0.si" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_1.cfe" afterPath="$PROJECT_DIR$/word2vec-index/_1.cfe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_1.cfs" afterPath="$PROJECT_DIR$/word2vec-index/_1.cfs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_1.si" afterPath="$PROJECT_DIR$/word2vec-index/_1.si" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_2.cfe" afterPath="$PROJECT_DIR$/word2vec-index/_2.cfe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_2.cfs" afterPath="$PROJECT_DIR$/word2vec-index/_2.cfs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_2.si" afterPath="$PROJECT_DIR$/word2vec-index/_2.si" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_3.cfe" afterPath="$PROJECT_DIR$/word2vec-index/_3.cfe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_3.cfs" afterPath="$PROJECT_DIR$/word2vec-index/_3.cfs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_3.si" afterPath="$PROJECT_DIR$/word2vec-index/_3.si" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_4.cfe" afterPath="$PROJECT_DIR$/word2vec-index/_4.cfe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_4.cfs" afterPath="$PROJECT_DIR$/word2vec-index/_4.cfs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_4.si" afterPath="$PROJECT_DIR$/word2vec-index/_4.si" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_5.cfe" afterPath="$PROJECT_DIR$/word2vec-index/_5.cfe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_5.cfs" afterPath="$PROJECT_DIR$/word2vec-index/_5.cfs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_5.si" afterPath="$PROJECT_DIR$/word2vec-index/_5.si" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_6.cfe" afterPath="$PROJECT_DIR$/word2vec-index/_6.cfe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_6.cfs" afterPath="$PROJECT_DIR$/word2vec-index/_6.cfs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_6.si" afterPath="$PROJECT_DIR$/word2vec-index/_6.si" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_7.cfe" afterPath="$PROJECT_DIR$/word2vec-index/_7.cfe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_7.cfs" afterPath="$PROJECT_DIR$/word2vec-index/_7.cfs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/_7.si" afterPath="$PROJECT_DIR$/word2vec-index/_7.si" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/application.log" afterPath="$PROJECT_DIR$/logs/application.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/word2vec-index/segments_2" afterPath="$PROJECT_DIR$/word2vec-index/segments_2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="618d74e4-cdf9-48a5-a755-0d947147203a" name="Default" comment="Rejected commit: Default" />
     <ignored path="deeplearning4j-examples.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
