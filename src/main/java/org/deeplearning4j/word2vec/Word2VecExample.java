@@ -10,9 +10,13 @@ import org.deeplearning4j.text.tokenization.tokenizer.TokenPreProcess;
 import org.deeplearning4j.text.tokenization.tokenizer.preprocessor.EndingPreProcessor;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.DefaultTokenizerFactory;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.TokenizerFactory;
+import org.nd4j.linalg.api.ndarray.INDArray;
 import org.springframework.core.io.ClassPathResource;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+
 
 /**
  * Created by agibsonccc on 10/9/14.
@@ -21,7 +25,7 @@ public class Word2VecExample {
 
 
     public static void main(String[] args) throws Exception {
-        ClassPathResource resource = new ClassPathResource("wakati_kankore.txt");
+        ClassPathResource resource = new ClassPathResource("raw_sentences.txt");
         SentenceIterator iter = new LineSentenceIterator(resource.getFile());
         iter.setPreProcessor(new SentencePreProcessor() {
             @Override
@@ -54,25 +58,56 @@ public class Word2VecExample {
         vec.fit();
 
         //similarity(string　A, string　B):AとBの近似値
-        double sim = vec.similarity("利根", "筑摩");
-        System.out.println("Similarity between 利根 and 筑摩 " + sim);
+        double sim = vec.similarity("people", "money");
+        System.out.println("Similarity between people and money " + sim);
 
         //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
-        Collection<String> similar = vec.wordsNearest("武蔵",20);
-        System.out.println(similar);
+        Collection<String> similar = vec.wordsNearest("money", 10);
+        System.out.println("wordNearest:" + similar);
+        for(int i = 0; i < similar.size(); i++){
+            List<String> tmpData = (List<String>) similar;
+            double sim2 = vec.similarity("money", tmpData.get(i));
+            System.out.println("money and " + tmpData.get(i)+ " is " + sim2);
+        }
 
+        /*//test wordsNearestSum
+        Collection<String> testWordNearestSum = vec.wordsNearestSum("money", 20);
+        System.out.println("WordNearestSum:" + testWordNearestSum);*/
 
+        //test similarWordsInVocabTo
+        Collection<String> testSimilarWordInVocabTo = vec.similarWordsInVocabTo("money", 0.7);
+        System.out.println("SimilarWordInVocabTo:" + testSimilarWordInVocabTo);
+
+        //test getWordVector
+        double[] testGetWordVector = vec.getWordVector("money");
+        System.out.println("GetWordVector:" + testGetWordVector[0]);
+
+        //test getWordVectorMatrixNormalized
+        //INDArray testGetWordVectorMatrixNormalized = vec.getWordVectorMatrixNormalized("money");
+        //System.out.println("GetWordVectorMatrixNormalized:" + testGetWordVectorMatrixNormalized);
+
+        //test getWordVectorMatrix
+        //INDArray testGetWordVectorMatrix = vec.getWordVectorMatrix("money");
+        //System.out.println("GetWordVectorMatrix:" + testGetWordVectorMatrix);
+
+        //test wordNearest(String positive, String negative, int top)
+        List<String> list1 = (List<String>) similar;
+        //List<String> list1 = new ArrayList();
+        List<String> list2 = new ArrayList();
+        //list1.add("money");
+        list2.add("work");
+        Collection<String> testWordNearest = vec.wordsNearest(list1, list2, 10);
+        System.out.println("testWordNearest(positive, negative, top):" + testWordNearest);
 
 
         Tsne tsne = new Tsne.Builder().setMaxIter(200)
                 .learningRate(200).useAdaGrad(false)
                 .normalize(false).usePca(false).build();
 
-        System.out.println("ここまで処理した");
 
-        vec.lookupTable().plotVocab(tsne);
+        //vec.lookupTable().plotVocab(tsne);
 
-        System.out.println("ほとんど処理が終わった");
+
 
     }
 

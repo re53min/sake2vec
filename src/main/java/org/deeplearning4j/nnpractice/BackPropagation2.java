@@ -1,12 +1,12 @@
 package org.deeplearning4j.nnpractice;
 
 /**
- * バックプロパゲーションの練習問題
- * Created by b1012059 on 2015/05/01.
+ * バックプロパゲーションの練習問題2
+ * Created by b1012059 on 2015/05/27.
  * @author b1012059 Wataru Matsudate
  */
 
-public class BackPropagation {
+public class BackPropagation2 {
     //各層の配列(入力層、中間層、出力層)
     private int input[];
     private double hidden[];
@@ -32,7 +32,7 @@ public class BackPropagation {
      * @param HIDDEN
      * @param OUTPUT
      */
-    public BackPropagation(int INPUT, int HIDDEN, int OUTPUT){
+    public BackPropagation2(int INPUT, int HIDDEN, int OUTPUT){
         int i, j;
         input = new int[INPUT];
         hidden = new double[HIDDEN];
@@ -77,10 +77,6 @@ public class BackPropagation {
         //計算用temp
         double tmpData;
 
-        /*//入力層
-        for(i = 0; i < lengthIn; i++){
-            input[i] = inputData[i];
-        }*/
 
         //入力層→中間層の計算
         for(i = 0; i < lengthHid; i++){
@@ -118,11 +114,11 @@ public class BackPropagation {
      * 教師信号
      * @return 出力結果と教師データとを比較した結果
      */
-    public double teach(){
+    public double teach(double teachData) {
         double t;
-        //入力層1と入力層2の和が1の場合は「1 - 出力層」、和が0または2の時は「0 - 出力層」
-        if((input[0] + input[1]) % 2 == 1 ){
-            t = 1.0 - output[0];
+        //入力した値が閉じていれば「1 - 出力層」、閉じていなければ「0 - 出力層」
+        if (teachData == 1) {
+            t = teachData - output[0];
         } else {
             t = 0.0 - output[0];
         }
@@ -134,7 +130,7 @@ public class BackPropagation {
      * 教師信号teach()をもとに出力層の誤差を求める
      * その後出力層の誤差をもとに中間層の誤差を求める
      */
-    public void errorCal(){
+    public void errorCal(double teachData[]){
         int i,j;
         //各層の長さ
         int lengthHid = hidden.length;
@@ -144,7 +140,7 @@ public class BackPropagation {
 
         //出力層の誤差計算
         for(i = 0; i < lengthOut; i++){
-            errorOut[i] = teach() * output[i] * (1.0 - output[i]);
+            errorOut[i] = teach(teachData[i]) * output[i] * (1.0 - output[i]);
             //System.out.println("出力層の誤差:" + errorOut[i]);
         }
         //中間層の誤差計算
@@ -218,21 +214,133 @@ public class BackPropagation {
 
         //入力データ
         int inputData[][] = {
-                {0,0},
-                {1,0},
-                {0,1},
-                {1,1}
+                //0
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //1
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  0,  0,  1,  0,  0,  0,
+                 0,  0,  1,  1,  0,  0,  0,
+                 0,  0,  0,  1,  0,  0,  0,
+                 0,  0,  0,  1,  0,  0,  0,
+                 0,  0,  0,  1,  0,  0,  0,
+                 0,  0,  0,  1,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //2
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  1,  0,
+                 0,  0,  0,  0,  0,  1,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //3
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  1,  0,
+                 0,  0,  0,  0,  0,  1,  0,
+                 0,  0,  0,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  1,  0,
+                 0,  0,  0,  0,  0,  1,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //4
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  0,  0,  1,  0,  0,  0,
+                 0,  0,  1,  1,  0,  0,  0,
+                 0,  1,  0,  1,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  1,  0,  0,  0,
+                 0,  0,  0,  1,  0,  0,  0,
+                 0,  0,  0,  1,  0,  0,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //5
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  1,  0,
+                 0,  0,  0,  0,  0,  1,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //6
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //7
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  0,  0,  0,  1,  0,  0,
+                 0,  0,  0,  1,  0,  0,  0,
+                 0,  0,  1,  0,  0,  0,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //8
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //9
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  1,  0,
+                 0,  0,  0,  0,  0,  1,  0,
+                 0,  0,  0,  0,  0,  1,  0,
+                 0,  0,  0,  0,  0,  0,  0}
         };
+
         //出力データの正解例
         double resultData[][] = {
-                {0.0},
-                {1.0},
-                {1.0},
-                {0.0}
+                {1.0},                  //0
+                {0.0},                  //1
+                {0.0},                  //2
+                {0.0},                  //3
+                {1.0},                  //4
+                {0.0},                  //5
+                {1.0},                  //6
+                {0.0},                  //7
+                {1.0},                  //8
+                {1.0},                  //9
         };
 
         //BackPropagationのコンストラクタの生成
-        BackPropagation bp = new BackPropagation(2,5,1);
+        BackPropagation2 bp = new BackPropagation2(65,10,1);
 
         //BackPropagationによる学習
         while(true){
@@ -244,11 +352,10 @@ public class BackPropagation {
 
                 bp.input = inputData[i];
                 bp.frontCal();
-                bp.errorCal();
+                bp.errorCal(resultData[i]);
                 bp.backCal();
 
-                System.out.println("INPUT:" + inputData[i][0] + "," + inputData[i][1] +
-                        " -> " + bp.output[0] + "(" + resultData[i][0] + ")");
+                System.out.println("INPUT:" + i + " -> " + bp.output[0] + "(" + resultData[i][0] + ")");
 
                 e = e + bp.calcError(resultData[i]);
             }
@@ -257,11 +364,13 @@ public class BackPropagation {
             System.out.println("Error = " + e);
             System.out.println(count + "回目");
 
-            if(e < 0.001 || count == 10000) {
+            if(e < 0.001) {
                 System.out.println("Error < 0.001");
                 System.out.println("学習回数:" + count);
                 break;
             }
         }
     }
+
+    
 }
