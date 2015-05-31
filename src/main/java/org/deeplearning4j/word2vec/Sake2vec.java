@@ -20,7 +20,7 @@ import org.springframework.core.io.ClassPathResource;
 import java.util.Collection;
 import java.util.List;
 
-public class Sake2Vec {
+class Sake2Vec {
     private String fileName;
     private String word1;
     private String word2;

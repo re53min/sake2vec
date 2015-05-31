@@ -119,11 +119,8 @@ public class BackPropagation2 {
     public double teach(double teachData) {
         double t;
         //入力した値が閉じていれば「1 - 出力層」、閉じていなければ「0 - 出力層」
-        if (teachData == 1) {
-            t = teachData - output[0];
-        } else {
-            t = 0.0 - output[0];
-        }
+        t = teachData - output[0];
+
         return t;
     }
 
@@ -182,7 +179,7 @@ public class BackPropagation2 {
         for(i = 0; i < lengthHid; i++){
             threshHid[i] = threshHid[i] - alpha * errorHid[i];
             for(j = 0; j < lengthIn; j++){
-                wIH[i][j] = + wIH[i][j] + alpha * errorHid[i] * input[j];
+                wIH[i][j] = wIH[i][j] + alpha * errorHid[i] * input[j];
                 //System.out.println("入力層→中間層の重み:" + wIH[i][j]);
             }
         }
@@ -199,9 +196,9 @@ public class BackPropagation2 {
         int i;
 
         for(i = 0; i < lengthOut; i++){
-            e = e + Math.pow(teach[i] - output[i], 2.0);
+            e = e + Math.pow(teach(teach[i]), 2.0);
         }
-        e *= 0.5;
+        e = e * 0.5;
         return e;
     }
 
@@ -342,8 +339,69 @@ public class BackPropagation2 {
                 {1.0},                  //9
         };
 
+        //応用問題
+        int advanceData[][] = {
+                //C
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //E
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  0,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //X
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  0,  1,  0,  1,  0,  0,
+                 0,  0,  0,  1,  0,  0,  0,
+                 0,  0,  1,  0,  1,  0,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //A
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  0,  0,  1,  0,  0,  0,
+                 0,  0,  1,  0,  1,  0,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  0,  0},
+
+                //Q
+                {0,  0,  0,  0,  0,  0,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  0,  0,  1,  0,
+                 0,  1,  0,  1,  0,  1,  0,
+                 0,  1,  0,  0,  1,  1,  0,
+                 0,  1,  1,  1,  1,  1,  0,
+                 0,  0,  0,  0,  0,  0,  1},
+        };
+
+        //応用問題入力文字列
+        String advanceResult[] = {"C", "E", "X", "A", "Q" };
+
         //BackPropagationのコンストラクタの生成
-        BackPropagation2 bp = new BackPropagation2(65,10,1);
+        BackPropagation2 bp = new BackPropagation2(63,10,1);
 
         //BackPropagationによる学習
         while(true){
@@ -372,8 +430,12 @@ public class BackPropagation2 {
                 System.out.println("学習回数:" + count);
                 break;
             }
+        }//学習し終わったパーセプトロンにアルファベットを入力して判定させる
+        System.out.println("アルファベットをパーセプトロンに入力します");
+        for(i = 0; i < advanceData.length; i++){
+            bp.input = advanceData[i];
+            bp.frontCal();
+            System.out.println("INPUT:" + advanceResult[i] + " -> " + bp.output[0] + "(" + advanceResult[i] + ")");
         }
     }
-
-
 }

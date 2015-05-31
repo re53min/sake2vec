@@ -178,5 +178,6 @@
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.21" level="project" />
     <orderEntry type="library" name="Maven: org.nd4j:nd4j-jblas:0.0.3.5.5.3-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.jblas:jblas:1.2.3" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
