@@ -1,5 +1,11 @@
 package org.deeplearning4j.nnpractice;
 
+import org.deeplearning4j.CreateGraph;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+
 /**
  * バックプロパゲーションの練習問題2
  * 数字が閉じているか閉じていないかの判別
@@ -212,6 +218,13 @@ public class BackPropagation2 {
 
         int i, count = 0;
 
+        //グラフ作成用
+        CreateGraph frame = new CreateGraph("中間層1層(4)における二乗誤差の推移", "学習回数(n)", "二乗誤差(e)");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setBounds(10, 10, 800, 500);
+        frame.setTitle("BackPropagation2");
+        ArrayList<Double> tmpData = new ArrayList<>();
+
         //入力データ
         int inputData[][] = {
                 //0
@@ -401,7 +414,7 @@ public class BackPropagation2 {
         String advanceResult[] = {"C", "E", "X", "A", "Q" };
 
         //BackPropagationのコンストラクタの生成
-        BackPropagation2 bp = new BackPropagation2(63,10,1);
+        BackPropagation2 bp = new BackPropagation2(63,4,1);
 
         //BackPropagationによる学習
         while(true){
@@ -422,6 +435,7 @@ public class BackPropagation2 {
             }
 
             count++;
+            tmpData.add(e);
             System.out.println("Error = " + e);
             System.out.println(count + "回目");
 
@@ -437,5 +451,8 @@ public class BackPropagation2 {
             bp.frontCal();
             System.out.println("INPUT:" + advanceResult[i] + " -> " + bp.output[0] + "(" + advanceResult[i] + ")");
         }
+        //グラフ表示
+        frame.getContentPane().add(frame.createGraphPanel(count, tmpData), BorderLayout.CENTER);
+        frame.setVisible(true);
     }
 }

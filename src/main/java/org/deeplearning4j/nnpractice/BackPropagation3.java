@@ -247,7 +247,7 @@ public class BackPropagation3 {
         int i, count = 0;
 
         //グラフ作成用
-        CreateGraph frame = new CreateGraph("二乗誤差の推移", "学習回数(n)", "二乗誤差(e)");
+        CreateGraph frame = new CreateGraph("中間層2層(4,4)における二乗誤差の推移", "学習回数(n)", "二乗誤差(e)");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(10, 10, 800, 500);
         frame.setTitle("BackPropagation3");
@@ -441,8 +441,8 @@ public class BackPropagation3 {
         //応用問題入力文字列
         String advanceResult[] = {"C", "E", "X", "A", "Q" };
 
-        //BackPropagationのコンストラクタの生成
-        BackPropagation3 bp = new BackPropagation3(63, 6, 4, 1);
+        //BackPropagationのインスタンス生成
+        BackPropagation3 bp = new BackPropagation3(63, 4, 4, 1);
 
         //BackPropagationによる学習
         while(true){
