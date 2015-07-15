@@ -251,7 +251,19 @@ public class BackPropagation3 {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(10, 10, 800, 500);
         frame.setTitle("BackPropagation3");
-        ArrayList<Double> tmpData = new ArrayList<>();
+        //error用
+        ArrayList<Double> tmpError = new ArrayList<>();
+        ArrayList<Double> tmpZero = new ArrayList<>();
+        ArrayList<Double> tmpOne = new ArrayList<>();
+        ArrayList<Double> tmpTwo = new ArrayList<>();
+        ArrayList<Double> tmpThree = new ArrayList<>();
+        ArrayList<Double> tmpFour = new ArrayList<>();
+        ArrayList<Double> tmpFive = new ArrayList<>();
+        ArrayList<Double> tmpSix = new ArrayList<>();
+        ArrayList<Double> tmpSeven = new ArrayList<>();
+        ArrayList<Double> tmpEight = new ArrayList<>();
+        ArrayList<Double> tmpNine = new ArrayList<>();
+
 
         //入力データ
         int inputData[][] = {
@@ -442,7 +454,7 @@ public class BackPropagation3 {
         String advanceResult[] = {"C", "E", "X", "A", "Q" };
 
         //BackPropagationのインスタンス生成
-        BackPropagation3 bp = new BackPropagation3(63, 4, 4, 1);
+        BackPropagation3 bp = new BackPropagation3(63, 30, 10, 1);
 
         //BackPropagationによる学習
         while(true){
@@ -458,12 +470,35 @@ public class BackPropagation3 {
                 bp.backCal();
 
                 System.out.println("INPUT:" + i + " -> " + bp.output[0] + "(" + teachData[i][0] + ")");
+                switch (i){
+                    case 0:
+                        tmpZero.add(bp.output[0]);
+                    case 1:
+                        tmpOne.add(bp.output[0]);
+                    case 2:
+                        tmpTwo.add(bp.output[0]);
+                    case 3:
+                        tmpThree.add(bp.output[0]);
+                    case 4:
+                        tmpFour.add(bp.output[0]);
+                    case 5:
+                        tmpFive.add(bp.output[0]);
+                    case 6:
+                        tmpSix.add(bp.output[0]);
+                    case 7:
+                        tmpSeven.add(bp.output[0]);
+                    case 8:
+                        tmpEight.add(bp.output[0]);
+                    case 9:
+                        tmpNine.add(bp.output[0]);
+                    default:
+                }
 
                 e = e + bp.calcError(teachData[i]);
             }
 
             count++;
-            tmpData.add(e);
+            tmpError.add(e);
             System.out.println("Error = " + e);
             System.out.println(count + "回目");
 
@@ -482,7 +517,8 @@ public class BackPropagation3 {
             System.out.println("INPUT:" + advanceResult[i] + " -> " + bp.output[0] + "(" + advanceResult[i] + ")");
         }
         //グラフ表示
-        frame.getContentPane().add(frame.createGraphPanel(count, tmpData), BorderLayout.CENTER);
+        frame.getContentPane().add(frame.createGraphPanel2(count, tmpError, tmpZero, tmpOne, tmpTwo,
+                tmpThree, tmpFour, tmpFive, tmpSix, tmpSeven, tmpEight, tmpNine), BorderLayout.CENTER);
         frame.setVisible(true);
     }
 }

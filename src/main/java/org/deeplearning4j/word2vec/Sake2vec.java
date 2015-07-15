@@ -27,6 +27,12 @@ class Sake2Vec {
     private Word2Vec vec;
 
 
+    /**
+     *
+     * @param fileName
+     * @param word1
+     * @param word2
+     */
     public Sake2Vec(String fileName, String word1, String word2) {
 
         this.fileName = fileName;
@@ -35,6 +41,11 @@ class Sake2Vec {
 
     }
 
+    /**
+     *
+     * @param word1
+     * @param word2
+     */
     public Sake2Vec(String word1, String word2){
 
         this.word1 = word1;
@@ -42,12 +53,20 @@ class Sake2Vec {
 
     }
 
+    /**
+     *
+     * @param fileName
+     */
     public Sake2Vec(String fileName){
 
         this.fileName = fileName;
 
     }
 
+    /**
+     *
+     * @throws Exception
+     */
     public void Sake2vecExample() throws Exception {
 
         ClassPathResource resource = new ClassPathResource(fileName);
@@ -91,7 +110,11 @@ class Sake2Vec {
 
     }
 
-
+    /**
+     *
+     * @return
+     * @throws Exception
+     */
     public double sake2vecSimilarity() throws Exception {
         double result = 0.0;
         if(vec != null){
@@ -107,19 +130,67 @@ class Sake2Vec {
         return result;
     }
 
-    public Collection<String> sake2vecWordsNearest(int number){
+    /**
+     *
+     * @param word1
+     * @param word2
+     * @return
+     * @throws Exception
+     */
+    public double sake2vecSimilarity(String word1,  String word2) throws Exception {
+        double result = 0.0;
+        if(vec != null){
+            try {
+                //similarity(string　A, string　B):AとBの近似値
+                double sim = vec.similarity(word1, word2);
+                //System.out.println("Similarity between people and money " + sim);
+                result = sim;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
+    /**
+     *
+     * @param number
+     * @return
+     */
+    public Collection<String> sake2vecWordsNearest(String word, int number){
         Collection<String> result = null;
 
         if(vec != null){
             //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
-            Collection<String> similar = vec.wordsNearest(word1, number);
-            System.out.println(similar);
+            Collection<String> similar = vec.wordsNearest(word, number);
+            //System.out.println(similar);
             result = similar;
+        }
+        return result;
+    }
 
-            for(int i = 0; i < similar.size(); i++){
-                List<String> tmpData = (List<String>) similar;
-                double sim2 = vec.similarity(word1, tmpData.get(i));
-                System.out.println(word1 + " and " + tmpData.get(i) + " is " + sim2);
+    /**
+     *
+     * @param number
+     * @return
+     * @throws Exception
+     */
+    public double[] sake2vecWordsNearestCustom(String word, int number) throws Exception {
+        Collection<String> tmpResult;
+        double[] result = new double[number+1];
+
+        if(vec != null){
+            //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
+            tmpResult = sake2vecWordsNearest(word, number);
+            List<String> tmpData = (List<String>) tmpResult;
+
+            for(int i = 0; i < number; i++){
+                try {
+                    result[i] = sake2vecSimilarity(word, tmpData.get(i));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                System.out.println(word + " and " + tmpData.get(i) + " is " + result[i]);
             }
         }
         return result;

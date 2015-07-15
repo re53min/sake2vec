@@ -16328,3 +16328,2787 @@ Words so far 1025576 with alpha at 0.012355745355322226
                 
 Words so far 1702450 with alpha at 0.01
 
+2015-06-05 16:36:16,230 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to1150a3e8-6e76-437a-a998-871095e4796f
+
+2015-06-05 16:36:16,420 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-05 16:36:17,963 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-05 16:36:17,964 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-05 16:36:25,848 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-05 16:36:25,879 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-05 16:36:25,946 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-05 16:36:25,965 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-05 16:36:26,000 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-05 16:36:26,178 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-05 16:36:26,198 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-05 16:36:26,304 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-05 16:36:26,317 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-05 16:36:36,327 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 1001 with queued 97162
+
+2015-06-05 16:36:46,354 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 55722 with queued 97162
+
+2015-06-05 16:36:56,354 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-05 16:36:56,354 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-05 16:37:04,254 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-05 16:37:04,254 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-05 16:37:04,256 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-05 16:37:04,256 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-05 16:37:04,409 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-05 16:37:04,422 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-05 16:37:20,594 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 360944 with alpha at 0.020549716012775974
+
+2015-06-05 16:37:39,277 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 1002968 with alpha at 0.012633288550353235
+
+2015-06-05 16:37:49,278 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1276425 with alpha at 0.01
+
+2015-06-05 16:38:03,068 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-10
+                
+Words so far 1687808 with alpha at 0.01
+
+2015-06-05 16:38:13,070 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 2024574 with alpha at 0.01
+
+2015-06-06 13:30:31,236 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path tod21e19dd-2f32-432c-9d90-1cbdb143cf27
+
+2015-06-06 13:30:31,276 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:30:32,212 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 13:30:32,213 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:30:42,240 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 13:30:42,303 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 13:30:42,452 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 13:30:42,471 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 13:30:42,508 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 13:30:42,529 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 13:30:42,563 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 13:30:42,581 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 13:30:42,685 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 13:30:52,701 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 68193 with queued 97162
+
+2015-06-06 13:31:02,702 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 13:31:02,702 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 13:31:11,794 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 13:31:11,795 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 13:31:11,799 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 13:31:11,799 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 13:31:12,683 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 13:31:12,701 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 13:31:29,894 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 323545 with alpha at 0.021010741137501163
+
+2015-06-06 13:31:49,837 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1009105 with alpha at 0.012557471349404103
+
+2015-06-06 13:32:09,464 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1688047 with alpha at 0.01
+
+2015-06-06 13:40:39,083 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to73b43b3b-c534-4574-a740-9b554bbf9d9d
+
+2015-06-06 13:40:39,094 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:40:39,274 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 13:40:39,275 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:40:44,659 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 13:40:44,735 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 13:40:44,852 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 13:40:45,000 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 13:40:45,049 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 13:40:45,100 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 13:40:45,168 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 13:40:45,212 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 13:40:45,342 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 13:40:55,404 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 69838 with queued 97162
+
+2015-06-06 13:41:05,404 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 13:41:05,404 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 13:41:13,192 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 13:41:13,193 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 13:41:13,196 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 13:41:13,196 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 13:41:13,276 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 13:41:13,295 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 13:41:30,384 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-9
+                
+Words so far 342061 with alpha at 0.020782679025405443
+
+2015-06-06 13:41:49,878 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1024643 with alpha at 0.012367023965399477
+
+2015-06-06 13:42:09,182 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1660699 with alpha at 0.01
+
+2015-06-06 13:42:19,183 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1961746 with alpha at 0.01
+
+2015-06-06 13:43:41,709 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path toa7bb78c6-8578-450d-9002-0fe2ed53015a
+
+2015-06-06 13:43:41,713 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:43:41,953 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 13:43:41,955 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:43:44,349 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 13:43:44,407 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 13:43:44,502 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 13:43:44,536 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 13:43:44,572 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 13:43:44,602 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 13:43:44,640 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 13:43:44,783 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 13:43:44,878 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 13:43:55,127 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 56213 with queued 97162
+
+2015-06-06 13:44:05,128 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 13:44:05,128 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 13:44:08,665 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 13:44:08,665 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 13:44:08,669 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 13:44:08,669 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 13:44:08,731 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 13:44:08,772 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 13:44:27,240 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 244143 with alpha at 0.021990490095143426
+
+2015-06-06 13:44:37,241 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 509734 with alpha at 0.018716594283505316
+
+2015-06-06 13:44:53,295 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 992675 with alpha at 0.012763461394332418
+
+2015-06-06 13:45:03,296 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1302946 with alpha at 0.01
+
+2015-06-06 13:46:42,766 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to01c0cafe-7869-41dd-8a32-d89725619f5d
+
+2015-06-06 13:46:42,770 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:46:42,853 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 13:46:42,855 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:46:45,137 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 13:46:45,258 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 13:46:45,367 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 13:46:45,412 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 13:46:45,450 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 13:46:45,472 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 13:46:45,624 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 13:46:45,670 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 13:46:45,804 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 13:46:55,832 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 57035 with queued 97162
+
+2015-06-06 13:47:05,832 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 13:47:05,832 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 13:47:08,064 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 13:47:08,064 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 13:47:08,067 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 13:47:08,067 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 13:47:08,126 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 13:47:08,161 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 13:47:25,933 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-9
+                
+Words so far 287442 with alpha at 0.021456173937229445
+
+2015-06-06 13:47:35,934 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 586366 with alpha at 0.017770788148139382
+
+2015-06-06 13:47:48,967 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 992915 with alpha at 0.01275851109053017
+
+2015-06-06 13:47:58,968 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1335601 with alpha at 0.01
+
+2015-06-06 13:48:09,484 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 1699576 with alpha at 0.01
+
+2015-06-06 13:52:01,988 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path tod888167d-fd94-4035-a9d3-410dfe7ca648
+
+2015-06-06 13:52:01,995 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:52:20,449 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to59854704-1cad-4864-984e-bf75fde61419
+
+2015-06-06 13:52:20,453 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:52:20,511 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 13:52:20,512 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:52:23,082 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 13:52:23,130 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 13:52:23,174 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 13:52:23,291 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 13:52:23,339 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 13:52:23,362 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 13:52:23,458 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 13:52:23,695 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 13:52:23,802 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 13:52:34,175 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 56515 with queued 97162
+
+2015-06-06 13:52:44,175 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 13:52:44,175 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 13:52:46,290 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 13:52:46,290 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 13:52:46,294 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 13:52:46,294 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 13:52:46,409 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 13:52:46,495 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 13:53:03,951 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-8
+                
+Words so far 264068 with alpha at 0.02174512831738857
+
+2015-06-06 13:53:13,954 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-7
+                
+Words so far 511876 with alpha at 0.01869067551763785
+
+2015-06-06 13:53:28,978 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 1015922 with alpha at 0.012477862711339617
+
+2015-06-06 13:53:38,979 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1350146 with alpha at 0.01
+
+2015-06-06 13:53:49,097 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 1675791 with alpha at 0.01
+
+2015-06-06 13:53:59,098 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 2013650 with alpha at 0.01
+
+2015-06-06 13:57:40,492 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to646bad4a-8bde-4b64-91be-d75956d21915
+
+2015-06-06 13:57:40,495 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:57:40,717 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 13:57:40,718 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 13:57:47,912 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 13:57:48,001 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 13:57:48,086 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 13:57:48,295 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 13:57:48,451 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 13:57:48,568 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 13:57:48,599 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 13:57:48,721 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 13:57:48,809 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 13:57:58,947 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 53182 with queued 97162
+
+2015-06-06 13:58:08,948 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 13:58:08,948 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 13:58:12,264 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 13:58:12,264 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 13:58:12,267 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 13:58:12,268 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 13:58:12,338 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 13:58:12,364 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 13:58:29,737 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 326435 with alpha at 0.020976372657345106
+
+2015-06-06 13:58:39,738 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 674068 with alpha at 0.01669130672946123
+
+2015-06-06 13:58:49,865 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1020345 with alpha at 0.01242302907847891
+
+2015-06-06 13:59:09,296 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 1700795 with alpha at 0.01
+
+2015-06-06 14:09:38,429 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path tob99f55d1-dbe7-422f-b8e7-7fc9a765eeaa
+
+2015-06-06 14:09:38,433 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:09:38,540 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 14:09:38,541 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:09:41,806 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 14:09:41,850 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 14:09:41,929 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 14:09:41,952 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 14:09:41,997 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 14:09:42,020 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 14:09:42,115 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 14:09:42,159 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 14:09:42,279 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 14:09:52,310 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 44300 with queued 97162
+
+2015-06-06 14:10:02,311 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 14:10:02,311 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 14:10:08,370 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 14:10:08,370 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 14:10:08,374 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 14:10:08,374 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 14:10:08,438 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 14:10:08,458 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 14:10:25,958 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 289162 with alpha at 0.0214358172985664
+
+2015-06-06 14:10:35,959 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-7
+                
+Words so far 543611 with alpha at 0.01829950366054661
+
+2015-06-06 14:10:50,029 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1016737 with alpha at 0.012467798578971321
+
+2015-06-06 14:11:00,030 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1351890 with alpha at 0.01
+
+2015-06-06 14:11:10,104 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1651150 with alpha at 0.01
+
+2015-06-06 14:11:20,105 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1966087 with alpha at 0.01
+
+2015-06-06 14:18:41,866 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to45b0ad79-c820-4aa0-a4c2-3f6b17efcb01
+
+2015-06-06 14:18:41,870 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:18:41,962 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 14:18:41,963 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:18:44,727 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 14:18:44,763 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 14:18:44,864 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 14:18:44,899 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 14:18:44,952 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 14:18:45,162 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 14:18:45,193 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 14:18:45,253 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 14:18:45,429 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 14:18:55,477 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 56872 with queued 97162
+
+2015-06-06 14:19:05,479 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 14:19:05,479 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 14:19:07,896 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 14:19:07,896 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 14:19:07,899 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 14:19:07,899 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 14:19:07,963 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 14:19:07,980 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 14:19:25,411 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 293718 with alpha at 0.021379424855666615
+
+2015-06-06 14:19:35,353 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 603434 with alpha at 0.01756164708446308
+
+2015-06-06 14:19:47,639 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1018820 with alpha at 0.012441306394059121
+
+2015-06-06 14:20:06,830 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1689672 with alpha at 0.01
+
+2015-06-06 14:22:23,275 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path tofc53806d-cef9-47f3-9c70-2506efcd0b31
+
+2015-06-06 14:22:23,279 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:22:23,351 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 14:22:23,352 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:22:27,917 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 14:22:27,960 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 14:22:28,050 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 14:22:28,086 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 14:22:28,128 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 14:22:28,228 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 14:22:28,336 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 14:22:28,359 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 14:22:28,386 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 14:22:38,508 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 63311 with queued 97162
+
+2015-06-06 14:22:48,509 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 14:22:48,509 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 14:22:52,893 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 14:22:52,893 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 14:22:52,902 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 14:22:52,902 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 14:22:52,945 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 14:22:52,987 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 14:23:10,194 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 335596 with alpha at 0.020863200983771132
+
+2015-06-06 14:23:29,928 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 1016502 with alpha at 0.012469861161650678
+
+2015-06-06 14:23:49,428 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1694758 with alpha at 0.01
+
+2015-06-06 14:26:43,603 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path toe4517366-4e18-4099-aa6d-b9c3ffe30a00
+
+2015-06-06 14:26:43,606 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:26:43,710 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 14:26:43,711 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:26:46,208 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 14:26:46,243 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 14:26:46,329 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 14:26:46,366 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 14:26:46,409 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 14:26:46,561 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 14:26:46,667 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 14:26:46,912 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 14:26:46,989 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 14:26:57,185 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 60926 with queued 97162
+
+2015-06-06 14:27:07,185 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 14:27:07,185 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 14:27:09,962 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 14:27:09,963 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 14:27:09,967 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 14:27:09,967 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 14:27:10,031 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 14:27:10,064 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 14:27:28,839 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 288799 with alpha at 0.021421427003053696
+
+2015-06-06 14:27:38,840 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 594760 with alpha at 0.01763019582594197
+
+2015-06-06 14:27:51,400 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1001371 with alpha at 0.01259178798913736
+
+2015-06-06 14:28:01,401 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 1339742 with alpha at 0.01
+
+2015-06-06 14:28:11,864 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1682164 with alpha at 0.01
+
+2015-06-06 14:28:21,865 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 2024225 with alpha at 0.01
+
+2015-06-06 14:29:31,739 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to2722605a-0fa3-4d49-9d02-b04120250070
+
+2015-06-06 14:29:31,742 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:29:32,017 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 14:29:32,018 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:29:37,682 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 14:29:37,724 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 14:29:37,825 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 14:29:37,966 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 14:29:38,040 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 14:29:38,221 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 14:29:38,251 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 14:29:38,477 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 14:29:38,567 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 14:29:48,615 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 47141 with queued 97162
+
+2015-06-06 14:29:58,615 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 14:29:58,615 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 14:30:01,519 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 14:30:01,520 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 14:30:01,522 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 14:30:01,523 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 14:30:01,593 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 14:30:01,637 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 14:30:19,918 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 331650 with alpha at 0.02091218689681184
+
+2015-06-06 14:30:53,921 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to3dd376ed-246e-4322-bfa8-53bef3c34d77
+
+2015-06-06 14:30:53,924 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:30:54,093 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 14:30:54,094 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:30:56,646 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 14:30:56,686 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 14:30:56,768 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 14:30:56,785 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 14:30:56,827 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 14:30:56,878 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 14:30:56,901 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 14:30:57,011 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 14:30:57,044 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 14:31:07,354 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 66839 with queued 97162
+
+2015-06-06 14:31:17,364 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 14:31:17,364 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 14:31:22,875 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 14:31:22,875 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 14:31:22,878 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 14:31:22,878 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 14:31:22,938 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 14:31:22,966 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 14:31:39,851 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 339145 with alpha at 0.020819589484168073
+
+2015-06-06 14:31:59,341 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1021701 with alpha at 0.012406184362334705
+
+2015-06-06 14:32:18,756 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 1689581 with alpha at 0.01
+
+2015-06-06 14:36:10,671 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to3d18bc61-3d50-42e9-a5ca-efd0f16e4327
+
+2015-06-06 14:36:10,675 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:36:10,752 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-06 14:36:10,753 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-06 14:36:12,982 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-06 14:36:13,018 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-06 14:36:13,142 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-06 14:36:13,198 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-06 14:36:13,282 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-06 14:36:13,308 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-06 14:36:13,464 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-06 14:36:13,536 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-06 14:36:13,626 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-06 14:36:23,651 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 58459 with queued 97162
+
+2015-06-06 14:36:33,653 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-06 14:36:33,653 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-06 14:36:35,802 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-06 14:36:35,802 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-06 14:36:35,807 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-06 14:36:35,807 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-06 14:36:35,877 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-06 14:36:35,897 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-06 14:36:53,148 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 302356 with alpha at 0.021272593907565616
+
+2015-06-06 14:37:03,149 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 570174 with alpha at 0.01797096786123747
+
+2015-06-06 14:37:16,746 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1015014 with alpha at 0.012487037242501574
+
+2015-06-06 14:37:36,578 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1689921 with alpha at 0.01
+
+2015-06-11 15:40:05,942 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to9ffc164d-a200-48c3-b194-152e89007766
+
+2015-06-11 15:40:05,966 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-11 15:40:06,658 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-11 15:40:06,659 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-11 15:40:15,511 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-11 15:40:15,543 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-11 15:40:15,626 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-11 15:40:15,662 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-11 15:40:15,728 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-11 15:40:15,850 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-11 15:40:15,892 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-11 15:40:15,925 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-11 15:40:16,184 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-11 15:40:26,234 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 60261 with queued 97162
+
+2015-06-11 15:40:36,234 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-11 15:40:36,234 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-11 15:40:40,381 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-11 15:40:40,381 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-11 15:40:40,385 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-11 15:40:40,385 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-11 15:40:40,651 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-11 15:40:40,771 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-11 15:40:57,774 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 297503 with alpha at 0.021332882189943697
+
+2015-06-11 15:41:07,775 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 599166 with alpha at 0.017614486879862733
+
+2015-06-11 15:41:20,725 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 979951 with alpha at 0.01292080831089943
+
+2015-06-11 15:41:30,726 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 1318161 with alpha at 0.01
+
+2015-06-11 15:41:41,589 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1669944 with alpha at 0.01
+
+2015-06-11 15:41:51,590 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-7
+                
+Words so far 2016901 with alpha at 0.01
+
+2015-06-19 17:05:09,330 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path toed932857-6097-4c69-98c3-e3467a3d6a45
+
+2015-06-19 17:05:09,375 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-19 17:05:09,743 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-19 17:05:09,744 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-19 17:05:14,418 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-19 17:05:14,524 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-06-19 17:05:14,598 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-06-19 17:05:14,629 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-06-19 17:05:14,680 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-06-19 17:05:14,805 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-06-19 17:05:14,818 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-06-19 17:05:14,836 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-06-19 17:05:14,889 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-06-19 17:05:24,949 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 72953 with queued 97162
+
+2015-06-19 17:05:34,950 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-06-19 17:05:34,950 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-19 17:05:36,747 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-19 17:05:36,748 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-19 17:05:36,750 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-19 17:05:36,750 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-19 17:05:36,855 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-19 17:05:36,876 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-19 17:05:54,699 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 345292 with alpha at 0.020742733788254513
+
+2015-06-19 17:06:13,700 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1009357 with alpha at 0.012554806066667852
+
+2015-06-19 17:06:23,701 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1239354 with alpha at 0.01
+
+2015-06-19 17:06:37,362 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 1698354 with alpha at 0.01
+
+2015-06-19 17:07:43,828 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to076835d7-5c27-49aa-9daf-832689555a95
+
+2015-06-19 17:07:43,831 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-19 17:07:43,899 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-06-19 17:07:43,900 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-06-19 17:07:45,991 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-06-19 17:07:56,134 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 19255 with queued 19255
+
+2015-06-19 17:07:56,134 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-06-19 17:07:58,324 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-06-19 17:07:58,324 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-06-19 17:07:58,377 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-06-19 17:07:58,377 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-06-19 17:07:59,021 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-06-19 17:07:59,041 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-06-19 17:08:13,302 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 5310 with alpha at 0.02492083696350271
+
+2015-06-19 17:08:23,399 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 10561 with alpha at 0.024842553516299836
+
+2015-06-19 17:08:33,460 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 16447 with alpha at 0.02475480330296216
+
+2015-06-19 17:08:43,507 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 21330 with alpha at 0.02468200610762953
+
+2015-06-19 17:08:53,544 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 27675 with alpha at 0.024587412987747175
+
+2015-06-19 17:09:03,604 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 32976 with alpha at 0.024508384125888016
+
+2015-06-19 17:09:13,651 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 39005 with alpha at 0.02441850202663337
+
+2015-06-19 17:09:23,697 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 44942 with alpha at 0.024329991490346287
+
+2015-06-19 17:09:33,729 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 50484 with alpha at 0.02424736972984384
+
+2015-06-19 17:09:43,904 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 55529 with alpha at 0.02417215739102485
+
+2015-06-19 17:09:53,912 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 61557 with alpha at 0.024082290200063333
+
+2015-06-19 17:10:03,920 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 66728 with alpha at 0.02400519941631051
+
+2015-06-19 17:10:13,996 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 72178 with alpha at 0.023923949218775623
+
+2015-06-19 17:10:24,120 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 77439 with alpha at 0.02384551668864149
+
+2015-06-19 17:10:34,209 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 82573 with alpha at 0.02376897751173432
+
+2015-06-19 17:10:44,237 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 89097 with alpha at 0.02367171580738247
+
+2015-06-19 17:10:54,242 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 94184 with alpha at 0.0235958773202522
+
+2015-06-19 17:11:04,267 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 99550 with alpha at 0.023515879419339872
+
+2015-06-19 17:11:14,355 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 105035 with alpha at 0.02343410743154559
+
+2015-06-19 17:11:24,358 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 110700 with alpha at 0.02334965195098869
+
+2015-06-19 17:11:34,391 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 116218 with alpha at 0.02326738798952126
+
+2015-06-19 17:11:44,409 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 121717 with alpha at 0.023185407285623218
+
+2015-06-19 17:11:54,467 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 127370 with alpha at 0.023101130704583823
+
+2015-06-19 17:12:04,558 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 132433 with alpha at 0.023025650016488573
+
+2015-06-19 17:12:14,647 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 137733 with alpha at 0.022946636062922538
+
+2015-06-19 17:12:24,649 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 143304 with alpha at 0.02286358196191945
+
+2015-06-19 17:12:34,656 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 148235 with alpha at 0.022790069168516787
+
+2015-06-19 17:12:44,695 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 153825 with alpha at 0.02270673180994431
+
+2015-06-19 17:12:54,699 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 159225 with alpha at 0.02262622702706571
+
+2015-06-19 17:13:04,758 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 164730 with alpha at 0.022544156873408914
+
+2015-06-19 17:13:14,799 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 170427 with alpha at 0.02245922432747199
+
+2015-06-19 17:13:24,840 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 176119 with alpha at 0.022374366323000695
+
+2015-06-19 17:13:34,934 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 182093 with alpha at 0.02228530417986796
+
+2015-06-19 17:13:44,937 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 187901 with alpha at 0.02219871681339409
+
+2015-06-19 17:13:54,951 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 194022 with alpha at 0.02210746315117188
+
+2015-06-19 17:14:05,112 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 199864 with alpha at 0.022020368902731735
+
+2015-06-19 17:14:15,164 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 205885 with alpha at 0.021930606069822098
+
+2015-06-19 17:14:25,220 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 212198 with alpha at 0.021836490015319763
+
+2015-06-19 17:14:35,226 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 218209 with alpha at 0.021746876265341383
+
+2015-06-19 17:14:45,420 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 223871 with alpha at 0.021662465509663855
+
+2015-06-19 17:14:55,462 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 229127 with alpha at 0.02158410752099535
+
+2015-06-19 17:15:05,475 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 233910 with alpha at 0.021512801154975288
+
+2015-06-19 17:15:15,565 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 240032 with alpha at 0.021421532584459953
+
+2015-06-19 17:15:25,618 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 245903 with alpha at 0.021334005995519163
+
+2015-06-19 17:15:35,643 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 251452 with alpha at 0.02125127987696484
+
+2015-06-19 17:15:45,652 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 256557 with alpha at 0.021175173040558312
+
+2015-06-19 17:15:55,693 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 262738 with alpha at 0.021083024880748563
+
+2015-06-19 17:16:05,744 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 268282 with alpha at 0.021000373303659867
+
+2015-06-19 17:16:15,812 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 274051 with alpha at 0.020914367360617896
+
+2015-06-19 17:16:25,828 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 279802 with alpha at 0.020828629766852187
+
+2015-06-19 17:16:35,837 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 284701 with alpha at 0.020755594038829546
+
+2015-06-19 17:16:45,925 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 290489 with alpha at 0.020669304838218185
+
+2015-06-19 17:16:55,947 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 295683 with alpha at 0.020591871163723473
+
+2015-06-19 17:17:05,961 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 301365 with alpha at 0.020507162242183435
+
+2015-06-19 17:17:16,103 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 306888 with alpha at 0.020424823739250378
+
+2015-06-19 17:17:26,140 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 312416 with alpha at 0.020342410694851692
+
+2015-06-19 17:17:36,185 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 317866 with alpha at 0.020261160497316806
+
+2015-06-19 17:17:46,319 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 323306 with alpha at 0.02018005938271318
+
+2015-06-19 17:17:56,323 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 328766 with alpha at 0.020098660102247038
+
+2015-06-19 17:18:06,328 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 334727 with alpha at 0.02000979176692494
+
+2015-06-19 17:18:16,397 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 340898 with alpha at 0.01991779269004645
+
+2015-06-19 17:18:26,405 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 346541 with alpha at 0.019833665191938313
+
+2015-06-19 17:18:36,605 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 352480 with alpha at 0.019745124839064977
+
+2015-06-19 17:18:46,626 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 358181 with alpha at 0.01966013265995555
+
+2015-06-19 17:18:56,773 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 364331 with alpha at 0.019568446657232702
+
+2015-06-19 17:19:06,781 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 369695 with alpha at 0.019488478572906625
+
+2015-06-19 17:19:16,863 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 375473 with alpha at 0.01940233845522652
+
+2015-06-19 17:19:26,892 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 380690 with alpha at 0.01932456188998992
+
+2015-06-19 17:19:36,895 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 386210 with alpha at 0.019242268111936234
+
+2015-06-19 17:19:46,912 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 391237 with alpha at 0.01916732412239351
+
+2015-06-19 17:19:56,947 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 397765 with alpha at 0.01907000278486916
+
+2015-06-19 17:20:07,013 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 403781 with alpha at 0.018980314493425146
+
+2015-06-19 17:20:17,059 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 409158 with alpha at 0.018900152601288436
+
+2015-06-19 17:20:27,062 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 414432 with alpha at 0.01882152626334367
+
+2015-06-19 17:20:37,149 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 420281 with alpha at 0.018734327656851645
+
+2015-06-19 17:20:47,273 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 425735 with alpha at 0.018653017826144258
+
+2015-06-19 17:20:57,292 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 431563 with alpha at 0.01856613229380787
+
+2015-06-19 17:21:07,431 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 436795 with alpha at 0.018488132104174382
+
+2015-06-19 17:21:17,454 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 442261 with alpha at 0.01840664337394949
+
+2015-06-19 17:21:27,565 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 447094 with alpha at 0.01833459159327314
+
+2015-06-19 17:21:37,591 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 452249 with alpha at 0.018257739342210328
+
+2015-06-19 17:21:47,723 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 457984 with alpha at 0.01817224028113463
+
+2015-06-19 17:21:57,815 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 463503 with alpha at 0.018089961411374072
+
+2015-06-19 17:22:07,873 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 469124 with alpha at 0.0180061618957147
+
+2015-06-19 17:22:17,907 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 475321 with alpha at 0.017913775203214945
+
+2015-06-19 17:22:28,036 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 480793 with alpha at 0.017832197023231296
+
+2015-06-19 17:22:38,085 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 486639 with alpha at 0.017745043141618646
+
+2015-06-19 17:22:48,110 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 491768 with alpha at 0.0176685785061771
+
+2015-06-19 17:22:58,191 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 497180 with alpha at 0.01758789482378099
+
+2015-06-19 17:23:08,230 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 502451 with alpha at 0.017509313210715607
+
+2015-06-19 17:23:18,281 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 508006 with alpha at 0.017426497642402526
+
+2015-06-19 17:23:28,421 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 512906 with alpha at 0.01735344700608676
+
+2015-07-15 20:48:17,379 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to5dc064b0-7431-4d3a-92b3-409f495aaeaf
+
+2015-07-15 20:48:17,397 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 20:48:19,119 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-07-15 20:48:19,120 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 20:48:30,360 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-07-15 20:48:30,394 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-07-15 20:48:30,431 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-07-15 20:48:30,507 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-07-15 20:48:30,525 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-07-15 20:48:30,558 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-07-15 20:48:30,596 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-07-15 20:48:30,617 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-07-15 20:48:30,724 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-07-15 20:48:40,748 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 72815 with queued 97162
+
+2015-07-15 20:48:50,750 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-07-15 20:48:50,750 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-07-15 20:49:01,895 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-07-15 20:49:01,895 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-07-15 20:49:01,898 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-07-15 20:49:01,898 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-07-15 20:49:02,003 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-07-15 20:49:02,030 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-07-15 20:49:18,335 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 261699 with alpha at 0.02177274355088849
+
+2015-07-15 20:49:28,336 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 575415 with alpha at 0.017904016562289123
+
+2015-07-15 20:49:41,247 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-15
+                
+Words so far 1022117 with alpha at 0.012395314158645974
+
+2015-07-15 20:50:00,573 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1685643 with alpha at 0.01
+
+2015-07-15 21:05:59,030 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path tod881e363-4a55-4064-bf4e-795edb0e3926
+
+2015-07-15 21:05:59,033 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:05:59,163 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-07-15 21:05:59,182 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:06:06,236 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-07-15 21:06:06,276 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-07-15 21:06:06,359 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-07-15 21:06:06,378 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-07-15 21:06:06,421 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-07-15 21:06:06,465 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-07-15 21:06:06,557 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-07-15 21:06:06,587 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-07-15 21:06:06,729 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-07-15 21:06:16,770 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 71351 with queued 97162
+
+2015-07-15 21:06:26,771 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-07-15 21:06:26,771 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-07-15 21:06:31,559 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-07-15 21:06:31,560 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-07-15 21:06:31,562 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-07-15 21:06:31,562 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-07-15 21:06:31,599 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-07-15 21:06:31,651 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-07-15 21:06:48,102 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 356594 with alpha at 0.02060339542932839
+
+2015-07-15 21:07:07,428 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-21
+                
+Words so far 1004881 with alpha at 0.012610379317708482
+
+2015-07-15 21:07:17,429 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 1339420 with alpha at 0.01
+
+2015-07-15 21:07:27,855 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1678701 with alpha at 0.01
+
+2015-07-15 21:07:37,856 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 2011439 with alpha at 0.01
+
+2015-07-15 21:10:58,747 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to8721b1fa-c4f4-489e-97ff-b64250b15c7f
+
+2015-07-15 21:10:58,747 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:11:09,713 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to530898f5-4f13-4dae-83d4-3003a3855f26
+
+2015-07-15 21:11:09,714 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:11:21,243 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path toac13cbd5-6d4c-4dc2-bb79-56077d912be0
+
+2015-07-15 21:11:21,243 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:11:48,939 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to632d7046-954c-404a-a14d-909d00c937ed
+
+2015-07-15 21:11:48,942 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:11:49,046 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-07-15 21:11:49,047 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:11:50,922 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-07-15 21:11:50,956 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-07-15 21:11:51,020 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-07-15 21:11:51,066 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-07-15 21:11:51,295 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-07-15 21:11:51,370 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-07-15 21:11:51,418 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-07-15 21:11:51,450 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-07-15 21:11:51,558 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-07-15 21:12:01,567 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 64193 with queued 97162
+
+2015-07-15 21:12:11,568 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-07-15 21:12:11,568 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-07-15 21:12:14,068 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-07-15 21:12:14,069 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-07-15 21:12:14,073 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-07-15 21:12:14,074 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-07-15 21:12:14,152 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-07-15 21:12:14,185 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-07-15 21:12:30,693 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-5
+                
+Words so far 341789 with alpha at 0.020786911442909704
+
+2015-07-15 21:12:40,695 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 640873 with alpha at 0.017100229372951938
+
+2015-07-15 21:12:52,476 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 942302 with alpha at 0.013384641479031506
+
+2015-07-15 21:13:02,477 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 1252091 with alpha at 0.01
+
+2015-07-15 21:13:15,654 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1669399 with alpha at 0.01
+
+2015-07-15 21:13:25,655 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1981714 with alpha at 0.01
+
+2015-07-15 21:17:52,213 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to7504e500-71be-45a3-a3d2-b007bcda6825
+
+2015-07-15 21:17:52,217 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:17:52,350 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-07-15 21:17:52,353 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:17:55,593 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-07-15 21:17:55,619 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-07-15 21:17:55,693 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-07-15 21:17:55,799 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-07-15 21:17:55,843 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-07-15 21:17:55,874 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-07-15 21:17:56,021 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-07-15 21:17:56,280 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-07-15 21:17:56,306 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-07-15 21:18:06,445 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 71406 with queued 97162
+
+2015-07-15 21:18:16,446 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-07-15 21:18:16,446 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-07-15 21:18:21,711 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-07-15 21:18:21,711 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-07-15 21:18:21,716 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-07-15 21:18:21,716 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-07-15 21:18:21,866 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-07-15 21:18:21,894 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-07-15 21:18:39,273 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-17
+                
+Words so far 307163 with alpha at 0.02121268951163456
+
+2015-07-15 21:18:49,274 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 632225 with alpha at 0.0172046848952939
+
+2015-07-15 21:19:00,655 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-7
+                
+Words so far 990080 with alpha at 0.012792343582004163
+
+2015-07-15 21:19:10,656 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 1311827 with alpha at 0.01
+
+2015-07-15 21:19:21,846 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1649405 with alpha at 0.01
+
+2015-07-15 21:19:31,847 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-3
+                
+Words so far 1940056 with alpha at 0.01
+
+2015-07-15 21:25:54,302 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path toadd04999-cbab-4dd8-b61d-3881b298704f
+
+2015-07-15 21:25:54,305 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:25:54,586 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-07-15 21:25:54,587 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:26:02,173 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-07-15 21:26:02,272 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-07-15 21:26:02,344 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-07-15 21:26:02,398 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-07-15 21:26:02,447 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-07-15 21:26:02,492 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-07-15 21:26:02,521 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-07-15 21:26:02,632 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-07-15 21:26:02,714 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-07-15 21:26:12,898 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 77291 with queued 97162
+
+2015-07-15 21:26:22,899 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-07-15 21:26:22,899 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-07-15 21:26:31,274 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-07-15 21:26:31,274 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-07-15 21:26:31,277 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-07-15 21:26:31,277 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-07-15 21:26:31,775 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-07-15 21:26:31,791 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-07-15 21:26:48,340 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-2
+                
+Words so far 350389 with alpha at 0.020679458534323736
+
+2015-07-15 21:27:07,404 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-16
+                
+Words so far 1017022 with alpha at 0.01245940733725943
+
+2015-07-15 21:27:27,257 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-18
+                
+Words so far 1677128 with alpha at 0.01
+
+2015-07-15 21:27:37,258 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-4
+                
+Words so far 1943675 with alpha at 0.01
+
+2015-07-15 21:49:21,054 - [WARN] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Changing index path to2201d3ee-c1d2-4813-a97c-9ddff8964360
+
+2015-07-15 21:49:21,057 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:49:21,136 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating new index writer
+
+2015-07-15 21:49:21,137 - [INFO] - from org.deeplearning4j.text.invertedindex.LuceneInvertedIndex in AWT-EventQueue-0
+                
+Creating directory word2vec-index
+
+2015-07-15 21:49:26,567 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 10000
+
+2015-07-15 21:49:26,603 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 20000
+
+2015-07-15 21:49:26,671 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 30000
+
+2015-07-15 21:49:26,802 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 40000
+
+2015-07-15 21:49:26,844 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 50000
+
+2015-07-15 21:49:26,887 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 60000
+
+2015-07-15 21:49:26,913 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 70000
+
+2015-07-15 21:49:27,017 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 80000
+
+2015-07-15 21:49:27,062 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Sent 90000
+
+2015-07-15 21:49:37,083 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 70749 with queued 97162
+
+2015-07-15 21:49:47,084 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+latch count 97162 with queued 97162
+
+2015-07-15 21:49:47,084 - [INFO] - from org.deeplearning4j.bagofwords.vectorizer.BaseTextVectorizer in AWT-EventQueue-0
+                
+Invoking finish on index
+
+2015-07-15 21:49:49,255 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Building binary tree
+
+2015-07-15 21:49:49,255 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Constructing priority queue
+
+2015-07-15 21:49:49,258 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Built tree
+
+2015-07-15 21:49:49,258 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Resetting weights
+
+2015-07-15 21:49:50,082 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Training word2vec multithreaded
+
+2015-07-15 21:49:50,096 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in AWT-EventQueue-0
+                
+Processing sentences...
+
+2015-07-15 21:50:06,416 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 336499 with alpha at 0.02085159745409375
+
+2015-07-15 21:50:26,133 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-22
+                
+Words so far 1005726 with alpha at 0.012601281730750738
+
+2015-07-15 21:50:36,134 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-6
+                
+Words so far 1335663 with alpha at 0.01
+
+2015-07-15 21:50:46,635 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-19
+                
+Words so far 1671235 with alpha at 0.01
+
+2015-07-15 21:50:56,636 - [INFO] - from org.deeplearning4j.models.word2vec.Word2Vec in default-akka.actor.default-dispatcher-20
+                
+Words so far 1992076 with alpha at 0.01
+

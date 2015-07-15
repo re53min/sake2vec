@@ -64,8 +64,8 @@ public class Word2VecExample {
         //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
         Collection<String> similar = vec.wordsNearest("money", 10);
         System.out.println("wordNearest:" + similar);
+        List<String> tmpData = (List<String>) similar;
         for(int i = 0; i < similar.size(); i++){
-            List<String> tmpData = (List<String>) similar;
             double sim2 = vec.similarity("money", tmpData.get(i));
             System.out.println("money and " + tmpData.get(i)+ " is " + sim2);
         }
