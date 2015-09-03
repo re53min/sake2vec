@@ -1,2 +1,6 @@
 target/
 *.jpeg
+word2vec-index/
+*.csv
+*.txt
+*.bin

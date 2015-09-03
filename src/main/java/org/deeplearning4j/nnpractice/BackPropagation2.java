@@ -444,7 +444,9 @@ public class BackPropagation2 {
                 System.out.println("学習回数:" + count);
                 break;
             }
-        }//学習し終わったパーセプトロンにアルファベットを入力して判定させる
+        }
+
+        // /学習し終わったパーセプトロンにアルファベットを入力して判定させる
         System.out.println("アルファベットをパーセプトロンに入力します");
         for(i = 0; i < advanceData.length; i++){
             bp.input = advanceData[i];

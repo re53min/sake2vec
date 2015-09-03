@@ -1,8 +1,9 @@
 package org.deeplearning4j.word2vec;
 
+import org.deeplearning4j.models.embeddings.inmemory.InMemoryLookupTable;
+import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
-import org.deeplearning4j.plot.BarnesHutTsne;
-import org.deeplearning4j.plot.Tsne;
+import org.deeplearning4j.models.word2vec.wordstore.inmemory.InMemoryLookupCache;
 import org.deeplearning4j.text.sentenceiterator.LineSentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentencePreProcessor;
@@ -11,8 +12,12 @@ import org.deeplearning4j.text.tokenization.tokenizer.preprocessor.EndingPreProc
 import org.deeplearning4j.text.tokenization.tokenizerfactory.DefaultTokenizerFactory;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.TokenizerFactory;
 import org.nd4j.linalg.api.ndarray.INDArray;
+import org.nd4j.linalg.factory.Nd4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -23,9 +28,13 @@ import java.util.List;
  */
 public class Word2VecExample {
 
+    private static Logger log = LoggerFactory.getLogger(Sake2Vec.class);
 
     public static void main(String[] args) throws Exception {
-        ClassPathResource resource = new ClassPathResource("raw_sentences.txt");
+
+        Nd4j.getRandom().setSeed(133);
+
+        ClassPathResource resource = new ClassPathResource("wakati_kankore.txt");
         SentenceIterator iter = new LineSentenceIterator(resource.getFile());
         iter.setPreProcessor(new SentencePreProcessor() {
             @Override
@@ -34,9 +43,8 @@ public class Word2VecExample {
             }
         });
 
-        //DocumentIterator iter = new FileDocumentIterator(resource.getFile());
-        TokenizerFactory t = new DefaultTokenizerFactory();
         final EndingPreProcessor preProcessor = new EndingPreProcessor();
+        TokenizerFactory t = new DefaultTokenizerFactory();
         t.setTokenPreProcessor(new TokenPreProcess() {
             @Override
             public String preProcess(String token) {
@@ -49,66 +57,69 @@ public class Word2VecExample {
             }
         });
 
+
+        int batchSize = 1000;
+        int iterations = 30;
         int layerSize = 300;
+        Word2Vec vec;
+        File file = new File("kankore.txt");
+        List<String> posi = new ArrayList();
+        List<String> nega = new ArrayList();
 
-        Word2Vec vec = new Word2Vec.Builder().sampling(1e-5)
-                .minWordFrequency(5).batchSize(1000).useAdaGrad(false).layerSize(layerSize)
-                .iterations(3).learningRate(0.025).minLearningRate(1e-2).negativeSample(10)
-                .iterate(iter).tokenizerFactory(t).build();
-        vec.fit();
 
-        //similarity(string　A, string　B):AとBの近似値
-        double sim = vec.similarity("people", "money");
-        System.out.println("Similarity between people and money " + sim);
+        if (file.exists()) {
+            System.out.println("モデルがありました。再利用します");
+            vec = WordVectorSerializer.loadGoogleModel(file, true);
 
-        //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
-        Collection<String> similar = vec.wordsNearest("money", 10);
-        System.out.println("wordNearest:" + similar);
-        List<String> tmpData = (List<String>) similar;
-        for(int i = 0; i < similar.size(); i++){
-            double sim2 = vec.similarity("money", tmpData.get(i));
-            System.out.println("money and " + tmpData.get(i)+ " is " + sim2);
+            //testing similarity
+            double sim = vec.similarity("大和", "武蔵");
+            log.info("Similarity between people and money: " + sim);
+
+            //testing wordsNearest
+            posi.add("加賀");
+            nega.add("おっぱい");
+            nega.add("甲板");
+            Collection<String> similar = vec.wordsNearest(posi, nega, 20);
+            log.info(String.valueOf(similar));
+
+        } else {
+            System.out.println("モデルがありません。学習を始めます");
+            vec = new Word2Vec.Builder()
+                    .batchSize(batchSize) //# words per minibatch.
+                    .sampling(1e-5) // negative sampling. drops words out
+                    .minWordFrequency(5) //
+                    .useAdaGrad(false) //
+                    .layerSize(layerSize) // word feature vector size
+                    .iterations(iterations) // # iterations to train
+                    .learningRate(0.025) //
+                    .minLearningRate(1e-2) // learning rate decays wrt # words. floor learning
+                    .negativeSample(10) // sample size 10 words
+                    .iterate(iter) //
+                    .tokenizerFactory(t)
+                    .build();
+            vec.fit();
+
+            InMemoryLookupTable table = (InMemoryLookupTable) vec.lookupTable();
+            table.getSyn0().diviRowVector(table.getSyn0().norm2(0));
+
+            //save word vector
+            System.out.println("モデルを保存します");
+            WordVectorSerializer.writeWordVectors(vec, "kankore.txt");
+
+            //testing similarity
+            double sim = vec.similarity("大和", "武蔵");
+            log.info("Similarity between people and money: " + sim);
+
+            //testing wordsNearest
+            posi.add("加賀");
+            nega.add("おっぱい");
+            nega.add("甲板");
+            Collection<String> similar = vec.wordsNearest(posi, nega, 20);
+            log.info(String.valueOf(similar));
+
+
+
         }
 
-        /*//test wordsNearestSum
-        Collection<String> testWordNearestSum = vec.wordsNearestSum("money", 20);
-        System.out.println("WordNearestSum:" + testWordNearestSum);*/
-
-        //test similarWordsInVocabTo
-        Collection<String> testSimilarWordInVocabTo = vec.similarWordsInVocabTo("money", 0.7);
-        System.out.println("SimilarWordInVocabTo:" + testSimilarWordInVocabTo);
-
-        //test getWordVector
-        double[] testGetWordVector = vec.getWordVector("money");
-        System.out.println("GetWordVector:" + testGetWordVector[0]);
-
-        //test getWordVectorMatrixNormalized
-        //INDArray testGetWordVectorMatrixNormalized = vec.getWordVectorMatrixNormalized("money");
-        //System.out.println("GetWordVectorMatrixNormalized:" + testGetWordVectorMatrixNormalized);
-
-        //test getWordVectorMatrix
-        //INDArray testGetWordVectorMatrix = vec.getWordVectorMatrix("money");
-        //System.out.println("GetWordVectorMatrix:" + testGetWordVectorMatrix);
-
-        //test wordNearest(String positive, String negative, int top)
-        List<String> list1 = (List<String>) similar;
-        //List<String> list1 = new ArrayList();
-        List<String> list2 = new ArrayList();
-        //list1.add("money");
-        list2.add("work");
-        Collection<String> testWordNearest = vec.wordsNearest(list1, list2, 10);
-        System.out.println("testWordNearest(positive, negative, top):" + testWordNearest);
-
-
-        Tsne tsne = new Tsne.Builder().setMaxIter(200)
-                .learningRate(200).useAdaGrad(false)
-                .normalize(false).usePca(false).build();
-
-
-        //vec.lookupTable().plotVocab(tsne);
-
-
-
     }
-
 }

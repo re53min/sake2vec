@@ -1,94 +1,97 @@
-/*package org.deeplearning4j.word2vec;
+package org.deeplearning4j.word2vec;
 
+import org.deeplearning4j.models.embeddings.inmemory.InMemoryLookupTable;
+import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
-import org.deeplearning4j.models.word2vec.wordstore.VocabCache;
-import org.deeplearning4j.models.word2vec.wordstore.inmemory.InMemoryLookupCache;
-import org.deeplearning4j.text.documentiterator.DocumentIterator;
-import org.deeplearning4j.text.documentiterator.FileDocumentIterator;
+import org.deeplearning4j.plot.BarnesHutTsne;
 import org.deeplearning4j.text.sentenceiterator.LineSentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentenceIterator;
+import org.deeplearning4j.text.sentenceiterator.SentencePreProcessor;
+import org.deeplearning4j.text.tokenization.tokenizer.TokenPreProcess;
+import org.deeplearning4j.text.tokenization.tokenizer.preprocessor.EndingPreProcessor;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.DefaultTokenizerFactory;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.TokenizerFactory;
-import org.deeplearning4j.util.SerializationUtils;
+import org.nd4j.linalg.factory.Nd4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 
 /**
- * Created by agibsonccc on 9/20/14.
+ * Created by agibsonccc on 10/9/14.
  */
-/*public class Word2VecExample2 {
-    private SentenceIterator iter;
-    private TokenizerFactory tokenizer;
-    private Word2Vec vec;
+public class Word2VecExample2 {
 
-    public final static String VEC_PATH = "vec2.ser";
-    public final static String CACHE_SER = "cache.ser";
-
-    public Word2VecExample2(String path) throws Exception {
-        this.iter = new LineSentenceIterator(new File(path));
-        tokenizer =  new DefaultTokenizerFactory();
-    }
+    private static Logger log = LoggerFactory.getLogger(Sake2Vec.class);
 
     public static void main(String[] args) throws Exception {
-        if(args.length >= 1)
-            new Word2VecExample2(args[0]).train();
-        else {
-            ClassPathResource resource = new ClassPathResource("raw_sentences.txt");
-            File f = resource.getFile();
-            new Word2VecExample2(f.getAbsolutePath()).train();
-        }
+        // Customizing params
+        int batchSize = 1000;
+        int iterations = 1;
+        int layerSize = 300;
+
+        Nd4j.getRandom().setSeed(133);
+
+        log.info("Load data....");
+        ClassPathResource resource = new ClassPathResource("raw_sentences.txt");
+        SentenceIterator iter = new LineSentenceIterator(resource.getFile());
+        iter.setPreProcessor(new SentencePreProcessor() {
+            @Override
+            public String preProcess(String sentence) {
+                return sentence.toLowerCase();
+            }
+        });
+
+        log.info("Tokenize data....");
+        final EndingPreProcessor preProcessor = new EndingPreProcessor();
+        TokenizerFactory tokenizer = new DefaultTokenizerFactory();
+        tokenizer.setTokenPreProcessor(new TokenPreProcess() {
+            @Override
+            public String preProcess(String token) {
+                token = token.toLowerCase();
+                String base = preProcessor.preProcess(token);
+                base = base.replaceAll("\\d", "d");
+                if (base.endsWith("ly") || base.endsWith("ing"))
+                    System.out.println();
+                return base;
+            }
+        });
+
+        log.info("Build model....");
+        Word2Vec vec = new Word2Vec.Builder()
+                .batchSize(batchSize)
+                .sampling(1e-5)
+                .minWordFrequency(5)
+                .useAdaGrad(false)
+                .layerSize(layerSize)
+                .iterations(iterations)
+                .learningRate(0.025)
+                .minLearningRate(1e-2)
+                .negativeSample(0)
+                .iterate(iter)
+                .tokenizerFactory(tokenizer)
+                .build();
+        vec.fit();
+
+        InMemoryLookupTable table = (InMemoryLookupTable) vec.lookupTable();
+        table.getSyn0().diviRowVector(table.getSyn0().norm2(0));
+
+        log.info("Evaluate model....");
+        double sim = vec.similarity("people", "money");
+        log.info("Similarity between people and money: " + sim);
+        //Collection<String> similar = vec.wordsNearest("day", 20);
+        //log.info("Similar words to 'day' : " + similar);
+        log.info("Save vectors....");
+        WordVectorSerializer.writeWordVectors(vec, "example-words.txt");
+
+        log.info("****************Example finished********************");
+
+
     }
 
-
-    public void train() throws Exception {
-        VocabCache cache;
-        if(vec == null && !new File(VEC_PATH).exists()) {
-            cache = new InMemoryLookupCache.Builder()
-                    .lr(2e-5).vectorLength(100).build();
-
-            vec = new Word2Vec.Builder().minWordFrequency(5).vocabCache(cache)
-                    .windowSize(5)
-                    .layerSize(100).iterate(iter).tokenizerFactory(tokenizer)
-                    .build();
-            vec.setCache(cache);
-            vec.fit();
-
-
-            SerializationUtils.saveObject(vec, new File(VEC_PATH));
-            SerializationUtils.saveObject(cache,new File(CACHE_SER));
-
-        }
-
-
-        else {
-            vec = SerializationUtils.readObject(new File(VEC_PATH));
-            cache = SerializationUtils.readObject(new File(CACHE_SER));
-            vec.setCache(cache);
-
-            for(String s : cache.words()) {
-                System.out.println(s);
-            }
-
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            String line;
-            System.out.println("Print similarity");
-            while((line = reader.readLine()) != null) {
-
-                String[] split = line.split(",");
-                if(cache.indexOf(split[0]) < 0) {
-                    System.err.println("Word " + split[0] + " not in vocab");
-                    continue;
-                }
-                if(cache.indexOf(split[01]) < 0) {
-                    System.err.println("Word " + split[1] + " not in vocab");
-                    continue;
-                }
-                System.out.println(vec.similarity(split[0],split[1]));
-            }
-        }
-    }
 }
-*/

@@ -3,11 +3,12 @@ package org.deeplearning4j.word2vec;
 /**
  * sake2vec本体
  * Created by b1012059 on 2015/04/25.
- * @auther b1012059 Wataru Matsudate
+ * @auther Wataru Matsudate
  */
+import org.deeplearning4j.models.embeddings.inmemory.InMemoryLookupTable;
+import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
 import org.deeplearning4j.plot.BarnesHutTsne;
-import org.deeplearning4j.plot.Tsne;
 import org.deeplearning4j.text.sentenceiterator.LineSentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentencePreProcessor;
@@ -15,8 +16,13 @@ import org.deeplearning4j.text.tokenization.tokenizer.TokenPreProcess;
 import org.deeplearning4j.text.tokenization.tokenizer.preprocessor.EndingPreProcessor;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.DefaultTokenizerFactory;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.TokenizerFactory;
+import org.deeplearning4j.util.SerializationUtils;
+import org.nd4j.linalg.factory.Nd4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 
+import java.io.File;
 import java.util.Collection;
 import java.util.List;
 
@@ -25,6 +31,8 @@ class Sake2Vec {
     private String word1;
     private String word2;
     private Word2Vec vec;
+    private File sakeCorpus, googleNV;
+    private static Logger log = LoggerFactory.getLogger(Sake2Vec.class);
 
 
     /**
@@ -65,69 +73,80 @@ class Sake2Vec {
 
     /**
      *
-     * @throws Exception
      */
-    public void Sake2vecExample() throws Exception {
-
-        ClassPathResource resource = new ClassPathResource(fileName);
-        SentenceIterator iter = new LineSentenceIterator(resource.getFile());
-        iter.setPreProcessor(new SentencePreProcessor() {
-            @Override
-            public String preProcess(String sentence) {
-                return sentence.toLowerCase();
-            }
-        });
-
-        //DocumentIterator iter = new FileDocumentIterator(resource.getFile());
-        TokenizerFactory t = new DefaultTokenizerFactory();
-        final EndingPreProcessor preProcessor = new EndingPreProcessor();
-        t.setTokenPreProcessor(new TokenPreProcess() {
-            @Override
-            public String preProcess(String token) {
-                token = token.toLowerCase();
-                String base = preProcessor.preProcess(token);
-                base = base.replaceAll("\\d", "d");
-                if (base.endsWith("ly") || base.endsWith("ing"))
-                    System.out.println();
-                return base;
-            }
-        });
-
-        int layerSize = 300;
-
-        vec = new Word2Vec.Builder().sampling(1e-5)
-                .minWordFrequency(5).batchSize(1000).useAdaGrad(false).layerSize(layerSize)
-                .iterations(3).learningRate(0.025).minLearningRate(1e-2).negativeSample(10)
-                .iterate(iter).tokenizerFactory(t).build();
-        vec.fit();
-
-        Tsne tsne = new Tsne.Builder().setMaxIter(200)
-                .learningRate(200).useAdaGrad(false)
-                .normalize(false).usePca(false).build();
-
-
-        //vec.lookupTable();//.plotVocab(tsne);
+    public Sake2Vec(){
 
     }
 
     /**
      *
-     * @return
      * @throws Exception
      */
-    public double sake2vecSimilarity() throws Exception {
-        double result = 0.0;
-        if(vec != null){
-            try {
-                //similarity(string　A, string　B):AとBの近似値
-                double sim = vec.similarity(word1, word2);
-                System.out.println("Similarity between people and money " + sim);
-                result = sim;
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+    public void Sake2vecExample() throws Exception {
+        sakeCorpus = new File("words.txt");
+        googleNV = new File("GoogleNews-vectors-negative300.bin.gz");
+
+        if(sakeCorpus.exists()){
+            log.info("Exist word vectors model. Reload model...");
+            vec = WordVectorSerializer.loadGoogleModel(sakeCorpus, false);
+
+            log.info("****************Reload model finished********************");
+
+        } else {
+            log.info("Not Exist word vectors model. Load data...");
+            ClassPathResource resource = new ClassPathResource(fileName);
+            SentenceIterator iter = new LineSentenceIterator(resource.getFile());
+            iter.setPreProcessor(new SentencePreProcessor() {
+                @Override
+                public String preProcess(String sentence) {
+                    return sentence.toLowerCase();
+                }
+            });
+
+            log.info("Tokenize data....");
+            final EndingPreProcessor preProcessor = new EndingPreProcessor();
+            TokenizerFactory t = new DefaultTokenizerFactory();
+            t.setTokenPreProcessor(new TokenPreProcess() {
+                @Override
+                public String preProcess(String token) {
+                    token = token.toLowerCase();
+                    String base = preProcessor.preProcess(token);
+                    base = base.replaceAll("\\d", "d");
+                    if (base.endsWith("ly") || base.endsWith("ing"))
+                        System.out.println();
+                    return base;
+                }
+            });
+
+            int batchSize = 1000;
+            int iterations = 30;
+            int layerSize = 300;
+
+            log.info("Build model...");
+            vec = new Word2Vec.Builder()
+                    .batchSize(batchSize) //# words per minibatch.
+                    .sampling(1e-5) // negative sampling. drops words out
+                    .minWordFrequency(5) //
+                    .useAdaGrad(false) //
+                    .layerSize(layerSize) // word feature vector size
+                    .iterations(iterations) // # iterations to train
+                    .learningRate(0.025) //
+                    .minLearningRate(1e-2) // learning rate decays wrt # words. floor learning
+                    .negativeSample(10) // sample size 10 words
+                    .iterate(iter) //
+                    .tokenizerFactory(t)
+                    .build();
+            vec.fit();
+
+            InMemoryLookupTable table = (InMemoryLookupTable) vec.lookupTable();
+            table.getSyn0().diviRowVector(table.getSyn0().norm2(0));
+
+            log.info("save model");
+            WordVectorSerializer.writeWordVectors(vec, "words.txt");
+
+            log.info("****************Build model finished********************");
+
         }
-        return result;
     }
 
     /**
@@ -139,13 +158,21 @@ class Sake2Vec {
      */
     public double sake2vecSimilarity(String word1,  String word2) throws Exception {
         double result = 0.0;
+        double sim;
         if(vec != null){
             try {
                 //similarity(string　A, string　B):AとBの近似値
-                double sim = vec.similarity(word1, word2);
-                //System.out.println("Similarity between people and money " + sim);
+                sim = vec.similarity(word1, word2);
                 result = sim;
             } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                Sake2vecExample();
+                sim = vec.similarity(word1, word2);
+                result = sim;
+            } catch (Exception e){
                 e.printStackTrace();
             }
         }
@@ -154,45 +181,66 @@ class Sake2Vec {
 
     /**
      *
+     * @param word
      * @param number
      * @return
+     * @throws Exception
      */
-    public Collection<String> sake2vecWordsNearest(String word, int number){
+    public Collection<String> sake2vecWordsNearest(String word, int number) throws Exception {
         Collection<String> result = null;
+        Collection<String> similar;
 
         if(vec != null){
-            //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
-            Collection<String> similar = vec.wordsNearest(word, number);
-            //System.out.println(similar);
-            result = similar;
+            try {
+                //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
+                similar = vec.wordsNearest(word, number);
+                //System.out.println(similar);
+                result = similar;
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                Sake2vecExample();
+                similar = vec.wordsNearest(word, number);
+                result = similar;
+            } catch (Exception e){
+                e.printStackTrace();
+            }
         }
         return result;
     }
 
     /**
      *
+     * @param posi
+     * @param nega
      * @param number
      * @return
-     * @throws Exception
      */
-    public double[] sake2vecWordsNearestCustom(String word, int number) throws Exception {
-        Collection<String> tmpResult;
-        double[] result = new double[number+1];
+    public Collection<String> sake2vecWordsNearest(List<String> posi, List<String> nega, int number) throws Exception {
+        Collection<String> result = null;
+        Collection<String> similar;
 
         if(vec != null){
-            //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
-            tmpResult = sake2vecWordsNearest(word, number);
-            List<String> tmpData = (List<String>) tmpResult;
-
-            for(int i = 0; i < number; i++){
-                try {
-                    result[i] = sake2vecSimilarity(word, tmpData.get(i));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                System.out.println(word + " and " + tmpData.get(i) + " is " + result[i]);
+            try {
+                //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
+                similar = vec.wordsNearest(posi, nega, number);
+                //System.out.println(similar);
+                result = similar;
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                Sake2vecExample();
+                similar = vec.wordsNearest(posi, nega, number);
+                result = similar;
+            } catch (Exception e){
+                e.printStackTrace();
             }
         }
         return result;
     }
+
 }
