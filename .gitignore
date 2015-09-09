@@ -6,4 +6,5 @@ word2vec-index/
 *.txt
 /logs
 /word2vec-index
+/.idea
 *.bin
