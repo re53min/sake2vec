@@ -1,6 +1,9 @@
 target/
 *.jpeg
+/target
 word2vec-index/
 *.csv
 *.txt
+/logs
+/word2vec-index
 *.bin

@@ -8,7 +8,6 @@ package org.deeplearning4j.word2vec;
 import org.deeplearning4j.models.embeddings.inmemory.InMemoryLookupTable;
 import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
-import org.deeplearning4j.plot.BarnesHutTsne;
 import org.deeplearning4j.text.sentenceiterator.LineSentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentencePreProcessor;
@@ -16,8 +15,6 @@ import org.deeplearning4j.text.tokenization.tokenizer.TokenPreProcess;
 import org.deeplearning4j.text.tokenization.tokenizer.preprocessor.EndingPreProcessor;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.DefaultTokenizerFactory;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.TokenizerFactory;
-import org.deeplearning4j.util.SerializationUtils;
-import org.nd4j.linalg.factory.Nd4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
@@ -26,7 +23,7 @@ import java.io.File;
 import java.util.Collection;
 import java.util.List;
 
-class Sake2Vec2 {
+class Sake2Vec2 extends Sake2Vec{
     private String fileName;
     private String word1;
     private String word2;
@@ -121,7 +118,7 @@ class Sake2Vec2 {
 
             int batchSize = 1000;
             int iterations = 30;
-            int layerSize = 300;
+            int layerSize = 50;
 
             log.info("Build model...");
             vec = new Word2Vec.Builder()
@@ -195,7 +192,6 @@ class Sake2Vec2 {
             try {
                 //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
                 similar = vec.wordsNearest(word, number);
-                //System.out.println(similar);
                 result = similar;
             } catch (Exception e){
                 e.printStackTrace();
