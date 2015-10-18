@@ -3,7 +3,6 @@ package org.deeplearning4j.word2vec;
 import org.deeplearning4j.models.embeddings.inmemory.InMemoryLookupTable;
 import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
-import org.deeplearning4j.models.word2vec.wordstore.inmemory.InMemoryLookupCache;
 import org.deeplearning4j.text.sentenceiterator.LineSentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentencePreProcessor;
@@ -11,7 +10,6 @@ import org.deeplearning4j.text.tokenization.tokenizer.TokenPreProcess;
 import org.deeplearning4j.text.tokenization.tokenizer.preprocessor.EndingPreProcessor;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.DefaultTokenizerFactory;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.TokenizerFactory;
-import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +32,7 @@ public class Word2VecExample {
 
         Nd4j.getRandom().setSeed(133);
 
-        ClassPathResource resource = new ClassPathResource("wakati_kankore.txt");
+        ClassPathResource resource = new ClassPathResource("日本酒コーパス.txt");
         SentenceIterator iter = new LineSentenceIterator(resource.getFile());
         iter.setPreProcessor(new SentencePreProcessor() {
             @Override
@@ -60,9 +58,9 @@ public class Word2VecExample {
 
         int batchSize = 1000;
         int iterations = 30;
-        int layerSize = 300;
+        int layerSize = 30;
         Word2Vec vec;
-        File file = new File("kankore.txt");
+        File file = new File("日本酒-30.txt");
         List<String> posi = new ArrayList();
         List<String> nega = new ArrayList();
 
@@ -72,13 +70,13 @@ public class Word2VecExample {
             vec = WordVectorSerializer.loadGoogleModel(file, true);
 
             //testing similarity
-            double sim = vec.similarity("大和", "武蔵");
-            log.info("Similarity between people and money: " + sim);
+            double sim = vec.similarity("獺祭", "八海山");
+            log.info("Similarity between A and B: " + sim);
 
             //testing wordsNearest
-            posi.add("加賀");
-            nega.add("おっぱい");
-            nega.add("甲板");
+            posi.add("獺祭");
+            nega.add("甘い");
+            nega.add("辛い");
             Collection<String> similar = vec.wordsNearest(posi, nega, 20);
             log.info(String.valueOf(similar));
 
@@ -104,16 +102,16 @@ public class Word2VecExample {
 
             //save word vector
             System.out.println("モデルを保存します");
-            WordVectorSerializer.writeWordVectors(vec, "kankore.txt");
+            WordVectorSerializer.writeWordVectors(vec, "日本酒-30.txt");
 
             //testing similarity
-            double sim = vec.similarity("大和", "武蔵");
-            log.info("Similarity between people and money: " + sim);
+            double sim = vec.similarity("獺祭", "八海山");
+            log.info("Similarity between A and B: " + sim);
 
             //testing wordsNearest
-            posi.add("加賀");
-            nega.add("おっぱい");
-            nega.add("甲板");
+            posi.add("獺祭");
+            nega.add("甘い");
+            nega.add("辛い");
             Collection<String> similar = vec.wordsNearest(posi, nega, 20);
             log.info(String.valueOf(similar));
 

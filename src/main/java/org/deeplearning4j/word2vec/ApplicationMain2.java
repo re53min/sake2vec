@@ -5,12 +5,10 @@ import org.slf4j.LoggerFactory;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.*;
 
 /**
  * sake2vec@GUI版_v2
@@ -66,8 +64,8 @@ class OpenFrame2 extends Frame implements ActionListener {
         //menu関連
         MenuBar mb = new MenuBar();
         Menu mn1 = new Menu("ファイル");
-        mil1 = new MenuItem("新規");
-        mil2 = new MenuItem("開く");
+        mil1 = new MenuItem("コーパス");
+        mil2 = new MenuItem("モデル");
         mil1.addActionListener(this);
         mil2.addActionListener(this);
         mn1.add(mil1);
@@ -114,15 +112,14 @@ class OpenFrame2 extends Frame implements ActionListener {
 
         //action処理
         if (obj == mil1) {
-            /*OpenFrame frm = new OpenFrame("Test sake2vec");
-            frm.setLocation(300, 200);
-            frm.setSize(600, 400);
-            frm.setBackground(Color.LIGHT_GRAY);
-            frm.setVisible(true);*/
-            System.out.println("デバッグ用");
-        } else if (obj == mil2) {
             try {
                 SendFileName();
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
+        } else if (obj == mil2) {
+            try {
+                SendModelName();
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
@@ -148,57 +145,40 @@ class OpenFrame2 extends Frame implements ActionListener {
         fileDialog.setVisible(true);
         String fileName = fileDialog.getFile();
 
-        //fileDialogによってfileが参照されたら
+        //fileDialogによってcorpus fileが参照されたら
         if (fileName != null) {
-            input = new ChangerInput(fileName);
+            input = new ChangerInput(fileName, false);
+            log.info("コーパスデータを参照");
         }
     }
 
+    /**
+     * fileDialogの生成及びsake2vecのインスタンス生成
+     * fileDialogで受け取ったmodelnameをsake2vecに渡す
+     * @throws Exception
+     */
+    private void SendModelName() throws Exception{
+        FileDialog fileDialog = new FileDialog(this);
+        fileDialog.setVisible(true);
+        String modelName = fileDialog.getFile();
+
+        //fileDialogによってmodel fileが参照されたら
+        if (modelName != null) {
+            input = new ChangerInput(modelName, true);
+            log.info("モデルデータを参照");
+        }
+    }
+
+    /**
+     *
+     * @param sentence
+     * @throws Exception
+     */
     private void ChangerInputRun(String sentence) throws Exception {
-        input = new ChangerInput();
+        if(input == null) input = new ChangerInput();
+
         txtar1.append(input.transRun(sentence));
         txtar1.append(input.output());
         txtar1.append("\n");
     }
-    /*private void Sake2vecRun(String posiWord, String negaWord, int number, int flag) throws Exception {
-        java.util.List<String> posi = new ArrayList();
-        java.util.List<String> nega = new ArrayList();
-
-        //sake2vec本体の実行
-        vec.Sake2vecExample();
-
-        //テキストフィールド内(positive, negative)の意味演算
-        String[] posiTmp = posiWord.split(",", -1);
-        for(int i = 0; i < posiTmp.length; i++){
-            posi.add(posiTmp[i]);
-            log.info("positive words:" + posi.get(i));
-        }
-        String[] negaTmp = negaWord.split(",", -1);
-        for(int i = 0; i < negaTmp.length; i++){
-            nega.add(negaTmp[i]);
-            log.info("negative words:" + nega.get(i));
-        }
-
-        if (flag == 1) {
-            //similarity of word1 and word2
-            double simResult = vec.sake2vecSimilarity(posi.get(0), nega.get(0));
-            log.info("Similarity between " + posi.get(0) + " and " + nega.get(0) + ": " + simResult);
-            txtar1.append("Similarity between " + posi.get(0) + " and " + nega.get(0) + ": " + simResult+ "\n");
-        } else if (flag == 2 ) {
-            //個数表示
-            java.util.List<String> nearResult = (java.util.List<String>) vec.sake2vecWordsNearest(posi.get(0), number);
-            log.info("Word Nearest " + posi.get(0) + " is: " + nearResult);
-            //結果の表示
-            txtar1.append("演算結果: " + nearResult + "\n");
-        } else if (flag == 3){
-            //意味演算実行
-            java.util.List<String> nearResult = (java.util.List<String>) vec.sake2vecWordsNearest(posi, nega, number);
-            log.info("Word Nearest: " + nearResult);
-            //結果の表示
-            txtar1.append("演算結果: " + nearResult + "\n");
-        }
-
-        txtar1.append("\n");
-    }*/
-
 }

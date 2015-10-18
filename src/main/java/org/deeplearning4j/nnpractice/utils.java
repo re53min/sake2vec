@@ -56,17 +56,19 @@ public class utils {
      * @param tmpOutput
      * @return
      */
-    public static void funSoftmax(double tmpOutput[], int nOut){
+    public static void funSoftmax(double tmpOut[], int nOut){
         double max = 0.0;
         double sum = 0.0;
 
-        for(int i = 0; i < nOut; i++) if(max < tmpOutput[i]) max = tmpOutput[i];
-
         for(int i = 0; i < nOut; i++){
-            tmpOutput[i] = Math.exp(tmpOutput[i] - max);
-            sum += tmpOutput[i];
+            if(max < tmpOut[i]) max = tmpOut[i];
         }
 
-        for(int i = 0; i < nOut; i++) tmpOutput[i] /= sum;
+        for(int i = 0; i < nOut; i++){
+            tmpOut[i] = Math.exp(tmpOut[i] - max);
+            sum += tmpOut[i];
+        }
+
+        for(int i = 0; i < nOut; i++) tmpOut[i] /= sum;
     }
 }

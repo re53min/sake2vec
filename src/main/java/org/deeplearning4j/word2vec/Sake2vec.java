@@ -8,7 +8,6 @@ package org.deeplearning4j.word2vec;
 import org.deeplearning4j.models.embeddings.inmemory.InMemoryLookupTable;
 import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
-import org.deeplearning4j.plot.BarnesHutTsne;
 import org.deeplearning4j.text.sentenceiterator.LineSentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentencePreProcessor;
@@ -16,8 +15,6 @@ import org.deeplearning4j.text.tokenization.tokenizer.TokenPreProcess;
 import org.deeplearning4j.text.tokenization.tokenizer.preprocessor.EndingPreProcessor;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.DefaultTokenizerFactory;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.TokenizerFactory;
-import org.deeplearning4j.util.SerializationUtils;
-import org.nd4j.linalg.factory.Nd4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
@@ -156,7 +153,7 @@ class Sake2Vec {
      * @return
      * @throws Exception
      */
-    public double sake2vecSimilarity(String word1,  String word2) throws Exception {
+    public double sakeSimilar(String word1,  String word2) throws Exception {
         double result = 0.0;
         double sim;
         if(vec != null){
@@ -186,7 +183,7 @@ class Sake2Vec {
      * @return
      * @throws Exception
      */
-    public Collection<String> sake2vecWordsNearest(String word, int number) throws Exception {
+    public Collection<String> sakeWordsNearest(String word, int number) throws Exception {
         Collection<String> result = null;
         Collection<String> similar;
 
@@ -194,7 +191,6 @@ class Sake2Vec {
             try {
                 //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
                 similar = vec.wordsNearest(word, number);
-                //System.out.println(similar);
                 result = similar;
             } catch (Exception e){
                 e.printStackTrace();
@@ -218,7 +214,7 @@ class Sake2Vec {
      * @param number
      * @return
      */
-    public Collection<String> sake2vecWordsNearest(List<String> posi, List<String> nega, int number) throws Exception {
+    public Collection<String> sakeWordsNearest(List<String> posi, List<String> nega, int number) throws Exception {
         Collection<String> result = null;
         Collection<String> similar;
 

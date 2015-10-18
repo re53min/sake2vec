@@ -1,13 +1,16 @@
 package org.deeplearning4j.word2vec;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -204,18 +207,18 @@ class OpenFrame extends Frame implements ActionListener {
 
         if (flag == 1) {
             //similarity of word1 and word2
-            double simResult = vec.sake2vecSimilarity(posi.get(0), nega.get(0));
+            double simResult = vec.sakeSimilar(posi.get(0), nega.get(0));
             log.info("Similarity between " + posi.get(0) + " and " + nega.get(0) + ": " + simResult);
             txtar1.append("Similarity between " + posi.get(0) + " and " + nega.get(0) + ": " + simResult+ "\n");
         } else if (flag == 2 ) {
             //個数表示
-            List<String> nearResult = (List<String>) vec.sake2vecWordsNearest(posi.get(0), number);
+            List<String> nearResult = (List<String>) vec.sakeWordsNearest(posi.get(0), number);
             log.info("Word Nearest " + posi.get(0) + " is: " + nearResult);
             //結果の表示
             txtar1.append("演算結果: " + nearResult + "\n");
         } else if (flag == 3){
             //意味演算実行
-            List<String> nearResult = (List<String>) vec.sake2vecWordsNearest(posi, nega, number);
+            List<String> nearResult = (List<String>) vec.sakeWordsNearest(posi, nega, number);
             log.info("Word Nearest: " + nearResult);
             //結果の表示
             txtar1.append("演算結果: " + nearResult + "\n");

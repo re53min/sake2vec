@@ -20,14 +20,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.File;
-import java.util.Collection;
-import java.util.List;
 
 class Sake2Vec2 extends Sake2Vec{
-    private String fileName;
+    private String fileName, modelName;
     private String word1;
     private String word2;
     private Word2Vec vec;
+    private boolean flag;
     private File sakeCorpus, googleNV;
     private static Logger log = LoggerFactory.getLogger(Sake2Vec.class);
 
@@ -62,9 +61,11 @@ class Sake2Vec2 extends Sake2Vec{
      *
      * @param fileName
      */
-    public Sake2Vec2(String fileName){
+    public Sake2Vec2(String fileName, boolean flag){
 
-        this.fileName = fileName;
+        this.flag = flag;
+        if(flag) this.modelName = fileName;
+        else this.fileName = fileName;
 
     }
 
@@ -79,11 +80,12 @@ class Sake2Vec2 extends Sake2Vec{
      *
      * @throws Exception
      */
-    public void Sake2vecExample() throws Exception {
-        sakeCorpus = new File("words.txt");
-        googleNV = new File("GoogleNews-vectors-negative300.bin.gz");
+    public void runSake2vec() throws Exception {
 
-        if(sakeCorpus.exists()){
+        //googleNV = new File("GoogleNews-vectors-negative300.bin.gz");
+
+        if(flag){
+            sakeCorpus = new File(modelName);
             log.info("Exist word vectors model. Reload model...");
             vec = WordVectorSerializer.loadGoogleModel(sakeCorpus, false);
 
@@ -91,8 +93,8 @@ class Sake2Vec2 extends Sake2Vec{
 
         } else {
             log.info("Not Exist word vectors model. Load data...");
-            //ClassPathResource resource = new ClassPathResource(fileName);
-            ClassPathResource resource = new ClassPathResource("日本酒コーパス.txt");
+            ClassPathResource resource = new ClassPathResource(fileName);
+            //ClassPathResource resource = new ClassPathResource("日本酒コーパス.txt");
             SentenceIterator iter = new LineSentenceIterator(resource.getFile());
             iter.setPreProcessor(new SentencePreProcessor() {
                 @Override
@@ -141,103 +143,13 @@ class Sake2Vec2 extends Sake2Vec{
 
             log.info("save model");
             WordVectorSerializer.writeWordVectors(vec, "words.txt");
+            modelName = "words.txt";
+            flag = true;
 
             log.info("****************Build model finished********************");
 
         }
     }
 
-    /**
-     *
-     * @param word1
-     * @param word2
-     * @return
-     * @throws Exception
-     */
-    public double sake2vecSimilarity(String word1,  String word2) throws Exception {
-        double result = 0.0;
-        double sim;
-        if(vec != null){
-            try {
-                //similarity(string　A, string　B):AとBの近似値
-                sim = vec.similarity(word1, word2);
-                result = sim;
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else {
-            try {
-                Sake2vecExample();
-                sim = vec.similarity(word1, word2);
-                result = sim;
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        }
-        return result;
-    }
-
-    /**
-     *
-     * @param word
-     * @param number
-     * @return
-     * @throws Exception
-     */
-    public Collection<String> sake2vecWordsNearest(String word, int number) throws Exception {
-        Collection<String> result = null;
-        Collection<String> similar;
-
-        if(vec != null){
-            try {
-                //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
-                similar = vec.wordsNearest(word, number);
-                result = similar;
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        } else {
-            try {
-                Sake2vecExample();
-                similar = vec.wordsNearest(word, number);
-                result = similar;
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        }
-        return result;
-    }
-
-    /**
-     *
-     * @param posi
-     * @param nega
-     * @param number
-     * @return
-     */
-    public Collection<String> sake2vecWordsNearest(List<String> posi, List<String> nega, int number) throws Exception {
-        Collection<String> result = null;
-        Collection<String> similar;
-
-        if(vec != null){
-            try {
-                //wordsNearest(string　A, int　N):Aに近い単語をN個抽出
-                similar = vec.wordsNearest(posi, nega, number);
-                //System.out.println(similar);
-                result = similar;
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        } else {
-            try {
-                Sake2vecExample();
-                similar = vec.wordsNearest(posi, nega, number);
-                result = similar;
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        }
-        return result;
-    }
 
 }

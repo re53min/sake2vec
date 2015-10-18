@@ -8,32 +8,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * GUIに入力されたsentenceをword2vecが
+ * GUIに入力されたqueryをword2vecが
  * 理解できる形式に変換する
  * Created by b1012059 on 2015/08/11.
  * @author Wataru Matsudate
  */
 public class ChangerInput {
     private static Logger log = LoggerFactory.getLogger(Sake2Vec.class);
-    private Sake2Vec2 vec;
-    private String fileName;
+    private String fileName, modelName;
     private double simResult;
+    private boolean flag;
 
-    public ChangerInput(String fileName){
-        this.fileName = fileName;
+    public ChangerInput(String fileName, boolean flag){
+
+        this.flag = flag;
+        if(flag) this.modelName = fileName;
+        else this.fileName = fileName;
     }
 
     public ChangerInput(){
     }
 
     public String transRun(String sentence) throws Exception {
-        if(fileName != null) {
-            vec = new Sake2Vec2(fileName);
-        } else {
-            vec = new Sake2Vec2();
-        }
-        vec.Sake2vecExample();
-        return changeInput(sentence);
+        Sake2Vec2 vec;
+        if(flag) vec = new Sake2Vec2(modelName, flag);
+        else vec = new Sake2Vec2(fileName, flag);
+
+        vec.runSake2vec();
+
+        return changeInput(vec, sentence);
     }
 
     public String output(){
@@ -42,10 +45,10 @@ public class ChangerInput {
         return result;
     }
 
-    private String changeInput(String sentence){
+    private String changeInput(Sake2Vec2 vec, String sentence){
         String result;
-        sake2vec2Run(sentence);
-        result = ("私:" + sentence + "\n");
+        sake2vec2Run(vec, sentence);
+        result = ("あなた: " + sentence + "\n");
         return result;
     }
 
@@ -54,23 +57,23 @@ public class ChangerInput {
         String result;
         BigDecimal bi = new BigDecimal(String.valueOf(simResult));
         double su = bi.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
-        result = ("sake2vec:" + su + "です。" + judgment(su) + "。\n");
+        result = ("sake2vec: 類似度は" + su + "です。" + judgment(su) + "。\n");
         return result;
     }
 
     private String judgment(double sim){
         String text;
-        if(sim > 8){
+        if(sim > 0.8){
             text = "かなり似ています";
-        } else if(sim <3){
+        } else if(sim < 0.3){
             text = "それほど似ていません";
         } else {
-            text = "似てはいます";
+            text = "まあまあ似ている…？";
         }
         return text;
     }
 
-    private void sake2vec2Run(String sentence){
+    private void sake2vec2Run(Sake2Vec2 vec, String sentence){
         List<String> posi = new ArrayList();
         List<String> nega = new ArrayList();
 
@@ -82,11 +85,12 @@ public class ChangerInput {
 
         //similarity of word1 and word2
         try {
-            simResult = vec.sake2vecSimilarity(posi.get(0), posi.get(1));
+            simResult = vec.sakeSimilar(posi.get(0), posi.get(1));
         } catch (Exception e) {
             e.printStackTrace();
         }
         log.info("Similarity between " + posi.get(0) + " and " + posi.get(1) + ": " + simResult);
+        log.info("*********************************************************");
     }
 
 }
