@@ -26,7 +26,7 @@ import java.util.List;
  */
 public class Word2VecExample {
 
-    private static Logger log = LoggerFactory.getLogger(Sake2Vec.class);
+    private static Logger log = LoggerFactory.getLogger(Word2VecExample.class);
 
     public static void main(String[] args) throws Exception {
 

@@ -1,4 +1,4 @@
-package org.deeplearning4j.word2vec;
+package org.deeplearning4j.sake2vec;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

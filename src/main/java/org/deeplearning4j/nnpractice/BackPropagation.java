@@ -2,6 +2,8 @@ package org.deeplearning4j.nnpractice;
 
 /**
  * バックプロパゲーションの練習問題
+ * 排他的論理和(XOR)の実現
+ * 中間層1の3層パーセプトロン
  * Created by b1012059 on 2015/05/01.
  * @author b1012059 Wataru Matsudate
  */

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 /**
  * バックプロパゲーションの練習問題2
  * 数字が閉じているか閉じていないかの判別
+ * 隠れ層1の3層パーセプトロン
  * Created by b1012059 on 2015/05/27.
  * @author b1012059 Wataru Matsudate
  */

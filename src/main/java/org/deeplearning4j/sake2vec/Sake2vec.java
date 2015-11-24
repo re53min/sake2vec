@@ -1,4 +1,4 @@
-package org.deeplearning4j.word2vec;
+package org.deeplearning4j.sake2vec;
 
 /**
  * sake2vec本体
@@ -158,6 +158,7 @@ class Sake2Vec {
         double sim;
         if(vec != null){
             try {
+                log.info("********************vec exists********************");
                 //similarity(string　A, string　B):AとBの近似値
                 sim = vec.similarity(word1, word2);
                 result = sim;
@@ -166,6 +167,7 @@ class Sake2Vec {
             }
         } else {
             try {
+                log.info("********************vec null********************");
                 Sake2vecExample();
                 sim = vec.similarity(word1, word2);
                 result = sim;

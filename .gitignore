@@ -7,4 +7,5 @@ word2vec-index/
 /logs
 /word2vec-index
 /.idea
+/src/assemble
 *.bin

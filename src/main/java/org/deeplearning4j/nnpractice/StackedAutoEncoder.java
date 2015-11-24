@@ -15,18 +15,18 @@ public class StackedAutoEncoder {
     private int hiddenSize[];
     private double output[];
     private int N;
-    private HiddenLayer hLayer[];
+    private HiddenLayerSimple hLayer[];
     private AutoEncoder aeLayer[];
     private Random rng;
 
-    public StackedAutoEncoder(int INPUT, int HIDDEN[], int OUTPUT, int layer_size , int N, Random rng){
+    public StackedAutoEncoder(int INPUT, int HIDDEN[], int OUTPUT, int layer_size , int N, Random rng, String activation){
         int inputLayer;
 
         this.N = N;
         this.layerSize = layer_size;
         this.hiddenSize = HIDDEN;
         this.aeLayer = new AutoEncoder[layer_size];
-        this.hLayer = new HiddenLayer[layer_size];
+        this.hLayer = new HiddenLayerSimple[layer_size];
         input = new int[INPUT];
         output = new double[OUTPUT];
 
@@ -43,7 +43,7 @@ public class StackedAutoEncoder {
             }
 
             //Hidden layer
-            this.hLayer[i] = new HiddenLayer(inputLayer, this.hiddenSize[i], null, null, this.N, rng);
+            this.hLayer[i] = new HiddenLayerSimple(inputLayer, this.hiddenSize[i], null, null, this.N, rng);
 
             //AutoEncoder layer
             this.aeLayer[i] = new AutoEncoder(this.N, inputLayer, this.hiddenSize[i], hLayer[i].wIO, hLayer[i].bias, rng);
@@ -128,7 +128,7 @@ public class StackedAutoEncoder {
         };
 
         //インスタンスの生成
-        StackedAutoEncoder sAE = new StackedAutoEncoder(nInput, nHidden, nOutput, nLayer, inputData.length, rng);
+        StackedAutoEncoder sAE = new StackedAutoEncoder(nInput, nHidden, nOutput, nLayer, inputData.length, rng, null);
 
         //pretraining
         sAE.pretrain(inputData);

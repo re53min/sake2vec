@@ -8,8 +8,8 @@
     <name>DeepLearning4j Examples</name>
     <description>Examples of training different data sets</description>
     <properties>
-        <nd4j.version>0.0.3.5.5.6-SNAPSHOT</nd4j.version>
-        <dl4j.version>0.0.3.3.5.alpha2-SNAPSHOT</dl4j.version>
+        <nd4j.version>0.4-rc0</nd4j.version>
+        <dl4j.version>0.4-rc0</dl4j.version>
     </properties>
 
     <distributionManagement>
@@ -25,28 +25,20 @@
         </repository>
     </distributionManagement>
 
+    <repositories>
+        <repository>
+            <id>Atilika Open Source repository</id>
+            <url>http://www.atilika.org/nexus/content/repositories/atilika</url>
+        </repository>
+    </repositories>
+
     <dependencyManagement>
         <dependencies>
 
             <dependency>
                 <groupId>org.nd4j</groupId>
-                <artifactId>nd4j-jcublas-6.5</artifactId>
+                <artifactId>nd4j-jcublas-7.0</artifactId>
                 <version>${nd4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nd4j</groupId>
-                <artifactId>nd4j-api</artifactId>
-                <version>${nd4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nd4j</groupId>
-                <artifactId>nd4j-jblas</artifactId>
-                <version>${nd4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.nd4j</groupId>
-                <artifactId>jcublas</artifactId>
-                <version>6.5</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -118,16 +110,16 @@
     </build>
 
     <dependencies>
+
         <dependency>
-            <groupId>org.nd4j</groupId>
-            <artifactId>nd4j-instrumentation</artifactId>
-            <version>${nd4j.version}</version>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-ui</artifactId>
+            <version>${dl4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.deeplearning4j</groupId>
             <artifactId>deeplearning4j-nlp</artifactId>
             <version>${dl4j.version}</version>
-
         </dependency>
         <dependency>
             <groupId>org.nd4j</groupId>
@@ -135,6 +127,23 @@
             <version>${nd4j.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.atilika.kuromoji</groupId>
+            <artifactId>kuromoji</artifactId>
+            <version>0.7.7</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atilika.kuromoji</groupId>
+            <artifactId>kuromoji-ipadic</artifactId>
+            <version>0.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.atilika.kuromoji</groupId>
+            <artifactId>kuromoji-unidic</artifactId>
+            <version>0.9.0</version>
+        </dependency>
 
     </dependencies>
 </project>

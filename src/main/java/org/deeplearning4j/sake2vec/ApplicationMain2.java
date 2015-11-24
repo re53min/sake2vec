@@ -1,4 +1,4 @@
-package org.deeplearning4j.word2vec;
+package org.deeplearning4j.sake2vec;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +33,7 @@ public class ApplicationMain2 {
 }
 
 class OpenFrame2 extends Frame implements ActionListener {
-    private static Logger log = LoggerFactory.getLogger(Sake2Vec.class);
+    private static Logger log = LoggerFactory.getLogger(ApplicationMain2.class);
 
     private MenuItem mil1, mil2;
     private TextArea txtar1;
@@ -42,7 +42,7 @@ class OpenFrame2 extends Frame implements ActionListener {
     private Button button1;
 
     private Sake2Vec2 vec;
-    private ChangerInput input;
+    private SakeChanger input;
 
     /**
      * OpenFrameメソッド
@@ -113,13 +113,13 @@ class OpenFrame2 extends Frame implements ActionListener {
         //action処理
         if (obj == mil1) {
             try {
-                SendFileName();
+                sendFileName();
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
         } else if (obj == mil2) {
             try {
-                SendModelName();
+                sendModelName();
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
@@ -127,7 +127,8 @@ class OpenFrame2 extends Frame implements ActionListener {
             try {
                 sentence = tf1.getText();
                 tf1.setText("");
-                ChangerInputRun(sentence);
+                log.info("入力:" + sentence);
+                sakeChangerRun(sentence);
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
@@ -140,14 +141,14 @@ class OpenFrame2 extends Frame implements ActionListener {
      * fileDialogで受け取ったfilenameをsake2vecに渡す
      * @throws Exception
      */
-    private void SendFileName() throws Exception {
+    private void sendFileName() throws Exception {
         FileDialog fileDialog = new FileDialog(this);
         fileDialog.setVisible(true);
         String fileName = fileDialog.getFile();
 
         //fileDialogによってcorpus fileが参照されたら
         if (fileName != null) {
-            input = new ChangerInput(fileName, false);
+            input = new SakeChanger(fileName, false);
             log.info("コーパスデータを参照");
         }
     }
@@ -157,14 +158,14 @@ class OpenFrame2 extends Frame implements ActionListener {
      * fileDialogで受け取ったmodelnameをsake2vecに渡す
      * @throws Exception
      */
-    private void SendModelName() throws Exception{
+    private void sendModelName() throws Exception{
         FileDialog fileDialog = new FileDialog(this);
         fileDialog.setVisible(true);
         String modelName = fileDialog.getFile();
 
         //fileDialogによってmodel fileが参照されたら
         if (modelName != null) {
-            input = new ChangerInput(modelName, true);
+            input = new SakeChanger(modelName, true);
             log.info("モデルデータを参照");
         }
     }
@@ -174,8 +175,8 @@ class OpenFrame2 extends Frame implements ActionListener {
      * @param sentence
      * @throws Exception
      */
-    private void ChangerInputRun(String sentence) throws Exception {
-        if(input == null) input = new ChangerInput();
+    private void sakeChangerRun(String sentence) throws Exception {
+        //if(input == null) input = new ChangerSentence();
 
         txtar1.append(input.transRun(sentence));
         txtar1.append(input.output());

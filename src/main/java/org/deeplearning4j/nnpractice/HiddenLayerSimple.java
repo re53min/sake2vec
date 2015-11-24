@@ -4,9 +4,9 @@ import java.util.Random;
 import static org.deeplearning4j.nnpractice.utils.*;
 
 /**
- * Created by b1012059 on 2015/09/09.
+ * Created by b1012059 on 2015/11/22.
  */
-public class HiddenLayer {
+public class HiddenLayerSimple extends HiddenLayer{
     public int nIn;
     public int nOut;
     public double wIO[][];
@@ -24,7 +24,8 @@ public class HiddenLayer {
      * @param N
      * @param rng
      */
-    public HiddenLayer(int nIn, int nOut, double wIO[][], double bias[], int N, Random rng, String activation){
+    public HiddenLayerSimple(int nIn, int nOut, double wIO[][], double bias[], int N, Random rng){
+        super(nIn, nOut, wIO, bias, N, rng, null);
         this.nIn = nIn;
         this.nOut = nOut;
         this.N = N;
@@ -36,7 +37,7 @@ public class HiddenLayer {
             this.wIO = new double[nOut][nIn];
             for(int i = 0; i < nOut; i++){
                 for(int j = 0; j < nIn; j++){
-                    this.wIO[i][j] = uniform(nIn, nOut, rng, activation);
+                    this.wIO[i][j] = uniform(nIn, nOut, rng, null);
                 }
             }
         } else{
@@ -52,21 +53,7 @@ public class HiddenLayer {
             this.bias = bias;
         }
 
-        /*
-        ここラムダ式で記述
-         */
 
-    }
-
-    /**
-     * Forward Calculation
-     * @param input
-     * @param output
-     */
-    public void forwardCal(double input[], double output[]){
-        for(int i = 0; i < nOut; i++) {
-            output[i] = this.output(input, wIO[i], bias[i]);
-        }
     }
 
     /**
@@ -76,22 +63,21 @@ public class HiddenLayer {
      * @param bias
      * @return
      */
-    public double output(double input[], double w[], double bias){
+    public double hOutput(double input[], double w[], double bias){
         double tmpData = 0.0;
         for(int i = 0; i < nIn; i++){
             tmpData += input[i] * w[i];
         }
         tmpData += bias;
-
         return funSigmoid(tmpData);
     }
 
-    /*
-    ここ逆方向計算
+    /**
+     *
+     * @param input
+     * @param sample
      */
-    public void backwardCal(double input[], double dOutput[], double prevInput[],
-                            double prevdOutput[], double prevWIO[][], double learningLate){
-
-
+    public void sampleHgive(double input[], double sample[]){
+        for(int i = 0; i < nOut; i++) sample[i] = binomial(1, hOutput(input, wIO[i], bias[i]), rng);
     }
 }
