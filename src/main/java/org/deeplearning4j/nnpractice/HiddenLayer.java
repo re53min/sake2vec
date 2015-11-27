@@ -1,22 +1,31 @@
 package org.deeplearning4j.nnpractice;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Random;
+import java.util.function.DoubleFunction;
+
 import static org.deeplearning4j.nnpractice.utils.*;
 
 /**
+ * Hidden Layer
  * Created by b1012059 on 2015/09/09.
  */
 public class HiddenLayer {
+    private static Logger log = LoggerFactory.getLogger(HiddenLayer.class);
     public int nIn;
     public int nOut;
     public double wIO[][];
     public double bias[];
     public int N;
     public Random rng;
+    public DoubleFunction<Double> activation;
+    public DoubleFunction<Double> dActivation;
 
 
     /**
-     *
+     * Hidden Layer Constructor
      * @param nIn
      * @param nOut
      * @param wIO
@@ -32,6 +41,7 @@ public class HiddenLayer {
         if(rng == null) this.rng = new Random(1234);
         else this.rng = rng;
 
+        //重み行列を連続一様分布で初期化
         if(wIO == null){
             this.wIO = new double[nOut][nIn];
             for(int i = 0; i < nOut; i++){
@@ -43,6 +53,7 @@ public class HiddenLayer {
             this.wIO = wIO;
         }
 
+        //バイアスを0で初期化
         if(bias == null){
             this.bias = new double[nOut];
             for(int i = 0; i < nOut; i++){
@@ -52,9 +63,22 @@ public class HiddenLayer {
             this.bias = bias;
         }
 
+
         /*
         ここラムダ式で記述
          */
+        if (activation == "sigmoid" || activation == null) {
+            this.activation = (double tmpOut) -> funSigmoid(tmpOut);
+            this.dActivation = (double tmpOut) -> dfunSigmoid(tmpOut);
+        } else if(activation == "tanh"){
+            this.activation = (double tmpOut) -> funTanh(tmpOut);
+            this.dActivation = (double tmpOut) -> dfunTanh(tmpOut);
+        } else if(activation == "ReLU"){
+            this.activation = (double tmpOut) -> funReLU(tmpOut);
+            this.dActivation = (double tmpOut) -> dfunReLU(tmpOut);
+        } else {
+            log.info("Activation function not supported!");
+        }
 
     }
 
@@ -83,15 +107,52 @@ public class HiddenLayer {
         }
         tmpData += bias;
 
-        return funSigmoid(tmpData);
+        return activation.apply(tmpData);
     }
 
-    /*
-    ここ逆方向計算
+    /**
+     * Backward Calculation
+     * @param input 今層への入力(前層の出力)
+     * @param dOutput 今層の誤差勾配
+     * @param prevInput 次層への入力(今層の出力)
+     * @param prevdOutput　次層の誤差勾配
+     * @param prevWIO 次層の重み行列(今層→次層への重み行列)
+     * @param learningLate 学習率
      */
     public void backwardCal(double input[], double dOutput[], double prevInput[],
                             double prevdOutput[], double prevWIO[][], double learningLate){
 
+        if(dOutput == null) dOutput = new double[nOut];
+
+        int prevIn = nOut;
+        int prevOut = prevdOutput.length;
+
+        //今層の誤差勾配
+        for(int i = 0; i < prevIn; i++) {
+            dOutput[i] = 0;
+            for (int j = 0; j < prevOut; j++) {
+                //次層の誤差勾配と次層への重み行列との積
+                dOutput[i] += prevdOutput[j] * prevWIO[j][i];
+            }
+            //活性化関数の微分との積により誤差勾配(修正量)を求める
+            dOutput[i] *= dActivation.apply(prevInput[i]);
+        }
+
+        //今層の誤差勾配を用いて重み行列及びバイアスの更新
+        for(int i = 0; i < nOut; i++){
+            for(int j = 0; j < nIn; j++){
+                //重み行列の更新
+                wIO[i][j] += learningLate * dOutput[i] * input[j] / N;
+            }
+            //バイアスの更新
+            bias[i] += learningLate * dOutput[i] / N;
+        }
+    }
+
+    /*
+    ここにDropOut
+     */
+    public void dropout(){
 
     }
 }

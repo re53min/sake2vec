@@ -4,7 +4,7 @@ import java.util.Random;
 import static org.deeplearning4j.nnpractice.utils.*;
 
 /**
- * AutoEncoderの実現。特に意味はない
+ * AutoEncoder
  * Created by b1012059 on 2015/09/01.
  * @author Wataru Matsudate
  */
@@ -27,7 +27,7 @@ public class AutoEncoder {
     private final double alpha = 0.1;
 
     /**
-     *
+     * AutoEncoder Constructor
      * @param INPUT
      * @param OUTPUT
      */

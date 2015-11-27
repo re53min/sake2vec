@@ -19,7 +19,7 @@ public class utils {
      * @param activation
      * @return
      */
-    public static double uniform(double nIn, double nOut, Random rng, String activation){
+    public static double uniform(int nIn, int nOut, Random rng, String activation){
         double min = -Math.sqrt(6. / (nIn + nOut));
         double max = Math.sqrt(6. / (nIn + nOut));
 
@@ -71,11 +71,21 @@ public class utils {
         return dsigmoid;
     }
 
+    /**
+     *
+     * @param tmpOut
+     * @return
+     */
     public static double funTanh(double tmpOut){
         double tanh = Math.tanh(tmpOut);
         return tanh;
     }
 
+    /**
+     *
+     * @param tmpOut
+     * @return
+     */
     public static double dfunTanh(double tmpOut){
         double dtanh = 1 - tmpOut * tmpOut;
         return dtanh;
@@ -86,7 +96,7 @@ public class utils {
      * @param tmpOut
      * @return
      */
-    public static double funRelu(double tmpOut){
+    public static double funReLU(double tmpOut){
 
         if(tmpOut > 0) return tmpOut;
         else return  0.;
@@ -97,7 +107,7 @@ public class utils {
      * @param tmpOut
      * @return
      */
-    public static double dfunRelu(double tmpOut){
+    public static double dfunReLU(double tmpOut){
 
         if(tmpOut > 0) return 1.;
         else return 0.;
@@ -109,7 +119,7 @@ public class utils {
      * @param nOut
      * @return
      */
-    public static double[] funSoftmax(double tmpOut[], int nOut){
+    public static void funSoftmax(double tmpOut[], int nOut){
         double max = 0.0;
         double sum = 0.0;
 
@@ -122,9 +132,9 @@ public class utils {
             sum += tmpOut[i];
         }
 
-        for(int i = 0; i < nOut; i++) tmpOut[i] /= sum;
-
-        return tmpOut;
+        for(int i = 0; i < nOut; i++){
+            tmpOut[i] /= sum;
+        }
     }
 
     /**
