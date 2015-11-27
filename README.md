@@ -1,12 +1,24 @@
 sake2vec
 ========
 
-#Overview
+## Overview
 
 For Graduate Study
 
-Reference:http://deeplearning4j.org
-
-Main program:sake2vec/src/main/java/org/deeplearning4j/word2vec
-
 Based on deeplearning4j-examples 0.0.3.3.3-SNAPSHOT
+
+### Package:
+
+  - sake2vec: Main Package. 
+
+  - nnpractice: Based on <https://github.com/yusugomori/DeepLearning>
+
+  - word2vec: Reference to [Deeplearning4j][]
+
+### Reference:
+
+  - http://deeplearning4j.org
+
+  - http://yusugomori.com/projects/deep-learning/
+
+[deeplearning4j]:http://deeplearning4j.org/word2vec.html "Word2Vec"
