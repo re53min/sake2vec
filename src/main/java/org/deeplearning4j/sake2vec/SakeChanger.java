@@ -4,7 +4,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Collection;
+
+import static org.deeplearning4j.sake2vec.SakeUtils.judgment;
+import static org.deeplearning4j.sake2vec.SakeUtils.sakeSimilarity;
 
 /**
  * GUIに入力されたqueryをword2vecが
@@ -12,11 +16,13 @@ import java.util.Collection;
  * Created by b1012059 on 2015/08/11.
  * @author Wataru Matsudate
  */
-public class SakeChanger extends SakeUtils {
+public class SakeChanger {
     private static Logger log = LoggerFactory.getLogger(SakeChanger.class);
-    private String fileName;//modelName;
+    private String fileName;
     private boolean flag;
     private Sake2Vec2 vec;
+    private Converter conv;
+    private ArrayList<String> ret;
 
 
     /**
@@ -28,8 +34,9 @@ public class SakeChanger extends SakeUtils {
 
         this.flag = flag;
         this.fileName = fileName;
-        /*if(flag) this.modelName = fileName;
-        else this.fileName = fileName;*/
+        this.vec = new Sake2Vec2(this.fileName, this.flag);
+        this.conv = new Converter();
+        this.ret = new ArrayList<>();
     }
 
     /**
@@ -53,13 +60,11 @@ public class SakeChanger extends SakeUtils {
      * @param sentence
      * @return
      */
-    public String transRun(String sentence){
-        Converter conv = new Converter();
-        conv.convWakati(sentence);
-        /*if(flag) vec = new Sake2Vec2(modelName, flag);
-        else vec = new Sake2Vec2(fileName, flag);*/
+    public String input(String sentence){
+        String str = "あなた:" + sentence;
+        ret = conv.convWakati(sentence);
 
-        return input(sentence);
+        return str;
     }
 
     /**
@@ -68,22 +73,9 @@ public class SakeChanger extends SakeUtils {
      * @throws Exception
      */
     public String output() throws Exception {
-        vec = new Sake2Vec2(fileName, flag);
-        //Converter conv = new Converter();
-        //conv.convSentence(sentence);
-        //runSake2Vec(conv.convSentence(sentence));
-        //runSake2Vec(conv.convSentence(sentence));
-        return calculate();
-    }
-
-    /**
-     *
-     * @param sentence
-     * @return
-     */
-    private String input(String sentence){
-        String result;
-        result = ("あなた: " + sentence + "\n");
+        runSake2Vec(ret);
+        String result = null;
+        calculate(0.0, result);
         return result;
     }
 
@@ -91,12 +83,10 @@ public class SakeChanger extends SakeUtils {
      *
      * @return
      */
-    private String calculate(){
-        String result;
-        BigDecimal bi = new BigDecimal(String.valueOf(simResult));
+    private void calculate(double similarity, String result){
+        BigDecimal bi = new BigDecimal(String.valueOf(similarity));
         double su = bi.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
         result = ("sake2vec: 類似度は" + su + "です。" + judgment(su) + "。\n");
-        return result;
     }
 
     /**

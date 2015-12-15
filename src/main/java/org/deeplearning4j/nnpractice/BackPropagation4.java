@@ -23,7 +23,7 @@ public class BackPropagation4 {
     private Random rng;
 
     public BackPropagation4(int INPUT, int HIDDEN[], int OUTPUT, int layer_size , int N, Random rng, String activation){
-        int inputLayer;
+        //int inputLayer;
 
         this.N = N;
         this.layerSize = layer_size;
@@ -37,15 +37,16 @@ public class BackPropagation4 {
         else this.rng = rng;
 
         //Hidden layerの初期化
-        for(int i = 0; i < layer_size; i++){
+        /*for(int i = 0; i < layer_size; i++){
             if(i == 0) inputLayer = nInput;
             else inputLayer = hiddenSize[i-1];
 
             //Hidden layer
             this.hLayer[i] = new HiddenLayer(inputLayer, hiddenSize[i], null, null, N, rng, activation);
-        }
+        }*/
+        this.hLayer[0] = new HiddenLayer(nInput, hiddenSize[0], null, null, N, rng, activation);
 
-        this.logisticLayer = new LogisticRegression(hiddenSize[layer_size-1], nOutput, N, rng);
+        this.logisticLayer = new LogisticRegression(hiddenSize[0], nOutput, N, rng);
     }
 
     /**
@@ -55,10 +56,10 @@ public class BackPropagation4 {
      * @param learningLate 学習率
      */
     public void train(double input[][], int teach[][], double learningLate){
-        double[] hiddenInput = new double[0];
-        double[] prevHiddenInput = new double[0];
-        double[] outLayerInput = new double[0];
-        double[] prevOutLayerInput = new double[0];
+        double[] hiddenInput;
+        //double[] prevHiddenInput = new double[0];
+        double[] outLayerInput;
+        //double[] prevOutLayerInput = new double[0];
         double[] dOutput;
 
 
@@ -82,6 +83,7 @@ public class BackPropagation4 {
             hiddenInput = new double[nInput];
             outLayerInput = new double[hiddenSize[0]];
 
+            for(int j = 0; j < nInput; j++) hiddenInput[j] = input[n][j];
             hLayer[0].forwardCal(hiddenInput, outLayerInput);
             dOutput = logisticLayer.train(outLayerInput, teach[n], learningLate);
 
@@ -99,11 +101,11 @@ public class BackPropagation4 {
      * @param output
      */
     public void reconstruct(double input[], double output[]){
-        double prevHiddenInput[] = new double[0];
-        double outLayerInput[] = new double[0];
+        //double prevHiddenInput[] = new double[0];
+        double outLayerInput[] = new double[hiddenSize[0]];
 
 
-        for(int i = 0; i < hiddenSize.length; i++){
+        /*for(int i = 0; i < hiddenSize.length; i++){
             if(i == 0) {
                 prevHiddenInput = new double[hiddenSize[i]];
                 hLayer[i].forwardCal(input, prevHiddenInput);
@@ -112,8 +114,8 @@ public class BackPropagation4 {
                 outLayerInput = new double[hiddenSize[i]];
                 hLayer[i].forwardCal(prevHiddenInput, outLayerInput);
             }
-        }
-
+        }*/
+        hLayer[0].forwardCal(input, outLayerInput);
         logisticLayer.reconstruct(outLayerInput, output);
     }
 
@@ -122,7 +124,7 @@ public class BackPropagation4 {
      */
     private static void testBackPropagation() {
 
-        /*double inputData[][] = {
+        double inputData[][] = {
                 //0
                 {0, 0, 0, 0, 0, 0, 0,
                         0, 1, 1, 1, 1, 1, 0,
@@ -236,16 +238,16 @@ public class BackPropagation4 {
 
         //教師データ
         int teachData[][] = {
-                {1, 0, 0, 0, 0, 0, 0, 0, 0, 0},                  //0
-                {0, 1, 0, 0, 0, 0, 0, 0, 0, 0},                  //1
-                {0, 0, 1, 0, 0, 0, 0, 0, 0, 0},                  //2
-                {0, 0, 0, 1, 0, 0, 0, 0, 0, 0},                  //3
-                {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},                  //4
-                {0, 0, 0, 0, 0, 1, 0, 0, 0, 0},                  //5
-                {0, 0, 0, 0, 0, 0, 1, 0, 0, 0},                  //6
-                {0, 0, 0, 0, 0, 0, 0, 1, 0, 0},                  //7
-                {0, 0, 0, 0, 0, 0, 0, 0, 1, 0},                  //8
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 1},                  //9
+                {1, 0},                  //0
+                {0, 1},                  //1
+                {0, 1},                  //2
+                {0, 1},                  //3
+                {1, 0},                  //4
+                {0, 1},                  //5
+                {1, 0},                  //6
+                {0, 1},                  //7
+                {1, 0},                  //8
+                {1, 0}                   //9
         };
 
         //応用問題
@@ -303,50 +305,17 @@ public class BackPropagation4 {
                         0, 1, 0, 1, 0, 1, 0,
                         0, 1, 0, 0, 1, 1, 0,
                         0, 1, 1, 1, 1, 1, 0,
-                        0, 0, 0, 0, 0, 0, 1},
+                        0, 0, 0, 0, 0, 0, 1}
+        };
 
-                //0
-                {0, 0, 0, 0, 0, 0, 0,
-                        0, 1, 1, 1, 1, 1, 0,
-                        0, 1, 0, 0, 0, 1, 0,
-                        0, 1, 0, 0, 0, 1, 0,
-                        0, 1, 0, 0, 0, 1, 0,
-                        0, 1, 0, 0, 0, 1, 0,
-                        0, 1, 0, 0, 0, 1, 0,
-                        0, 1, 1, 1, 1, 1, 0,
-                        0, 0, 0, 0, 0, 0, 0},
-
-                //5
-                {0, 0, 0, 0, 0, 0, 0,
-                        0, 1, 1, 1, 1, 1, 0,
-                        0, 1, 0, 0, 0, 0, 0,
-                        0, 1, 0, 0, 0, 0, 0,
-                        0, 1, 1, 1, 1, 1, 0,
-                        0, 0, 0, 0, 0, 1, 0,
-                        0, 0, 0, 0, 0, 1, 0,
-                        0, 1, 1, 1, 1, 1, 0,
-                        0, 0, 0, 0, 0, 0, 0},
-
-                //9
-                {0, 0, 0, 0, 0, 0, 0,
-                        0, 1, 1, 1, 1, 1, 0,
-                        0, 1, 0, 0, 0, 1, 0,
-                        0, 1, 0, 0, 0, 1, 0,
-                        0, 1, 1, 1, 1, 1, 0,
-                        0, 0, 0, 0, 0, 1, 0,
-                        0, 0, 0, 0, 0, 1, 0,
-                        0, 0, 0, 0, 0, 1, 0,
-                        0, 0, 0, 0, 0, 0, 0}
-        };*/
-
-        double[][] inputData = {
+        /*double[][] inputData = {
                 {0., 0.},
                 {0., 1.},
                 {1., 0.},
                 {1., 1.},
         };
 
-        int[][] teachData = {
+        /*int[][] teachData = {
                 {0, 1},
                 {1, 0},
                 {1, 0},
@@ -359,22 +328,23 @@ public class BackPropagation4 {
                 {0., 1.},
                 {1., 0.},
                 {1., 1.},
-        };
+        };*/
 
-        //int nInput = 63;
-        //int nHidden[] = {30, 15};
-        //int nOutput = 10;
-        int nInput = 2;
-        int nHidden[] = {2};
+        int nInput = 63;
+        int nHidden[] = {10};
         int nOutput = 2;
+        //int nInput = 2;
+        //int nHidden[] = {2};
+        //int nOutput = 2;
         int nLayer = nHidden.length;
-        int epochs = 2000;
+        int epochs = 200;
         int nTest = testData.length;
+        int N = inputData.length;
         double learningLate = 0.1;
         Random rng = new Random(123);
 
         //インスタンス生成
-        BackPropagation4 bp = new BackPropagation4(nInput, nHidden, nOutput, nLayer, inputData.length, rng, "sigmoid");
+        BackPropagation4 bp = new BackPropagation4(nInput, nHidden, nOutput, nLayer, N, rng, "ReLU");
 
         //Training
         for (int epoch = 0; epoch < epochs; epoch++) {

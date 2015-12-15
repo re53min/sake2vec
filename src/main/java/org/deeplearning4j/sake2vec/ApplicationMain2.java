@@ -178,7 +178,7 @@ class OpenFrame2 extends Frame implements ActionListener {
     private void sakeChangerRun(String sentence) throws Exception {
         //if(input == null) input = new ChangerSentence();
 
-        txtar1.append(input.transRun(sentence));
+        txtar1.append(input.input(sentence));
         txtar1.append(input.output());
         txtar1.append("\n");
     }

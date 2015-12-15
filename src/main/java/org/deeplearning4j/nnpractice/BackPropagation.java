@@ -146,7 +146,8 @@ public class BackPropagation {
 
         //出力層の誤差計算
         for(i = 0; i < lengthOut; i++){
-            errorOut[i] = teach() * output[i] * (1.0 - output[i]);
+            errorOut[i] = teach();
+            //errorOut[i] = teach() * output[i] * (1.0 - output[i]);
             //System.out.println("出力層の誤差:" + errorOut[i]);
         }
         //中間層の誤差計算
@@ -156,7 +157,7 @@ public class BackPropagation {
                 tmpData = tmpData + errorOut[j] * wHO[j][i];
                 //System.out.println("デバッグポイント10:" + tmpData);
             }
-            errorHid[i] = hidden[i] * tmpData * (1 - hidden[i]);
+            errorHid[i] = tmpData * hidden[i] * (1 - hidden[i]);
             //System.out.println("中間層の誤差:" + errorHid[i]);
         }
     }
@@ -185,7 +186,7 @@ public class BackPropagation {
         for(i = 0; i < lengthHid; i++){
             threshHid[i] = threshHid[i] - alpha * errorHid[i];
             for(j = 0; j < lengthIn; j++){
-                wIH[i][j] = + wIH[i][j] + alpha * errorHid[i] * input[j];
+                wIH[i][j] = wIH[i][j] + alpha * errorHid[i] * input[j];
                 //System.out.println("入力層→中間層の重み:" + wIH[i][j]);
             }
         }

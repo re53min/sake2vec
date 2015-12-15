@@ -148,8 +148,8 @@ public class LogisticRegression {
         double testData[][]= {
                 //{0., 1., 0., 0., 0., 0.},
                 //{0., 0., 0., 0., 1., 0.}
-                {1., 0., 1., 0., 0., 0.},
-                {0., 0., 1., 1., 1., 0.}
+                {0., 0., 1., 0., 0., 0.},
+                {0., 0., 0., 0., 1., 0.}
         };
 
         double testOutput[][] = new double[nTest][nOutput];

@@ -8,11 +8,10 @@ import java.util.*;
 /**
  * Created by b1012059 on 2015/10/21.
  */
-public class SakeUtils {
+public class SakeUtils extends Sake2Vec2{
     private static Logger log = LoggerFactory.getLogger(SakeUtils.class);
-    public double simResult;
 
-    public String judgment(double sim){
+    public static String judgment(double sim){
         String text;
         if(sim > 0.8){
             text = "かなり似ています";
@@ -29,7 +28,8 @@ public class SakeUtils {
      * @param vec
      * @param sentence
      */
-    public void sakeSimilarity(Sake2Vec2 vec, Collection<String> sentence){
+    public static double sakeSimilarity(Sake2Vec2 vec, Collection<String> sentence){
+        double simResult = 0.0;
         List<String> posi = new ArrayList();
         List<String> nega = new ArrayList();
 
@@ -52,9 +52,11 @@ public class SakeUtils {
         }
         log.info("Similarity between " + posi.get(0) + " and " + posi.get(1) + ": " + simResult);
         log.info("*********************************************************");
+
+        return simResult;
     }
 
-    public HashMap<String, Double> sakeNearest(Sake2Vec2 vec, String word, int number) throws Exception {
+    public static HashMap<String, Double> sakeNearest(Sake2Vec2 vec, String word, int number) throws Exception {
         String[] sake = {"獺祭", "久保田", "八海山", "黒龍", "飛露喜", "田酒", "出羽桜", "〆張鶴", "蓬莱泉", "天狗舞"};
         String[] sakeCategory = {"薫酒", "爽酒", "醇酒", "熟酒"};
         String[] similar = vec.sakeWordsNearest(word, number).toArray(new String[0]);
@@ -86,7 +88,7 @@ public class SakeUtils {
      * @param vectorB
      * @return
      */
-    public double cosineSimilarity(double[] vectorA, double[] vectorB){
+    public static double cosineSimilarity(double[] vectorA, double[] vectorB){
         double dotProduct = 0.0;
         double normA = 0.0;
         double normB = 0.0;
@@ -112,7 +114,7 @@ public class SakeUtils {
             e.printStackTrace();
         }
 
-        System.out.println("cosine similarity is " + sake.cosineSimilarity(new double[]{1.0, 0, 0, 0}, new double[]{1.0, 0, 0, 0}));
+        //System.out.println("cosine similarity is " + sake.cosineSimilarity(new double[]{1.0, 0, 0, 0}, new double[]{1.0, 0, 0, 0}));
     }
 
     public static void main(String args[]){

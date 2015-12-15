@@ -9,17 +9,17 @@ import static org.deeplearning4j.nnpractice.utils.*;
  * @author Wataru Matsudate
  */
 public class AutoEncoder {
-    public int N;
+    private int N;
     //encode用の各層配列(入力層、出力層)
     private double input[];
-    public double output[];
+    private double output[];
     //ノイズ付加
     private double noiseX[];
-    public Random rng;
+    private Random rng;
     //出力層の重み配列
-    public double wIO[][];
+    private double wIO[][];
     //出力層の閾値配列
-    public double threshOut[];
+    private double threshOut[];
     //decode用の各層配列
     private double decodeIn[];
     private double decodeThO[];
@@ -310,6 +310,7 @@ public class AutoEncoder {
 
         //testデータ
         double testData[][] = {
+                //C
                 {0,  0,  0,  0,  0,  0,  0,
                         0,  1,  1,  1,  1,  1,  0,
                         0,  1,  0,  0,  0,  0,  0,
@@ -320,7 +321,7 @@ public class AutoEncoder {
                         0,  1,  1,  1,  1,  1,  0,
                         0,  0,  0,  0,  0,  0,  0},
 
-                //E
+                /*//E
                 {0,  0,  0,  0,  0,  0,  0,
                         0,  1,  1,  1,  1,  1,  0,
                         0,  1,  0,  0,  0,  0,  0,
@@ -362,7 +363,7 @@ public class AutoEncoder {
                         0,  1,  0,  1,  0,  1,  0,
                         0,  1,  0,  0,  1,  1,  0,
                         0,  1,  1,  1,  1,  1,  0,
-                        0,  0,  0,  0,  0,  0,  1}
+                        0,  0,  0,  0,  0,  0,  1}*/
         };
 
 
@@ -370,7 +371,7 @@ public class AutoEncoder {
         int nOut = 10;
         int inputSize = inputData.length;
         Random r = new Random(123);
-        int epoch = 200;
+        int epoch = 600;
 
         //インスタンスの生成
         AutoEncoder ae = new AutoEncoder(inputSize, nIn, nOut, null, null, r);
@@ -383,7 +384,7 @@ public class AutoEncoder {
         }
 
         //weight print
-        System.out.println("------------------------------------------------------");
+        /*System.out.println("------------------------------------------------------");
         for(int i = 0; i < nOut; i++){
             for(int j = 0; j < nIn; j++){
                 System.out.printf("%.5f", ae.wIO[i][j] + " ");
@@ -391,6 +392,7 @@ public class AutoEncoder {
             System.out.println("");
         }
         System.out.println("------------------------------------------------------");
+        */
 
         //test
         double reconstructed_X[][] = new double[testData.length][nIn];

@@ -123,7 +123,7 @@ public class DeepLearningTest {
                             for(int k = 0; k < lengthtempIn; k++) tempInput[k] = layerInput[k];
 
                             layerInput = new double[lengthHid[i-1]];
-                            layerInput = aeLayer[i-1].output;
+                            //layerInput = aeLayer[i-1].output;
 
                         }
                     }
@@ -396,16 +396,16 @@ public class DeepLearningTest {
 
         //教師データ
         double teachData[][] = {
-                {1.0},                  //0
-                {0.0},                  //1
-                {0.0},                  //2
-                {0.0},                  //3
-                {1.0},                  //4
-                {0.0},                  //5
-                {1.0},                  //6
-                {0.0},                  //7
-                {1.0},                  //8
-                {1.0},                  //9
+                {1,0},                  //0
+                {0,1},                  //1
+                {0,1},                  //2
+                {0,1},                  //3
+                {1,0},                  //4
+                {0,1},                  //5
+                {1,0},                  //6
+                {0,1},                  //7
+                {1,0},                  //8
+                {1,0}                   //9
         };
 
         //テストデータ
