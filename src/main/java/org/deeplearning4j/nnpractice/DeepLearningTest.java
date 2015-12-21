@@ -103,6 +103,7 @@ public class DeepLearningTest {
         double layerInput[] = new double[0];
         double tempInput[];
         int lengthtempIn;
+        double corruptionLevel = 0.3;
 
         //layerサイズ
         for(int i = 0; i < layerSize; i++) {
@@ -127,7 +128,7 @@ public class DeepLearningTest {
 
                         }
                     }
-                    aeLayer[i].train(layerInput);
+                    aeLayer[i].train(layerInput, corruptionLevel);
                 }
             }
         }

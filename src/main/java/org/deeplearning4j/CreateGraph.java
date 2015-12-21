@@ -5,7 +5,6 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.chart.plot.PlotOrientation;
 
 import javax.swing.JFrame;
-import java.awt.BorderLayout;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -38,10 +37,6 @@ public class CreateGraph extends JFrame{
             data.addValue(tmpError.get(i), "二乗誤差", str);
         }
 
-
-
-
-
         JFreeChart chart = ChartFactory.createLineChart(
                 graphTitle,
                 categoryAxisLabel,
@@ -51,7 +46,6 @@ public class CreateGraph extends JFrame{
                 true,
                 false,
                 false);
-
         try {
             ChartUtilities.saveChartAsJPEG(file, chart, 800, 500);
         } catch (IOException e) {
@@ -102,10 +96,6 @@ public class CreateGraph extends JFrame{
                 data.addValue(tmpNine.get(tmpNine.size()-1), "9", str);
             }*/
         }
-
-
-
-
 
         JFreeChart chart = ChartFactory.createLineChart(
                 graphTitle,

@@ -1,5 +1,11 @@
 package org.deeplearning4j.nnpractice;
 
+import org.deeplearning4j.CreateGraph;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+
 /**
  * バックプロパゲーションの練習問題
  * 排他的論理和(XOR)の実現
@@ -23,7 +29,7 @@ public class BackPropagation {
     private double errorHid[];
     private double errorOut[];
     //学習率
-    private final double alpha = 1.0;
+    private final double alpha = 0.1;
     //シグモイド関数の傾き
     private final double beta = 1.0;
 
@@ -218,6 +224,12 @@ public class BackPropagation {
         System.out.println("デバッグ用１");
 
         int i, count = 0;
+        //グラフ作成用
+        CreateGraph frame = new CreateGraph("排他的論理和問題における二乗誤差の推移", "学習回数(n)", "二乗誤差(e)");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setBounds(10, 10, 800, 500);
+        frame.setTitle("BackPropagation");
+        ArrayList<Double> tmpData = new ArrayList<>();
 
         //入力データ
         int inputData[][] = {
@@ -259,6 +271,7 @@ public class BackPropagation {
             count++;
             System.out.println("Error = " + e);
             System.out.println(count + "回目");
+            tmpData.add(e);
 
             if(e < 0.001 || count == 10000) {
                 System.out.println("Error < 0.001");
@@ -266,5 +279,8 @@ public class BackPropagation {
                 break;
             }
         }
+        //グラフ表示
+        frame.getContentPane().add(frame.createGraphPanel(count, tmpData), BorderLayout.CENTER);
+        frame.setVisible(true);
     }
 }

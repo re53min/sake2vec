@@ -6,20 +6,20 @@ package org.deeplearning4j.sake2vec;
  * @auther Wataru Matsudate
  */
 
+import org.deeplearning4j.models.embeddings.WeightLookupTable;
+import org.deeplearning4j.models.embeddings.inmemory.InMemoryLookupTable;
 import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
-import org.deeplearning4j.text.sentenceiterator.LineSentenceIterator;
+import org.deeplearning4j.models.word2vec.wordstore.inmemory.InMemoryLookupCache;
 import org.deeplearning4j.text.sentenceiterator.SentenceIterator;
-import org.deeplearning4j.text.sentenceiterator.SentencePreProcessor;
-import org.deeplearning4j.text.tokenization.tokenizer.TokenPreProcess;
-import org.deeplearning4j.text.tokenization.tokenizer.preprocessor.EndingPreProcessor;
+import org.deeplearning4j.text.sentenceiterator.UimaSentenceIterator;
+import org.deeplearning4j.text.tokenization.tokenizer.preprocessor.CommonPreprocessor;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.DefaultTokenizerFactory;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.TokenizerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -31,7 +31,6 @@ class Sake2Vec2 {
     private String word2;
     private Word2Vec vec;
     private boolean flag;
-    private File sakeCorpus, googleNV;
     private static Logger log = LoggerFactory.getLogger(Sake2Vec2.class);
 
 
@@ -89,73 +88,48 @@ class Sake2Vec2 {
         //googleNV = new File("GoogleNews-vectors-negative300.bin.gz");
 
         if(flag){
-            sakeCorpus = new File(modelName);
+            //sakeCorpus = new File(modelName);
             log.info("Exist word vectors model. Reload model...");
-            vec = WordVectorSerializer.loadGoogleModel(sakeCorpus, false);
 
-            /*WordVectors wordVectors = WordVectorSerializer.loadTxtVectors(sakeCorpus);
-            WeightLookupTable weightLookupTable = wordVectors.lookupTable();
-            Iterator<INDArray> vectors = weightLookupTable.vectors();
-            INDArray wordVector = vectors.getWordVectorMatrix("myword");
-            double[] wordVector = vectors.getWordVector("myword");*/
+            vec = WordVectorSerializer.loadFullModel(modelName);
 
             log.info("****************Reload model finished********************");
 
         } else {
-            log.info("Not Exist word vectors model. Load data...");
-            ClassPathResource resource = new ClassPathResource(fileName);
-            //ClassPathResource resource = new ClassPathResource("日本酒コーパス.txt");
-            SentenceIterator iter = new LineSentenceIterator(resource.getFile());
-            iter.setPreProcessor(new SentencePreProcessor() {
-                @Override
-                public String preProcess(String sentence) {
-                    return sentence.toLowerCase();
-                }
-            });
+            String filePath = new ClassPathResource(fileName).getFile().getAbsolutePath();
 
-            log.info("Tokenize data....");
-            final EndingPreProcessor preProcessor = new EndingPreProcessor();
-            TokenizerFactory tokenizer = new DefaultTokenizerFactory();
-            tokenizer.setTokenPreProcessor(new TokenPreProcess() {
-                @Override
-                public String preProcess(String token) {
-                    token = token.toLowerCase();
-                    String base = preProcessor.preProcess(token);
-                    //base = base.replaceAll("\\d", "d");
-                    if (base.endsWith("ly") || base.endsWith("ing"))
-                        System.out.println();
-                    return base;
-                }
-            });
+            log.info("Load & Vectorize Sentences....");
+            // Strip white space before and after for each line
+            SentenceIterator iter = UimaSentenceIterator.createWithPath(filePath);
+            // Split on white spaces in the line to get words
+            TokenizerFactory t = new DefaultTokenizerFactory();
+            t.setTokenPreProcessor(new CommonPreprocessor());
 
-            // Customizing params
-            int batchSize = 1000;
-            int iterations = 30;
-            int layerSize = 30;
+            InMemoryLookupCache cache = new InMemoryLookupCache();
+            WeightLookupTable table = new InMemoryLookupTable.Builder()
+                    .vectorLength(100)
+                    .useAdaGrad(false)
+                    .cache(cache)
+                    .lr(0.025f).build();
 
-            log.info("Build model....");
+            log.info("Building model....");
             Word2Vec vec = new Word2Vec.Builder()
-                    .batchSize(batchSize)           // words per minibatch
-                    .sampling(1e-5)                 // sub sampling. drops words out
-                    .minWordFrequency(2)            // min word frequency
-                    .useAdaGrad(false)              // use AdaGrad. in case, not use
-                    .layerSize(layerSize)           // words feature vector size
-                    .iterations(iterations)         // iterations to train
-                    .learningRate(0.025)            // learning rate
-                    .minLearningRate(1e-2)          // learning rate decays wrt #words. floor learning
-                    .negativeSample(15)              // negative sampling size n words
-                    .iterate(iter)                  // learn words batch
-                    .windowSize(15)                 // window size
-                    .tokenizerFactory(tokenizer)    // create tokenizer
-                    .build();                       // build
+                    .minWordFrequency(5).iterations(1)
+                    .layerSize(100).lookupTable(table)
+                    .stopWords(new ArrayList<String>())
+                    .vocabCache(cache).seed(42)
+                    .windowSize(5).iterate(iter).tokenizerFactory(t).build();
+
+            log.info("Fitting Word2Vec model....");
             vec.fit();
 
             //InMemoryLookupTable table = (InMemoryLookupTable) vec.lookupTable();
             //table.getSyn0().diviRowVector(table.getSyn0().norm2(0));
 
             log.info("save model");
-            WordVectorSerializer.writeWordVectors(vec, fileName);
-            modelName = "words.txt";
+            WordVectorSerializer.writeWordVectors(vec, "pathToWriteto.txt");
+            WordVectorSerializer.writeFullModel(vec, fileName);
+            this.modelName = fileName;
 
             //ここにバグがあるよ
             this.flag = true;

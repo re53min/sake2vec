@@ -4,24 +4,20 @@ import java.util.Random;
 import static org.deeplearning4j.nnpractice.utils.*;
 
 /**
- * AutoEncoder
+ * AutoEncoder(Denoising AutoEncoder)
  * Created by b1012059 on 2015/09/01.
  * @author Wataru Matsudate
  */
 public class AutoEncoder {
     private int N;
-    //encode用の各層配列(入力層、出力層)
-    private double input[];
-    private double output[];
-    //ノイズ付加
-    private double noiseX[];
+    private int nIn;
+    private int nOut;
     private Random rng;
     //出力層の重み配列
     private double wIO[][];
     //出力層の閾値配列
-    private double threshOut[];
+    private double encodeThO[];
     //decode用の各層配列
-    private double decodeIn[];
     private double decodeThO[];
     //学習率
     private final double alpha = 0.1;
@@ -33,10 +29,8 @@ public class AutoEncoder {
      */
     public AutoEncoder(int N, int INPUT, int OUTPUT, double wIO[][], double threshOut[], Random rng){
         this.N = N;
-        this.input = new double[INPUT];
-        this.noiseX = new double[INPUT];
-        this.output = new double[OUTPUT];
-        this.decodeIn = new double[INPUT];
+        this.nIn = INPUT;
+        this.nOut = OUTPUT;
         this.decodeThO = new double[INPUT];
 
         //randomの種
@@ -46,10 +40,11 @@ public class AutoEncoder {
 
         //入力層→出力層の重み配列をランダム(-0.5~0.5)
         if(wIO == null) {
-            this.wIO = new double[OUTPUT][INPUT];
-            for (int i = 0; i < OUTPUT; i++) {
-                for (int j = 0; j < INPUT; j++) {
-                    this.wIO[i][j] = rng.nextDouble() - 0.5;
+            this.wIO = new double[this.nOut][this.nIn];
+            //double element = 1.0 / nIn;
+            for (int i = 0; i < this.nOut; i++) {
+                for (int j = 0; j < this.nIn; j++) {
+                    this.wIO[i][j] = uniform(nOut, nIn, rng, null);
                 }
             }
         } else {
@@ -58,12 +53,12 @@ public class AutoEncoder {
 
         //入力層→出力層の閾値配列を0で初期化
         if(threshOut == null){
-            this.threshOut = new double[OUTPUT];
-            for(int i = 0; i < OUTPUT; i++){
-                this.threshOut[i] = 0;
+            this.encodeThO = new double[this.nOut];
+            for(int i = 0; i < this.nOut; i++){
+                this.encodeThO[i] = 0;
             }
         } else {
-            this.threshOut = threshOut;
+            this.encodeThO = threshOut;
         }
 
         //出力層→入力層の閾値配列を0で初期化
@@ -73,131 +68,133 @@ public class AutoEncoder {
     /**
      *ノイズ処理
      * 平均0、標準偏差1のガウス分布
-     * @param x　inputデータ
+     * @param x　Inputデータ
+     * @param noiseX ノイズを付加したInputデータ
+     * @param corruptionLevel 損傷率
      */
-    public void noiseInput(double x[]){
-        //int lengthIn = x.length;
+    public void noiseInput(double x[], double noiseX[], double corruptionLevel){
 
         for(int i = 0; i < x.length; i++) {
             if (x[i] == 0) noiseX[i] = 0;
-            else noiseX[i] = x[i] + rng.nextGaussian();
+            else noiseX[i] = x[i] + rng.nextGaussian() * corruptionLevel;
         }
     }
 
     /**
-     *AutoEncoderにおける順方向計算(encode)の実現
+     * AutoEncoderにおける順方向計算(encode)の実現
      * 計算式:h = f(Wx+b)
      * なおf(x)はシグモイド関数
      * Wは重み行列、bはバイアス値
+     * @param input
+     * @param output
      */
-    public void encoderCal(){
+    public void encoder (double input[], double output[]){
         int i,j;
         //各層の長さ
         int lengthIn = input.length;
         int lengthOut = output.length;
-        //計算用temp
-        double tmpData;
 
         //入力inputから符号outputを得る(encode)
         for(i = 0; i < lengthOut; i++){
-            tmpData = -threshOut[i];
+            output[i] = 0;
             for(j = 0; j < lengthIn; j++){
-                // += input[j] * wIO[i][j];
-                tmpData += noiseX[j] * wIO[i][j];
+                output[i] += input[j] * wIO[i][j];
             }
-            output[i] = funSigmoid(tmpData);
+            output[i] += encodeThO[i];
+            output[i] = funSigmoid(output[i]);
         }
     }
 
     /**
-     *AutoEncoderにおける逆方向計算(decode)の実現
+     * AutoEncoderにおける逆方向計算(decode)の実現
      * 計算式:y = f'(W'h+b')
      * なおf'(x)はシグモイド関数、W'=W^T
      * W'は重み行列、b'はバイアス値
+     * @param output
+     * @param dInput
      */
-    public void decoderCal(){
+    public void decoder(double output[] , double dInput[]){
         int i,j;
         //各層の長さ
-        int lengthDeIn = decodeIn.length;
-        int lengthOut = output.length;
-        //計算用temp
-        double tmpData;
+        int lengthDeIn = output.length;
+        int lengthDeOut = dInput.length;
 
         //符号outputから入力inputを復号する(decode)
-        for(i = 0; i < lengthDeIn; i++) {
-            tmpData = -decodeThO[i];
-            for (j = 0; j < lengthOut; j++) {
-                tmpData += output[j] * wIO[j][i];
+        for(i = 0; i < lengthDeOut; i++) {
+            dInput[i] = 0;
+            for (j = 0; j < lengthDeIn; j++) {
+                dInput[i] += output[j] * wIO[j][i];
             }
-            decodeIn[i] = funSigmoid(tmpData);
+            dInput[i] += decodeThO[i];
+            dInput[i] = funSigmoid(dInput[i]);
         }
     }
 
     /**
      *
-     * @param x
-     * @param y
+     * @param input
+     * @param dinput
      */
-    public void reconstruct(double x[], double y[]){
-        double[] h = new double[output.length];
+    public void reconstruct(double input[], double dinput[]){
+        double output[] = new double[nOut];
 
-        noiseX = x;
-        output = h;
-        decodeIn = y;
-
-        encoderCal();
-        decoderCal();
+        encoder(input, output);
+        decoder(output, dinput);
     }
 
     /**
      * trainメソッド
-     * 確立的勾配降下法を用いてパラメータ更新
+     * 確立的勾配降下法を用いてパラメータWの更新
      * @param x 学習データ
+     * @param corruptionLevel 損傷率
      */
-    public void train(double x[]){
-        //各パラメータの長さ
-        int lengthOut = output.length;
-        int lengthIn = input.length;
+    public void train(double x[], double corruptionLevel){
+        double noiseX[] = new double[nIn];
+        double output[] = new double[nOut];
+        double dInput[] = new double[nIn];
 
-        noiseInput(x);
-        encoderCal();
-        decoderCal();
+        noiseInput(x, noiseX, corruptionLevel);
+        encoder(noiseX, output);
+        decoder(output, dInput);
 
-        double tempThO[] = new double[lengthOut];
-        double tempDeThO[] = new double[lengthIn];
+        //計算用
+        double tempThO[] = new double[nOut];
+        //誤差用配列
+        double tempDeThO[] = new double[nIn];
 
         //閾値decodeThOの変更(decodeのbiasの変更)
-        for(int i = 0; i < lengthIn; i++){
-            tempDeThO[i] = x[i] - decodeIn[i];
+        for(int i = 0; i < nIn; i++){
+            tempDeThO[i] = x[i] - dInput[i];
             decodeThO[i] += alpha * tempDeThO[i] / N;
         }
 
         //閾値threshOutの変更(encodeのbiasの変更)
-        for(int i = 0; i < lengthOut; i++){
+        for(int i = 0; i < nOut; i++){
             tempThO[i] = 0;
-            for(int j = 0; j < lengthIn; j++){
+            for(int j = 0; j < nIn; j++){
                 tempThO[i] += wIO[i][j] * tempDeThO[j];
             }
             tempThO[i] *= output[i] * (1 - output[i]);
-            threshOut[i] += alpha * tempThO[i] / N;
+            encodeThO[i] += alpha * tempThO[i] / N;
         }
 
         //重みwIOの変更
-        for(int i = 0; i < lengthOut; i++){
-            for(int j  = 0; j < lengthIn; j++){
+        for(int i = 0; i < nOut; i++){
+            for(int j  = 0; j < nIn; j++){
                 wIO[i][j] += alpha * (tempThO[i] * noiseX[j] + tempDeThO[j] * output[i]) / N;
             }
         }
     }
 
     /**
-     *
+     *　Tester
      */
     private static void testAutoEncoder(){
 
         //入力データ
         double inputData[][] = {
 
+                //0
                 {0,  0,  0,  0,  0,  0,  0,
                         0,  1,  1,  1,  1,  1,  0,
                         0,  1,  0,  0,  0,  1,  0,
@@ -211,12 +208,12 @@ public class AutoEncoder {
                 //1
                 {0,  0,  0,  0,  0,  0,  0,
                         0,  0,  0,  1,  0,  0,  0,
-                        0,  0,  1,  1,  0,  0,  0,
                         0,  0,  0,  1,  0,  0,  0,
                         0,  0,  0,  1,  0,  0,  0,
                         0,  0,  0,  1,  0,  0,  0,
                         0,  0,  0,  1,  0,  0,  0,
-                        0,  1,  1,  1,  1,  1,  0,
+                        0,  0,  0,  1,  0,  0,  0,
+                        0,  0,  1,  1,  1,  0,  0,
                         0,  0,  0,  0,  0,  0,  0},
 
                 //2
@@ -235,7 +232,7 @@ public class AutoEncoder {
                         0,  1,  1,  1,  1,  1,  0,
                         0,  0,  0,  0,  0,  1,  0,
                         0,  0,  0,  0,  0,  1,  0,
-                        0,  0,  0,  1,  1,  1,  0,
+                        0,  1,  1,  1,  1,  1,  0,
                         0,  0,  0,  0,  0,  1,  0,
                         0,  0,  0,  0,  0,  1,  0,
                         0,  1,  1,  1,  1,  1,  0,
@@ -310,60 +307,17 @@ public class AutoEncoder {
 
         //testデータ
         double testData[][] = {
-                //C
-                {0,  0,  0,  0,  0,  0,  0,
-                        0,  1,  1,  1,  1,  1,  0,
-                        0,  1,  0,  0,  0,  0,  0,
-                        0,  1,  0,  0,  0,  0,  0,
-                        0,  1,  0,  0,  0,  0,  0,
-                        0,  1,  0,  0,  0,  0,  0,
-                        0,  1,  0,  0,  0,  0,  0,
-                        0,  1,  1,  1,  1,  1,  0,
-                        0,  0,  0,  0,  0,  0,  0},
-
-                /*//E
-                {0,  0,  0,  0,  0,  0,  0,
-                        0,  1,  1,  1,  1,  1,  0,
-                        0,  1,  0,  0,  0,  0,  0,
-                        0,  1,  0,  0,  0,  0,  0,
-                        0,  1,  1,  1,  1,  0,  0,
-                        0,  1,  0,  0,  0,  0,  0,
-                        0,  1,  0,  0,  0,  0,  0,
-                        0,  1,  1,  1,  1,  1,  0,
-                        0,  0,  0,  0,  0,  0,  0},
-
-                //X
-                {0,  0,  0,  0,  0,  0,  0,
-                        0,  1,  0,  0,  0,  1,  0,
-                        0,  1,  0,  0,  0,  1,  0,
-                        0,  0,  1,  0,  1,  0,  0,
-                        0,  0,  0,  1,  0,  0,  0,
-                        0,  0,  1,  0,  1,  0,  0,
-                        0,  1,  0,  0,  0,  1,  0,
-                        0,  1,  0,  0,  0,  1,  0,
-                        0,  0,  0,  0,  0,  0,  0},
-
-                //A
+                //1
                 {0,  0,  0,  0,  0,  0,  0,
                         0,  0,  0,  1,  0,  0,  0,
-                        0,  0,  1,  0,  1,  0,  0,
-                        0,  1,  0,  0,  0,  1,  0,
-                        0,  1,  1,  1,  1,  1,  0,
-                        0,  1,  0,  0,  0,  1,  0,
-                        0,  1,  0,  0,  0,  1,  0,
-                        0,  1,  1,  1,  1,  1,  0,
-                        0,  0,  0,  0,  0,  0,  0},
+                        0,  0,  0,  1,  0,  0,  0,
+                        0,  0,  0,  1,  0,  0,  0,
+                        0,  0,  0,  1,  0,  0,  0,
+                        0,  0,  0,  1,  0,  0,  0,
+                        0,  0,  0,  1,  0,  0,  0,
+                        0,  0,  1,  1,  1,  0,  0,
+                        0,  0,  0,  0,  0,  0,  0}
 
-                //Q
-                {0,  0,  0,  0,  0,  0,  0,
-                        0,  1,  1,  1,  1,  1,  0,
-                        0,  1,  0,  0,  0,  1,  0,
-                        0,  1,  0,  0,  0,  1,  0,
-                        0,  1,  0,  0,  0,  1,  0,
-                        0,  1,  0,  1,  0,  1,  0,
-                        0,  1,  0,  0,  1,  1,  0,
-                        0,  1,  1,  1,  1,  1,  0,
-                        0,  0,  0,  0,  0,  0,  1}*/
         };
 
 
@@ -371,19 +325,20 @@ public class AutoEncoder {
         int nOut = 10;
         int inputSize = inputData.length;
         Random r = new Random(123);
-        int epoch = 600;
+        int epochs = 400;
+        double corruptionLevel = 0.3;
 
         //インスタンスの生成
         AutoEncoder ae = new AutoEncoder(inputSize, nIn, nOut, null, null, r);
 
         //train
-        for(int count = 0; count < epoch; count++){
+        for(int epoch = 0; epoch < epochs; epoch++){
             for (int i = 0; i < inputData.length; i++) {
-                ae.train(inputData[i]);
+                ae.train(inputData[i], corruptionLevel);
             }
         }
 
-        //weight print
+        //weight output
         /*System.out.println("------------------------------------------------------");
         for(int i = 0; i < nOut; i++){
             for(int j = 0; j < nIn; j++){
@@ -396,7 +351,7 @@ public class AutoEncoder {
 
         //test
         double reconstructed_X[][] = new double[testData.length][nIn];
-        System.out.println("test AutoEncoder");
+        System.out.println("Test AutoEncoder");
         for(int i = 0; i < testData.length; i++){
             ae.reconstruct(testData[i], reconstructed_X[i]);
             for(int j = 0; j < nIn; j++){

@@ -85,7 +85,7 @@ class Sake2Vec {
 
         if(sakeCorpus.exists()){
             log.info("Exist word vectors model. Reload model...");
-            vec = WordVectorSerializer.loadGoogleModel(sakeCorpus, false);
+            //vec = WordVectorSerializer.loadGoogleModel(sakeCorpus, false);
 
             log.info("****************Reload model finished********************");
 

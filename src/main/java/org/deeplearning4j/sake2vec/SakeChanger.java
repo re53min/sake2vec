@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Collection;
 
 import static org.deeplearning4j.sake2vec.SakeUtils.judgment;
 import static org.deeplearning4j.sake2vec.SakeUtils.sakeSimilarity;
@@ -47,12 +46,11 @@ public class SakeChanger {
 
     /**
      *
-     * @param sentence
      * @throws Exception
      */
-    public void runSake2Vec(Collection<String> sentence) throws Exception{
+    public void runSake2Vec()throws Exception{
+        log.info("Starting Run Sake2Vec");
         vec.runSake2vec2();
-        sakeSimilarity(vec, sentence);
     }
 
     /**
@@ -62,6 +60,7 @@ public class SakeChanger {
      */
     public String input(String sentence){
         String str = "あなた:" + sentence;
+        log.info("Starting Convert Sentences");
         ret = conv.convWakati(sentence);
 
         return str;
@@ -73,20 +72,21 @@ public class SakeChanger {
      * @throws Exception
      */
     public String output() throws Exception {
-        runSake2Vec(ret);
-        String result = null;
-        calculate(0.0, result);
-        return result;
+        runSake2Vec();
+        log.info("Starting Calculate Words");
+        return calculate(sakeSimilarity(vec, ret));
     }
 
     /**
      *
      * @return
      */
-    private void calculate(double similarity, String result){
+    private String calculate(double similarity){
         BigDecimal bi = new BigDecimal(String.valueOf(similarity));
         double su = bi.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
-        result = ("sake2vec: 類似度は" + su + "です。" + judgment(su) + "。\n");
+        String result = ("sake2vec: 類似度は" + su + "です。" + judgment(su) + "。\n");
+
+        return result;
     }
 
     /**

@@ -15,7 +15,7 @@ public class StackedAutoEncoder {
     private int hiddenSize[];
     private double output[];
     private int N;
-    private HiddenLayerSimple hLayer[];
+    private SimpleHiddenLayer hLayer[];
     private AutoEncoder aeLayer[];
     private Random rng;
 
@@ -26,7 +26,7 @@ public class StackedAutoEncoder {
         this.layerSize = layer_size;
         this.hiddenSize = HIDDEN;
         this.aeLayer = new AutoEncoder[layer_size];
-        this.hLayer = new HiddenLayerSimple[layer_size];
+        this.hLayer = new SimpleHiddenLayer[layer_size];
         input = new int[INPUT];
         output = new double[OUTPUT];
 
@@ -43,7 +43,7 @@ public class StackedAutoEncoder {
             }
 
             //Hidden layer
-            this.hLayer[i] = new HiddenLayerSimple(inputLayer, this.hiddenSize[i], null, null, this.N, rng);
+            this.hLayer[i] = new SimpleHiddenLayer(inputLayer, this.hiddenSize[i], null, null, this.N, rng);
 
             //AutoEncoder layer
             this.aeLayer[i] = new AutoEncoder(this.N, inputLayer, this.hiddenSize[i], hLayer[i].wIO, hLayer[i].bias, rng);
@@ -60,6 +60,7 @@ public class StackedAutoEncoder {
         double[] layerInput = new double[0];
         int prevInputSize;
         double[] prevInput;
+        double corruptionLevel = 0.3;
 
         for(int i = 0; i < layerSize; i++){
             for(int count = 0; count < 600; count++){
@@ -79,7 +80,7 @@ public class StackedAutoEncoder {
                             hLayer[j-1].sampleHgive(prevInput, layerInput);
                         }
                     }
-                    aeLayer[i].train(layerInput);
+                    aeLayer[i].train(layerInput, corruptionLevel);
                 }
             }
         }

@@ -66,7 +66,7 @@ public class Word2VecExample {
 
 
         if (file.exists()) {
-            System.out.println("モデルがありました。再利用します");
+            /*System.out.println("モデルがありました。再利用します");
             vec = WordVectorSerializer.loadGoogleModel(file, true);
 
             //testing similarity
@@ -78,7 +78,7 @@ public class Word2VecExample {
             nega.add("甘い");
             nega.add("辛い");
             Collection<String> similar = vec.wordsNearest(posi, nega, 20);
-            log.info(String.valueOf(similar));
+            log.info(String.valueOf(similar));*/
 
         } else {
             System.out.println("モデルがありません。学習を始めます");

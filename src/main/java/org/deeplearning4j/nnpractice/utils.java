@@ -31,6 +31,18 @@ public class utils {
     }
 
     /**
+     * 一様分布
+     * AutoEncoder用
+     * @param nIn
+     * @param nOut
+     * @param rng
+     * @return
+     */
+    public static double uniform(double nIn, double nOut, Random rng){
+        return rng.nextDouble() * (nOut - nIn) + nIn;
+    }
+
+    /**
      * 二項分布
      * @param n
      * @param p
