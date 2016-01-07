@@ -69,7 +69,7 @@ public class LogisticRegression {
             output[i] = 0;
             for(int j = 0; j < nIn; j++){
                 //入力とそれに対する重み行列の積
-                output[i] += input[i] * wIO[i][j];
+                output[i] += wIO[i][j] * input[j];
             }
             //バイアス
             output[i] += bias[i];
@@ -84,6 +84,7 @@ public class LogisticRegression {
         for(int i = 0; i < nOut; i++){
             //教師信号との誤差を求める
             dOutput[i] = teach[i] - output[i];
+
             for(int j = 0; j < nIn; j++){
                 //重み行列の更新
                 wIO[i][j] += learningLate * dOutput[i] * input[j] / N;
@@ -120,7 +121,7 @@ public class LogisticRegression {
      * Testing Method
      */
     private static void testLogisticRegression(){
-        int nInput = 5;
+        int nInput = 6;
         int nOutput = 2;
         int nTest = 2;
         int epochs = 500;
@@ -146,10 +147,9 @@ public class LogisticRegression {
         };
 
         double testData[][]= {
-                //{0., 1., 0., 0., 0., 0.},
-                //{0., 0., 0., 0., 1., 0.}
-                {0., 0., 1., 0., 0., 0.},
-                {0., 0., 0., 0., 1., 0.}
+
+                {0., 1., 0., 0., 0., 1.},
+                //{0., 0., 1., 1., 1., 0.}
         };
 
         double testOutput[][] = new double[nTest][nOutput];

@@ -227,5 +227,6 @@
     <orderEntry type="library" name="Maven: com.atilika.kuromoji:kuromoji-ipadic:0.9.0" level="project" />
     <orderEntry type="library" name="Maven: com.atilika.kuromoji:kuromoji-core:0.9.0" level="project" />
     <orderEntry type="library" name="Maven: com.atilika.kuromoji:kuromoji-unidic:0.9.0" level="project" />
+    <orderEntry type="library" name="Maven: org.nd4j:nd4j-jblas:0.4-rc3.7" level="project" />
   </component>
 </module>
