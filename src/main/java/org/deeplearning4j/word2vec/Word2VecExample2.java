@@ -1,10 +1,10 @@
 package org.deeplearning4j.word2vec;
 
+import org.deeplearning4j.models.embeddings.loader.WordVectorSerializer;
 import org.deeplearning4j.models.word2vec.Word2Vec;
 import org.deeplearning4j.text.sentenceiterator.LineSentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentenceIterator;
 import org.deeplearning4j.text.sentenceiterator.SentencePreProcessor;
-import org.deeplearning4j.text.tokenization.tokenizer.TokenPreProcess;
 import org.deeplearning4j.text.tokenization.tokenizer.preprocessor.EndingPreProcessor;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.DefaultTokenizerFactory;
 import org.deeplearning4j.text.tokenization.tokenizerfactory.TokenizerFactory;
@@ -28,42 +28,35 @@ public class Word2VecExample2 {
         log.info("Load data....");
 
 
-        ClassPathResource resource = new ClassPathResource("日本酒コーパスv3.txt");
+        ClassPathResource resource = new ClassPathResource("corpus_v2.txt");
         SentenceIterator iter = new LineSentenceIterator(resource.getFile());
-        iter.setPreProcessor(new SentencePreProcessor() {
-            @Override
-            public String preProcess(String sentence) {
-                return sentence.toLowerCase();
-            }
-        });
+        iter.setPreProcessor((SentencePreProcessor) sentence -> sentence.toLowerCase());
 
         log.info("Tokenize data....");
         final EndingPreProcessor preProcessor = new EndingPreProcessor();
         TokenizerFactory tokenizer = new DefaultTokenizerFactory();
-        tokenizer.setTokenPreProcessor(new TokenPreProcess() {
-            @Override
-            public String preProcess(String token) {
-                token = token.toLowerCase();
-                String base = preProcessor.preProcess(token);
-                //base = base.replaceAll("\\d", "d");
-                if (base.endsWith("ly") || base.endsWith("ing"))
-                    System.out.println();
-                return base;
-            }
+        tokenizer.setTokenPreProcessor(token -> {
+            token = token.toLowerCase();
+            String base = preProcessor.preProcess(token);
+            //base = base.replaceAll("\\d", "d");
+            if (base.endsWith("ly") || base.endsWith("ing"))
+                System.out.println();
+            return base;
         });
 
         // Customizing params
         int batchSize = 1000;
         int iterations = 30;
-        int layerSize = 30;
+        int layerSize = 50;
 
         log.info("Build model....");
         Word2Vec vec = new Word2Vec.Builder()
                 .batchSize(batchSize)           // words per minibatch
-                .sampling(1e-5)                 // sub sampling. drops words out
+                .sampling(1e-2)                 // sub sampling. drops words out
                 .minWordFrequency(2)            // min word frequency
                 .useAdaGrad(false)              // use AdaGrad. in case, not use
                 .layerSize(layerSize)           // words feature vector size
+                .epochs(iterations)
                 .iterations(iterations)         // iterations to train
                 .learningRate(0.025)            // learning rate
                 .minLearningRate(1e-2)          // learning rate decays wrt #words. floor learning
@@ -83,6 +76,7 @@ public class Word2VecExample2 {
 
         log.info("Evaluate model....");
 
+        /*
         double[] sim = new double[46];
         sim[0] = vec.similarity("獺祭", "薫酒");
         sim[1] = vec.similarity("久保田", "薫酒");
@@ -146,6 +140,7 @@ public class Word2VecExample2 {
             }
         }
         System.out.println("-------------------------");
+        */
 
         /*Collection<String> similar = vec.wordsNearest("山廃" , 20);
         log.info("Similar words to: " + similar);
@@ -168,8 +163,11 @@ public class Word2VecExample2 {
         log.info("Word operation: " + operation);*/
 
 
-        //log.info("Save vectors....");
-        //WordVectorSerializer.writeWordVectors(vec, "test-words.txt");
+        log.info("Save vectors....");
+        WordVectorSerializer.writeWordVectors(vec, "corpus_v2_Model.txt");
+
+        log.info("Save Full vectors....");
+        WordVectorSerializer.writeFullModel(vec, "corpus_v2_FullModel.txt");
 
         /*log.info("Plot TSNE.....");
         BarnesHutTsne tsne = new BarnesHutTsne.Builder()

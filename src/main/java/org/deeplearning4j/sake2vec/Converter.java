@@ -6,8 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Sentenceに対する処理
@@ -16,38 +15,67 @@ import java.util.List;
 
 public class Converter {
 
-    public Converter(){
-
-    }
-
     private static Logger log = LoggerFactory.getLogger(Converter.class);
+
+    private Collection<String> positive;
+    private Collection<String> negative;
+    private ArrayList<String> ret;
+    private List<Token> tokens;
+    private Stack stack;
+    private String query;
+
+
+    public Converter(String query){
+        this.query = query;
+        this.positive = new ArrayList<>();
+        this.negative = new ArrayList<>();
+        this.ret = new ArrayList<>();
+        this.stack = new Stack();
+
+        if(query != null){
+            Tokenizer tokenizer = new Tokenizer();
+            this.tokens = tokenizer.tokenize(this.query);
+        } else {
+            log.info("Query is empty");
+        }
+    }
 
     /**
      * Sentenceを形態素解析して分かち書き
-     * Kuromojiにて実装
-     * @param sentence
+     * Kuromojiを使用
      * @return
      */
-    private ArrayList<String> wakatiSent(String sentence){
-        Tokenizer tokenizer = new Tokenizer() ;
-        List<Token> tokens = tokenizer.tokenize(sentence);
-        ArrayList<String> ret = new ArrayList<String>();
+    private void wakatiSentence(){
 
         for (Token token : tokens) {
             String[] features = token.getAllFeaturesArray();
-            System.out.print(token.getSurface()+" ");
+            //System.out.print(token.getSurface()+" ");
             //ret.add(token.getSurface());
 
             if(features[0].equals("名詞")) {
-                ret.add(token.getSurface());
+                this.ret.add(token.getSurface());
             } else if(features[0].equals("形容詞")){
-                ret.add(token.getSurface());
+                this.ret.add(token.getSurface());
+            //} else if(features[0].equals("ない")){
+            //    ret.add(token.getSurface());
+            } else if(features[6].equals("、")) {
+                this.ret.add(token.getSurface());
             }
         }
 
-        System.out.println();
-        //log.info("分かち書き:" + String.valueOf(ret));
-        return ret;
+        //System.out.println();
+        wordFormula(this.ret);
+    }
+
+
+    private void wordFormula(ArrayList<String> ret){
+
+        ret.forEach(s -> {
+           if (s.equals("、")) negative.add((String) stack.pop());
+           else stack.push(s);
+        });
+
+        positive = stack;
     }
 
 
@@ -88,7 +116,7 @@ public class Converter {
             process.destroy();
             process.waitFor();
 
-            hogehoge(out);
+            wordFormula(out);
 
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -99,26 +127,16 @@ public class Converter {
         }
     }
 
-    /**
-     * hogehoge
-     * @param out
-     */
-    private void hogehoge(ArrayList out){
-        ArrayList<String> positive = new ArrayList<>();
-        ArrayList<String> negative = new ArrayList<>();
-
-        out.forEach(tmp -> System.out.println(tmp));
+    public Collection<String> getPositiveList(){
+        return this.positive;
     }
 
-    /**
-     * 梯形しか受け付けないやつ
-     */
-    private void hogeSent(){
-
+    public Collection<String> getNegativeList(){
+        return this.negative;
     }
 
-    public ArrayList<String> convWakati(String sentence){
-        return this.wakatiSent(sentence);
+    public void convSentence(){
+        this.wakatiSentence();
     }
 
     public void convCaboCha(String sentence){
@@ -129,10 +147,13 @@ public class Converter {
      * Tester
      */
     private static void testConverter(){
-        Converter conv = new Converter();
-        System.out.println(conv.convWakati("『報酬』の在り方を巡って、脳内にある報酬系のエージェント群が相互に意志によって選択されようとする過程が、葛藤や選択と呼ばれる。"));
-        //System.out.println("名詞と形容詞:" + conv.convWakati("人間の双曲線関数的な報酬系の振る舞いが人間の意思を決定する。"));
-        //conv.convCaboCha("獺祭は甘くないことはない");
+        String sentence = "『報酬』の在り方を巡って、脳内にある報酬系のエージェント群が相互に意志によって選択されようとする過程が、葛藤や選択と呼ばれる。";
+        Converter conv = new Converter(sentence);
+        conv.convSentence();
+
+        System.out.println("positive words: " + conv.positive);
+        System.out.println("---------------------------------");
+        System.out.println("negative words: " + conv.negative);
     }
 
     public static void main(String args[]){

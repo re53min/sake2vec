@@ -5,11 +5,13 @@
     <artifactId>deeplearning4j-examples</artifactId>
     <version>0.0.3.3.3-SNAPSHOT</version>
 
-    <name>DeepLearning4j Examples</name>
+    <name>Sake2Vec Examples</name>
     <description>Examples of training different data sets</description>
     <properties>
-        <nd4j.version>0.4-rc3.6</nd4j.version>
-        <dl4j.version>0.4-rc3.7</dl4j.version>
+        <nd4j.version>0.4-rc3.8</nd4j.version>
+        <dl4j.version>	0.4-rc3.8</dl4j.version>
+        <canova.version>0.0.0.14</canova.version>
+        <jackson.version>2.5.1</jackson.version>
     </properties>
 
     <distributionManagement>
@@ -34,10 +36,14 @@
 
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>org.nd4j</groupId>
                 <artifactId>nd4j-jcublas-7.0</artifactId>
+                <version>${nd4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.nd4j</groupId>
+                <artifactId>nd4j-x86</artifactId>
                 <version>${nd4j.version}</version>
             </dependency>
         </dependencies>
@@ -109,22 +115,48 @@
         </plugins>
     </build>
 
-    <dependencies>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-nlp</artifactId>
+            <version>${dl4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-core</artifactId>
+            <version>${dl4j.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.deeplearning4j</groupId>
             <artifactId>deeplearning4j-ui</artifactId>
             <version>${dl4j.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.deeplearning4j</groupId>
-            <artifactId>deeplearning4j-nlp</artifactId>
-            <version>${dl4j.version}</version>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
         </dependency>
         <dependency>
             <groupId>org.nd4j</groupId>
-            <artifactId>nd4j-jblas</artifactId>
+            <artifactId>nd4j-x86</artifactId>
             <version>${nd4j.version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>canova-nd4j-image</artifactId>
+            <groupId>org.nd4j</groupId>
+            <version>${canova.version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>canova-nd4j-codec</artifactId>
+            <groupId>org.nd4j</groupId>
+            <version>${canova.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
 
         <dependency>
@@ -143,6 +175,16 @@
             <groupId>com.atilika.kuromoji</groupId>
             <artifactId>kuromoji-unidic</artifactId>
             <version>0.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.fommil.netlib</groupId>
+            <artifactId>netlib-native_system-win-x86_64</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codelibs</groupId>
+            <artifactId>elasticsearch-analysis-kuromoji-neologd</artifactId>
+            <version>2.1.1</version>
         </dependency>
 
     </dependencies>

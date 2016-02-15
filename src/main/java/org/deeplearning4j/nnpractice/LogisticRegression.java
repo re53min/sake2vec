@@ -1,24 +1,24 @@
 package org.deeplearning4j.nnpractice;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Random;
 
-import static org.deeplearning4j.nnpractice.utils.*;
+import static org.deeplearning4j.nnpractice.utils.funSoftmax;
+import static org.deeplearning4j.nnpractice.utils.uniform;
 
 /**
  * Logistic Regression
  * Created by b1012059 on 2015/11/23.
  */
 public class LogisticRegression {
-    private static Logger log = LoggerFactory.getLogger(LogisticRegression.class);
-    public int nIn;
-    public int nOut;
+    //private static Logger log = LoggerFactory.getLogger(LogisticRegression.class);
+    private int nIn;
+    private int nOut;
+    private int dim;
     public double wIO[][];
-    public double bias[];
-    public int N;
-    public Random rng;
+    private double wPO[][];
+    private double bias[];
+    private int N;
+    private Random rng;
 
     /**
      * LogisticRegression Constructor
@@ -26,12 +26,14 @@ public class LogisticRegression {
      * @param nOut
      * @param N
      */
-    public LogisticRegression(int nIn, int nOut, int N, Random rng){
+    public LogisticRegression(int nIn, int nOut, int N, Random rng, String activation){
         this.nIn = nIn;
         this.nOut = nOut;
         this.N = N;
-        wIO = new double[nOut][nIn];
-        bias = new double[nOut];
+        this.wIO = new double[nOut][nIn];
+        this.bias = new double[nOut];
+
+       // log.info("Initialize LogisticLayer");
 
         //ランダムの種
         if(rng == null) this.rng = new Random(1234);
@@ -40,7 +42,7 @@ public class LogisticRegression {
         //重み行列の初期化
         for(int i = 0; i < nOut; i++) {
             for(int j = 0; j < nIn; j++){
-                wIO[i][j] = uniform(nIn, nOut, rng, null);
+                wIO[i][j] = uniform(nIn, nOut, rng, activation);
             }
         }
 
@@ -49,6 +51,43 @@ public class LogisticRegression {
             bias[i] = 0;
         }
 
+    }
+
+    /**
+     *
+     * @param dim
+     * @param nIn
+     * @param nOut
+     * @param N
+     * @param rng
+     * @param activation
+     */
+    public LogisticRegression(int dim, int nIn, int nOut, int N, Random rng, String activation){
+        this.nIn = nIn;
+        this.nOut = nOut;
+        this.N = N;
+        this.dim = dim;
+        this.wIO = new double[nOut][nIn];
+        this.wPO = new double[nOut][dim];
+        this.bias = new double[nOut];
+
+        //log.info("Initialize LogisticLayer");
+
+        //ランダムの種
+        if(rng == null) this.rng = new Random(1234);
+        else this.rng = rng;
+
+        //重み行列の初期化
+        for(int i = 0; i < nOut; i++) {
+            for(int j = 0; j < nIn; j++){
+                wIO[i][j] = uniform(nIn, nOut, rng, activation);
+            }
+        }
+
+        //バイアスの初期化
+        for(int i = 0; i < nOut; i++){
+            bias[i] = 0;
+        }
     }
 
     /**
@@ -96,6 +135,75 @@ public class LogisticRegression {
         return dOutput;
     }
 
+    public void train2(double input[], double projection[][], int teach[],
+                       double dProjection[], double dhOutput[], double learningLate){
+
+        double output[] = new double[nOut];
+        double dOutput[] = new double[nOut];
+
+
+        /*
+        ロジスティック回帰の順方向計算
+         */
+        for(int i = 0; i < nOut; i++){
+            output[i] = 0;
+            for(int j = 0; j < nIn; j++){
+                //入力とそれに対する重み行列の積
+                output[i] += wIO[i][j] * input[j];
+            }
+            //バイアス
+            output[i] += bias[i];
+        }
+
+        for(int n = 0; n < projection.length; n++) {
+            for (int i = 0; i < nOut; i++) {
+                for (int j = 0; j < dim; j++) {
+                    output[i] += wPO[i][j] * projection[n][j];
+                }
+            }
+        }
+
+        //Softmax関数
+        //log.info("Softmax Function:");
+        funSoftmax(output, nOut);
+
+        /*for(int i = 0; i < nOut; i++) {
+            System.out.print(output[i] + " ");
+        }
+        System.out.println();
+        */
+
+
+        /*
+        ロジスティック回帰の逆方向学習
+        確率的勾配降下法を用いてパラメータ更新
+         */
+        for (int i = 0; i < nOut; i++) {
+            //教師信号との誤差を求める
+            dOutput[i] = teach[i] - output[i];
+
+            for (int j = 0; j < nIn; j++) {
+                //中間層→出力層の誤差勾配
+                dhOutput[j] += dOutput[i] * wIO[i][j];
+                //中間層→出力層の重み行列更新
+                wIO[i][j] += learningLate * dOutput[i] * input[j];// / N;
+            }
+
+            //バイアスの更新
+            bias[i] += learningLate * dOutput[i];// / N;
+
+            for(int n = 0; n < projection.length; n++) {
+                for (int k = 0; k < dim; k++) {
+                    //投影層→出力層の誤差勾配
+                    dProjection[k] += dOutput[i] * wPO[i][k];
+
+                    //投影層→出力層の重み行列更新
+                    wPO[i][k] += learningLate * dOutput[i] * projection[n][k];// / N;
+                }
+            }
+        }
+    }
+
     /**
      * Testing Data Method
      * @param input テストデータ
@@ -113,6 +221,35 @@ public class LogisticRegression {
         }
 
         //Softmax関数
+        funSoftmax(output, nOut);
+
+    }
+
+    public void reconstruct2(double input[], double projection[][], double output[]){
+        //学習されたパラメータを使用した順方向計算
+        /*
+        ロジスティック回帰の順方向計算
+         */
+        for(int i = 0; i < nOut; i++){
+            output[i] = 0;
+            for(int j = 0; j < nIn; j++){
+                //入力とそれに対する重み行列の積
+                output[i] += wIO[i][j] * input[j];
+            }
+            //バイアス
+            output[i] += bias[i];
+        }
+
+        for(int n = 0; n < projection.length; n++) {
+            for (int i = 0; i < nOut; i++) {
+                for (int j = 0; j < dim; j++) {
+                    output[i] += wPO[i][j] * projection[n][j];
+                }
+            }
+        }
+
+        //Softmax関数
+        //log.info("Softmax Function:");
         funSoftmax(output, nOut);
 
     }
@@ -154,7 +291,7 @@ public class LogisticRegression {
 
         double testOutput[][] = new double[nTest][nOutput];
 
-        LogisticRegression logReg = new LogisticRegression(nInput, nOutput, inputData.length, rng);
+        LogisticRegression logReg = new LogisticRegression(nInput, nOutput, inputData.length, rng, null);
 
         for(int epoch = 0; epoch < epochs; epoch++){
             for(int i = 0; i < inputData.length; i++){

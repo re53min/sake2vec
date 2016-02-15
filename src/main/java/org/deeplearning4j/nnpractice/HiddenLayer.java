@@ -1,8 +1,5 @@
 package org.deeplearning4j.nnpractice;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Random;
 import java.util.function.DoubleFunction;
 
@@ -13,15 +10,15 @@ import static org.deeplearning4j.nnpractice.utils.*;
  * Created by b1012059 on 2015/09/09.
  */
 public class HiddenLayer {
-    private static Logger log = LoggerFactory.getLogger(HiddenLayer.class);
-    public int nIn;
-    public int nOut;
-    public double wIO[][];
-    public double bias[];
-    public int N;
-    public Random rng;
-    public DoubleFunction<Double> activation;
-    public DoubleFunction<Double> dActivation;
+    //private static Logger log = LoggerFactory.getLogger(HiddenLayer.class);
+    private int nIn;
+    private int nOut;
+    private double wIO[][];
+    private double bias[];
+    private int N;
+    private Random rng;
+    private DoubleFunction<Double> activation;
+    private DoubleFunction<Double> dActivation;
 
 
     /**
@@ -37,6 +34,8 @@ public class HiddenLayer {
         this.nIn = nIn;
         this.nOut = nOut;
         this.N = N;
+
+        //log.info("Initialize HiddenLayer");
 
         if(rng == null) this.rng = new Random(1234);
         else this.rng = rng;
@@ -77,7 +76,7 @@ public class HiddenLayer {
             this.activation = (double tmpOut) -> funReLU(tmpOut);
             this.dActivation = (double tmpOut) -> dfunReLU(tmpOut);
         } else {
-            log.info("Activation function not supported!");
+            //log.info("Activation function not supported!");
         }
 
     }
@@ -100,7 +99,7 @@ public class HiddenLayer {
      * @param bias
      * @return
      */
-    public double output(double input[], double w[], double bias){
+    private double output(double input[], double w[], double bias){
         double tmpData = 0.0;
         for(int i = 0; i < nIn; i++){
             tmpData += input[i] * w[i];
@@ -146,6 +145,41 @@ public class HiddenLayer {
             }
             //バイアスの更新
             bias[i] += learningLate * dOutput[i] / N;
+        }
+    }
+
+    /**
+     *
+     * @param input
+     * @param prevInput
+     * @param dProjection
+     * @param dhOutput
+     * @param learningLate
+     */
+    public void backwardCal2(double input[], double prevInput[],
+                             double dProjection[], double dhOutput[], double learningLate){
+
+        double dOutput[] = new double[nOut];
+
+        //今層の誤差勾配
+        for(int i = 0; i < nOut; i++) {
+            dOutput[i] = 0;
+            //次層の誤差勾配と次層への重み行列との積
+            dOutput[i] += dActivation.apply(prevInput[i]) * dhOutput[i];
+            for(int j = 0; j < nIn; j++){
+                //活性化関数の微分との積により誤差勾配(修正量)を求める
+                dProjection[i] += wIO[i][j] * dOutput[i];
+            }
+        }
+
+        //今層の誤差勾配を用いて重み行列及びバイアスの更新
+        for(int i = 0; i < nOut; i++){
+            for(int j = 0; j < nIn; j++){
+                //重み行列の更新
+                wIO[i][j] += learningLate * dOutput[i] * input[j];// / N;
+            }
+            //バイアスの更新
+            bias[i] += learningLate * dOutput[i];// / N;
         }
     }
 

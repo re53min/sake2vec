@@ -9,6 +9,7 @@ public class utils {
 
     //シグモイド関数の傾き
     private final static double beta = 1.0;
+    //private static Logger log = LoggerFactory.getLogger(utils.class);
 
     /**
      * 一様分布
@@ -132,15 +133,16 @@ public class utils {
      * @return
      */
     public static void funSoftmax(double tmpOut[], int nOut){
-        double max = 0.0;
+        //double max = 0.0;
         double sum = 0.0;
 
-        for(int i = 0; i < nOut; i++){
+        /*for(int i = 0; i < nOut; i++){
             if(max < tmpOut[i]) max = tmpOut[i];
-        }
+        }*/
 
         for(int i = 0; i < nOut; i++){
-            tmpOut[i] = Math.exp(tmpOut[i] - max);
+            //tmpOut[i] = Math.exp(tmpOut[i] - max);
+            tmpOut[i] = Math.exp(tmpOut[i]);
             sum += tmpOut[i];
         }
 
@@ -149,15 +151,27 @@ public class utils {
         }
     }
 
+    public static double updateLR(double learningRate, double decayRate, int epoch){
+        return learningRate / (1 + decayRate * epoch);
+    }
+
     /**
      * AdaGradの実装予定
      * @param learningLate
      * @return
      */
     public static double adaGrad(double learningLate){
-        return 0.;
+        return 0.1;
     }
 
+    /**
+     * RMSPropの実装予定
+     * @param learningLate
+     * @return
+     */
+    public static double rmsProp(double learningLate){
+        return 0.1;
+    }
 
     /**
      * コサイン類似度
