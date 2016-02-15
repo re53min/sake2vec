@@ -3,7 +3,12 @@ package org.deeplearning4j.nnpractice;
 import org.apache.commons.collections.BidiMap;
 import org.apache.commons.collections.bidimap.DualHashBidiMap;
 import org.apache.commons.lang3.ArrayUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -18,7 +23,7 @@ import static org.deeplearning4j.nnpractice.utils.*;
  * Created by b1012059 on 2016/01/31.
  */
 public class NNLM {
-    //private static Logger log = LoggerFactory.getLogger(NNLM.class);
+    private static Logger log = LoggerFactory.getLogger(NNLM.class);
     private int nInput;
     private int nHidden;
     private int nOutput;
@@ -37,7 +42,7 @@ public class NNLM {
         this.vocab = vocab;
         this.dim = dim;
         this.n = n;
-        this.nInput = dim * 2;
+        this.nInput = dim*2;
         this.nHidden = nHidden;
         this.nOutput = vocab;
         this.learningRate = lr;
@@ -58,17 +63,17 @@ public class NNLM {
         } else if(lrUpdateType == "RMSProp"){
             this.learningType = (int epoch) -> rmsProp(this.learningRate);
         } else {
-            //log.info("Learning Update Type not supported!");
+            log.info("Learning Update Type not supported!");
         }
 
     }
 
     public void train(Map<String, Integer> nGram, int epochs, NLP nlp) {
-        double[][] lookUpInput = new double[n-1][vocab];
+        double[][] lookUpInput = new double[n-1][dim];
         double[] hiddenInput;
         int[] teachInput = new int[vocab];
         double[] outLayerInput;
-        double[] dProjection;
+        double[][] dProjection;
         double[] dhOutput;
         double lr;
 
@@ -76,14 +81,14 @@ public class NNLM {
         N-gramの袋から着目単語の前n-1単語の分散表現を取り出す
         着目単語のときは教師データの作成
          */
-        //log.info("Get LookUpTable and Create TeachData");
+        log.info("Get LookUpTable and Create TeachData");
         for (Map.Entry<String, Integer> entry : nGram.entrySet()) {
             String[] words = entry.getKey().split(" ", 0);
             for (int i = 0; i < n; i++) {
                 if (i < n - 1) {
                     int vocabNumber = nlp.getWordToId().get(words[i]);
                     lookUpInput[i] = pLayer.lookUpTable(vocabNumber);
-                    //log.info("LookUpTable " + vocabNumber + "th word");
+                    log.info("LookUpTable " + vocabNumber + "th word");
                 } else {
                     //log.info("TeachData:");
                     for (int v = 0; v < vocab; v++) {
@@ -95,17 +100,17 @@ public class NNLM {
             }
             //System.out.println();
             /*
-            N-gram30回の学習
+            N-gram N回の学習
              */
-            //log.info("Training N-gram");
+            log.info("Training N-gram");
             for (int epoch = 0; epoch < epochs; epoch++) {
                 //初期化
                 hiddenInput = ArrayUtils.addAll(lookUpInput[0], lookUpInput[1]);
                 outLayerInput = new double[nHidden];
                 dhOutput = new double[nHidden];
-                dProjection = new double[dim];
+                dProjection = new double[n-1][nInput];
                 lr = learningType.applyAsDouble(epoch);
-                System.out.println(String.valueOf(lr));
+                log.info(String.valueOf(lr));
 
                 hLayer.forwardCal(hiddenInput, outLayerInput);
                 logisticLayer.train2(outLayerInput, lookUpInput, teachInput,
@@ -113,13 +118,13 @@ public class NNLM {
                 hLayer.backwardCal2(hiddenInput, outLayerInput, dProjection, dhOutput, lr);
 
                 for(int j = 0; j < n - 1; j++) {
-                    pLayer.backwardCal(nlp.getWordToId().get(words[j]), dProjection);
+                    pLayer.backwardCal(nlp.getWordToId().get(words[j]), dProjection[j]);
                     //LookUpInputの更新
                     lookUpInput[j] = pLayer.lookUpTable(nlp.getWordToId().get(words[j]));
                 }
             }
         }
-        //log.info("Finish N-gram");
+        log.info("Finish N-gram");
     }
 
     /**
@@ -159,6 +164,44 @@ public class NNLM {
                 pLayer.lookUpTable(nlp.getWordToId().get(word2)));
     }
 
+    /**
+     * 車輪の再発明
+     * DeepLearning4jのWordVectorSerializerクラスにある
+     * writeWordVectorsを再実装
+     * @param vocab
+     * @param dim
+     * @param nlp
+     */
+    public void writeWordVectors(int vocab, int dim, NLP nlp){
+        try {
+            BufferedWriter write = new BufferedWriter(new FileWriter(new File("test1.txt"), false));
+            boolean flag = true;
+            for (String key : nlp.getWordToId().keySet()) {
+                StringBuilder sb = new StringBuilder();
+                if(flag){
+                    sb.append(vocab);
+                    sb.append(" ");
+                    sb.append(dim);
+                    sb.append("\n");
+                    write.write(sb.toString());
+                    flag = false;
+                    sb = new StringBuilder();
+                }
+                sb.append(key);
+                sb.append(" ");
+
+                for(int i = 0; i < dim; i++){
+                    sb.append(pLayer.lookUpTable(nlp.getWordToId().get(key))[i]);
+                    if(i < dim - 1) sb.append(" ");
+                }
+                sb.append("\n");
+                write.write(sb.toString());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private static void testNNLM(){
 
         String text = null;
@@ -168,8 +211,7 @@ public class NNLM {
             e.printStackTrace();
         }
 
-        /*
-        String text = "ラーメンとは、中華麺とスープ、様々な具（チャーシュー・メンマ・味付け玉子・刻み葱など）を組み合わせた麺料理（ただし具を入れない場合もある）。漢字表記は拉麺、老麺[2]または柳麺。別名は中華そばおよび支那そば・南京そば[3][4]などである。小麦粉を原材料とし、かん水（鹹水）というアルカリ塩水溶液を添加するのが大きな特徴である。そのため同じ小麦粉で作った麺でも、日本のうどんや中国の多くの麺料理と異なる独特の色・味・食感をもつ。"
+        /*String text = "ラーメンとは、中華麺とスープ、様々な具（チャーシュー・メンマ・味付け玉子・刻み葱など）を組み合わせた麺料理（ただし具を入れない場合もある）。漢字表記は拉麺、老麺[2]または柳麺。別名は中華そばおよび支那そば・南京そば[3][4]などである。小麦粉を原材料とし、かん水（鹹水）というアルカリ塩水溶液を添加するのが大きな特徴である。そのため同じ小麦粉で作った麺でも、日本のうどんや中国の多くの麺料理と異なる独特の色・味・食感をもつ。"
                 +"この小麦粉に水を加えて、細長い麺とする。多くの場合は「製麺機」で製麺し、製麺会社が製造する麺を使用する店も多いが、1990年代以降小型の圧延機などが流通するようになり、ラーメン専門店では自家製麺を行う店が増えている。"
                 +"また、麺の太さによって、「細麺」、「中細麺」、「中太麺」、「太麺」などと称する。また、めんの縮れ具合も考慮する。これを組み合わせ、マニアがラーメンの麺を評する際に「中細ストレート麺」などと称することもあるが、あくまでも感覚的な呼称である。博多ラーメンの細い麺からうどんより太い麺まで多種多様である。ラーメンの汁は「スープ」と呼ぶ。丼に入れたタレを出汁（ダシ）で割ってスープを作る（出汁を「スープ」と呼ぶこともあるが、本項では混同を避けるため、区別して記述する）。" +
                 "スープはラーメンの味を決定する非常に重要な要素であり、手間暇をかけて工夫したスープを使用する店がほとんどである。そのため、ダシとタレは分けて調理を行う。スープの素となる。出汁は複数の素材から取ることが多く、日本のラーメン原点ともされる醤油ラーメンでは、鶏ガラを基本に、野菜と削り節や煮干しで味を整えたものが主流である。また、「昔風」を標榜しているラーメンも同様のダシを使用することが多い。"
@@ -178,31 +220,37 @@ public class NNLM {
                 +"また、原始仏教は宗教的側面もあったが、四諦や十二因縁という自然の摂理を観ずる哲学的側面の方がより強かったという理由も挙げられる。さらに釈迦は「自灯明・法灯明」（自らを依り所とし、法を依り所とせよ）という基本的理念から、釈迦本人は、自身が根本的な信仰対象であるとは考えていなかった。したがって初期仏教においては仏像というものは存在しなかった。"
                 +"しかし、釈迦が入滅し時代を経ると、仏の教えを伝えるために図画化していくことになる。"
                 +"仏陀となった偉大な釈迦の姿は、もはや人の手で表現できないと思われていた。そのため人々は釈迦の象徴としてストゥーパ（卒塔婆、釈迦の遺骨を祀ったもの）、法輪（仏の教えが広まる様子を輪で表現したもの））や、仏足石（釈迦の足跡を刻んだ石）、菩提樹などを礼拝していた。インドの初期仏教美術には仏伝図（釈迦の生涯を表した浮き彫りなど）は多数あるが、釈迦の姿は表されず、足跡、菩提樹、台座などによってその存在が暗示されるのみであった。";
-        */
+                */
+
+        //String text = "仏陀となった偉大な釈迦の姿は、もはや人の手で表現できないと思われていた。そのため人々は釈迦の象徴としてストゥーパ（卒塔婆、釈迦の遺骨を祀ったもの）、法輪（仏の教えが広まる様子を輪で表現したもの））や、仏足石（釈迦の足跡を刻んだ石）、菩提樹などを礼拝していた。インドの初期仏教美術には仏伝図（釈迦の生涯を表した浮き彫りなど）は多数あるが、釈迦の姿は表されず、足跡、菩提樹、台座などによってその存在が暗示されるのみであった。";
 
         NLP nlp = new NLP(text);
         int vocab = nlp.getWordToId().size();
         int dim = 30;
         int n = 3;
         Map<String, Integer> map = nlp.createNgram(n);
-        int nHidden = 100;
-        int epochs = 10;
+        int nHidden = 60;
+        int epochs = 30;
         double learningRate = 0.1;
         double decayRate = 1E-2;
         Random rng = new Random(123);
 
-        //log.info("Vocabulary ize: " + vocab);
-        //log.info("Word Vector: " + dim);
-        //log.info("N-gram Count: " + map.size());
-        //log.info("Epoch: " + epochs);
-        //log.info("Learning Rate: " + learningRate);
-        //log.info("Decay Rate" + decayRate);
+        log.info("Word Size: " + nlp.getRet().size());
+        log.info("Vocabulary Size: " + vocab);
+        log.info("Word Vector: " + dim);
+        log.info("N-gram Size: " + map.size());
+        log.info("Epoch: " + epochs);
+        log.info("Learning Rate: " + learningRate);
+        log.info("Decay Rate" + decayRate);
 
-        //log.info("Creating NNLM Instance");
+        log.info("Creating NNLM Instance");
         NNLM nnlm = new NNLM(vocab, dim, n, nHidden, rng, learningRate, decayRate, null);
 
-        //log.info("Starting Train NNLM");
+        log.info("Starting Train NNLM");
         nnlm.train(map, epochs, nlp);
+
+        log.info("Saving Word Vectors");
+        nnlm.writeWordVectors(vocab, dim, nlp);
 
         System.out.println("-------TEST-------");
 
@@ -225,6 +273,8 @@ public class NNLM {
                 word1 = scan2.next();
                 word2 = scan2.next();
                 nnlm.reconstruct(nlp, word1, word2);
+            case "保存":
+                nnlm.writeWordVectors(vocab, dim, nlp);
             case "終了":
                 break;
             default:
@@ -233,7 +283,7 @@ public class NNLM {
     }
 
     public static void main(String[] args){
-        //log.info("Let's Start NNLM!!");
+        log.info("Let's Start NNLM!!");
         testNNLM();
     }
 }

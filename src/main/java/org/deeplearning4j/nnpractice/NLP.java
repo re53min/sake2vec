@@ -2,6 +2,8 @@ package org.deeplearning4j.nnpractice;
 
 import com.atilika.kuromoji.ipadic.Token;
 import com.atilika.kuromoji.ipadic.Tokenizer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,7 +14,7 @@ import java.util.Map;
  * Created by b1012059 on 2016/02/04.
  */
 public class NLP {
-    //private static Logger log = LoggerFactory.getLogger(NLP.class);
+    private static Logger log = LoggerFactory.getLogger(NLP.class);
     private Tokenizer tokenizer;
     private List<Token> tokens;
     private HashMap<String, Integer> wordCount;
@@ -35,7 +37,7 @@ public class NLP {
     private void createVector(){
         int id = 0;
 
-        //log.info("Stating Morphological Analysis");
+        log.info("Stating Morphological Analysis");
         tokens.forEach(token -> {
             String[] features = token.getAllFeaturesArray();
 
@@ -49,9 +51,7 @@ public class NLP {
             if(wordCount.containsKey(token.getSurface())){
                 counter = wordCount.get(token.getSurface()) + 1;
             }
-
             wordCount.put(token.getSurface(), counter);
-
         });
 
         //log.info("Creating WordToId");
@@ -69,7 +69,7 @@ public class NLP {
         StringBuilder ngramSb = new StringBuilder();
 
         // n-gramとその出現回数を格納したMapを生成
-        //log.info("Creating N-gram");
+        log.info("Creating N-gram");
         for(int i = 0; i < numberOfNgram; i++) {
             // ngramを1つ生成
             for (int j = i; j < i + n; j++) {
@@ -88,6 +88,10 @@ public class NLP {
         }
 
         return ngramMap;
+    }
+
+    public ArrayList<String> getRet(){
+        return this.ret;
     }
 
     public HashMap<String, Integer> getWordCount(){

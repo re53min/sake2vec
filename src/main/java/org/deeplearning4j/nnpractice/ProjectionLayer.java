@@ -1,5 +1,8 @@
 package org.deeplearning4j.nnpractice;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Random;
 
 import static org.deeplearning4j.nnpractice.utils.uniform;
@@ -8,7 +11,7 @@ import static org.deeplearning4j.nnpractice.utils.uniform;
  * Created by b1012059 on 2016/01/31.
  */
 public class ProjectionLayer {
-    //private static Logger log = LoggerFactory.getLogger(ProjectionLayer.class);
+    private static Logger log = LoggerFactory.getLogger(ProjectionLayer.class);
     private int vocab;
     private int dim;
     private double wDI[][];
@@ -17,7 +20,7 @@ public class ProjectionLayer {
     public ProjectionLayer(int vocab, int dim, double wDI[][], Random rng){
         this.vocab = vocab;
         this.dim = dim;
-        //log.info("Initialize ProjectionLayer");
+        log.info("Initialize ProjectionLayer");
 
         //randomの種
         if(rng == null) this.rng = new Random(1234);

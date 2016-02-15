@@ -1,5 +1,8 @@
 package org.deeplearning4j.nnpractice;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Random;
 
 import static org.deeplearning4j.nnpractice.utils.funSoftmax;
@@ -10,7 +13,7 @@ import static org.deeplearning4j.nnpractice.utils.uniform;
  * Created by b1012059 on 2015/11/23.
  */
 public class LogisticRegression {
-    //private static Logger log = LoggerFactory.getLogger(LogisticRegression.class);
+    private static Logger log = LoggerFactory.getLogger(LogisticRegression.class);
     private int nIn;
     private int nOut;
     private int dim;
@@ -71,7 +74,7 @@ public class LogisticRegression {
         this.wPO = new double[nOut][dim];
         this.bias = new double[nOut];
 
-        //log.info("Initialize LogisticLayer");
+        log.info("Initialize LogisticLayer");
 
         //ランダムの種
         if(rng == null) this.rng = new Random(1234);
@@ -136,7 +139,7 @@ public class LogisticRegression {
     }
 
     public void train2(double input[], double projection[][], int teach[],
-                       double dProjection[], double dhOutput[], double learningLate){
+                       double dProjection[][], double dhOutput[], double learningLate){
 
         double output[] = new double[nOut];
         double dOutput[] = new double[nOut];
@@ -166,12 +169,13 @@ public class LogisticRegression {
         //Softmax関数
         //log.info("Softmax Function:");
         funSoftmax(output, nOut);
-
-        /*for(int i = 0; i < nOut; i++) {
+        /*
+        for(int i = 0; i < nOut; i++) {
             System.out.print(output[i] + " ");
         }
         System.out.println();
         */
+
 
 
         /*
@@ -186,7 +190,7 @@ public class LogisticRegression {
                 //中間層→出力層の誤差勾配
                 dhOutput[j] += dOutput[i] * wIO[i][j];
                 //中間層→出力層の重み行列更新
-                wIO[i][j] += learningLate * dOutput[i] * input[j];// / N;
+                wIO[i][j] += learningLate * dOutput[i] * input[j];
             }
 
             //バイアスの更新
@@ -195,10 +199,10 @@ public class LogisticRegression {
             for(int n = 0; n < projection.length; n++) {
                 for (int k = 0; k < dim; k++) {
                     //投影層→出力層の誤差勾配
-                    dProjection[k] += dOutput[i] * wPO[i][k];
+                    dProjection[n][k] += dOutput[i] * wPO[i][k];
 
                     //投影層→出力層の重み行列更新
-                    wPO[i][k] += learningLate * dOutput[i] * projection[n][k];// / N;
+                    wPO[i][k] += learningLate * dOutput[i] * projection[n][k];
                 }
             }
         }
