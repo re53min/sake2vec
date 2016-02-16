@@ -23,7 +23,8 @@ public class RecurrentHLayer {
     private DoubleFunction<Double> activation;
     private DoubleFunction<Double> dActivation;
 
-    public RecurrentHLayer(int nIn, int nOut, double wIH[][], double wRH[][], double bias[], int N, Random rng, String activation){
+    public RecurrentHLayer(int nIn, int nOut, double wIH[][], double wRH[][],
+                           double bias[], int N, Random rng, String activation){
         this.nIn = nIn;
         this.nOut = nOut;
         this.N = N;
