@@ -76,6 +76,7 @@ public class NNLM {
         double[][] dProjection;
         double[] dhOutput;
         double lr;
+        int count = 1;
 
         /*
         N-gramの袋から着目単語の前n-1単語の分散表現を取り出す
@@ -83,6 +84,7 @@ public class NNLM {
          */
         log.info("Get LookUpTable and Create TeachData");
         for (Map.Entry<String, Integer> entry : nGram.entrySet()) {
+            log.info("Set " + count + "th N-gram");
             String[] words = entry.getKey().split(" ", 0);
             for (int i = 0; i < n; i++) {
                 if (i < n - 1) {
@@ -123,6 +125,7 @@ public class NNLM {
                     lookUpInput[j] = pLayer.lookUpTable(nlp.getWordToId().get(words[j]));
                 }
             }
+            count++;
         }
         log.info("Finish N-gram");
     }
@@ -203,6 +206,11 @@ public class NNLM {
     }
 
     private static void testNNLM(){
+        /*
+        N-gram Size: 111733
+        Word Size: 195569
+        Vocabulary Size: 10507
+         */
 
         String text = null;
         try {
@@ -228,7 +236,7 @@ public class NNLM {
         int n = 3;
         Map<String, Integer> map = nlp.createNgram(n);
         int nHidden = 60;
-        int epochs = 30;
+        int epochs = 10;
         double learningRate = 0.1;
         double decayRate = 1E-2;
         Random rng = new Random(123);
