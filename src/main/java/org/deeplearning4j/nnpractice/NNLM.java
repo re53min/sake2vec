@@ -230,7 +230,7 @@ public class NNLM {
         int nHidden = 60;
         int epochs = 30;
         double learningRate = 0.1;
-        double decayRate = 1E-2;
+        double decayRate = 1E-3;
         Random rng = new Random(123);
 
         log.info("Word Size: " + nlp.getRet().size());
