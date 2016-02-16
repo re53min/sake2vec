@@ -12,12 +12,14 @@ import static org.deeplearning4j.nnpractice.utils.uniform;
  */
 public class ProjectionLayer {
     private static Logger log = LoggerFactory.getLogger(ProjectionLayer.class);
+    private int N;
     private int vocab;
     private int dim;
     private double wDI[][];
     private Random rng;
 
-    public ProjectionLayer(int vocab, int dim, double wDI[][], Random rng){
+    public ProjectionLayer(int N, int vocab, int dim, double wDI[][], Random rng){
+        this.N = N;
         this.vocab = vocab;
         this.dim = dim;
         log.info("Initialize ProjectionLayer");
@@ -52,7 +54,7 @@ public class ProjectionLayer {
     public void backwardCal(int wordToId, double dProjection[]){
 
         for(int j = 0; j < dim; j++){
-            wDI[j][wordToId] += dProjection[j];
+            wDI[j][wordToId] += dProjection[j] / N;
         }
     }
 }

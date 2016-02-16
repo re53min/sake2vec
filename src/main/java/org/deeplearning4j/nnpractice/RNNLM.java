@@ -11,9 +11,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.function.IntToDoubleFunction;
 
-import static org.deeplearning4j.nnpractice.utils.adaGrad;
-import static org.deeplearning4j.nnpractice.utils.rmsProp;
-import static org.deeplearning4j.nnpractice.utils.updateLR;
+import static org.deeplearning4j.nnpractice.utils.*;
 
 /**
  * Created by b1012059 on 2016/02/15.
@@ -25,19 +23,16 @@ public class RNNLM {
     private int nOutput;
     private int vocab;
     private int dim;
-    private int n;
     private double learningRate;
     private double decayRate;
     private RecurrentHLayer rLayer;
-    private HiddenLayer hLayer;
     private LogisticRegression logisticLayer;
     private Random rng;
     private IntToDoubleFunction learningType;
 
-    public RNNLM(int vocab, int dim, int n, int nHidden, Random rng, double lr, double dr, String lrUpdateType){
+    public RNNLM(int N, int vocab, int dim, int nHidden, Random rng, double lr, double dr, String lrUpdateType){
         this.vocab = vocab;
         this.dim = dim;
-        this.n = n;
         this.nInput = vocab;
         this.nHidden = nHidden;
         this.nOutput = vocab;
@@ -48,9 +43,8 @@ public class RNNLM {
         if(rng == null) this.rng = new Random(1234);
         else this.rng = rng;
 
-        //this.rLayer = new RecurrentHLayer();
-        this.hLayer = new HiddenLayer(this.nInput, nHidden, null, null, vocab, rng, "tanh");
-        this.logisticLayer = new LogisticRegression(dim, nHidden, this.nOutput, vocab, rng, "tanh");
+        this.rLayer = new RecurrentHLayer(vocab, nHidden, null, null, null, null, N, rng, "sigmoid");
+        this.logisticLayer = new LogisticRegression(dim, nHidden, this.nOutput, N, rng, "sigmoid");
 
         if (lrUpdateType == "UpdateLR" || lrUpdateType == null) {
             this.learningType = (int epoch) -> updateLR(this.learningRate, this.decayRate, epoch);
@@ -63,8 +57,36 @@ public class RNNLM {
         }
     }
 
-    private void train(){
+    private void train(Map<String, Integer> nGramm, int epochs, NLP nlp){
+        double output[] = new double[vocab];
+        double rhLayer[] = new double[nHidden];
+        int[] teachInput = new int[vocab];
+        int vocabNumber = 0;
+        double lr;
+        double dOutput[] = new double[vocab];
 
+        log.info("Get LookUpTable and Create TeachData");
+        for(int epoch = 0; epoch < epochs; epoch++) {
+            for (Map.Entry<String, Integer> entry : nGramm.entrySet()) {
+                String[] words = entry.getKey().split(" ", 0);
+                for (int i = 0; i < words.length; i++) {
+                    if (i < words.length - 1) {
+                        vocabNumber = nlp.getWordToId().get(words[i]);
+                        log.info("LookUpTable " + vocabNumber + "th word");
+                    } else {
+                        for (int v = 0; v < vocab; v++) {
+                            if (v == nlp.getWordToId().get(words[i])) teachInput[v] = 1;
+                            else teachInput[v] = 0;
+                        }
+                    }
+                }
+
+                lr = learningType.applyAsDouble(epoch);
+                rLayer.forwardCal(vocabNumber, rhLayer, output);
+                dOutput = logisticLayer.train(output, teachInput, lr);
+                //rLayer.backwardCal();
+            }
+        }
     }
 
 
@@ -78,29 +100,29 @@ public class RNNLM {
         }
 
         NLP nlp = new NLP(text);
+        int word = nlp.getRet().size();
         int vocab = nlp.getWordToId().size();
-        int dim = 30;
-        int n = 3;
-        Map<String, Integer> map = nlp.createNgram(n);
-        int nHidden = 60;
+        Map<String, Integer> map = nlp.createNgram(2);
+        int dim = 100;
+        int nHidden = 100;
         int epochs = 10;
         double learningRate = 0.1;
         double decayRate = 1E-2;
         Random rng = new Random(123);
 
-        log.info("Word size: " + nlp.getRet().size());
+        log.info("Word size: " + word);
         log.info("Vocabulary size: " + vocab);
         log.info("Word Vector: " + dim);
-        log.info("N-gram Count: " + map.size());
+        log.info("N-gram Size: " + map.size());
         log.info("Epoch: " + epochs);
         log.info("Learning Rate: " + learningRate);
         log.info("Decay Rate" + decayRate);
 
         log.info("Creating NNLM Instance");
-        RNNLM rnnlm = new RNNLM(vocab, dim, n, nHidden, rng, learningRate, decayRate, null);
+        RNNLM rnnlm = new RNNLM(word, vocab, dim, nHidden, rng, learningRate, decayRate, null);
 
         log.info("Starting Train NNLM");
-        //rnnlm.train(map, epochs, nlp);
+        rnnlm.train(map, epochs, nlp);
 
         System.out.println("-------TEST-------");
 

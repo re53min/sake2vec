@@ -16,6 +16,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jfreechart-1.0.19" level="project" />
     <orderEntry type="library" name="Maven: org.deeplearning4j:deeplearning4j-nlp:0.4-rc3.8" level="project" />
     <orderEntry type="library" name="Maven: org.apache.lucene:lucene-analyzers-common:5.3.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.lucene:lucene-core:5.3.1" level="project" />
@@ -194,15 +195,18 @@
     <orderEntry type="library" name="Maven: org.nd4j:nd4j-jackson:0.4-rc3.8" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
     <orderEntry type="library" name="Maven: org.nd4j:nd4j-x86:0.4-rc3.8" level="project" />
+    <orderEntry type="library" name="Maven: net.sourceforge.f2j:arpack_combined_all:0.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.fommil.netlib:core:1.1.2" level="project" />
     <orderEntry type="library" name="Maven: com.github.fommil.netlib:netlib-native_ref-osx-x86_64:natives:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.fommil.netlib:native_ref-java:1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.github.fommil:jniloader:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.fommil.netlib:netlib-native_ref-linux-x86_64:natives:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.fommil.netlib:netlib-native_ref-linux-i686:natives:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.fommil.netlib:netlib-native_ref-win-x86_64:natives:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.fommil.netlib:netlib-native_ref-win-i686:natives:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.fommil.netlib:netlib-native_ref-linux-armhf:natives:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.fommil.netlib:netlib-native_system-osx-x86_64:natives:1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.github.fommil.netlib:native_system-java:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.fommil.netlib:netlib-native_system-linux-x86_64:natives:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.fommil.netlib:netlib-native_system-linux-i686:natives:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.fommil.netlib:netlib-native_system-linux-armhf:natives:1.1" level="project" />
@@ -231,15 +235,9 @@
     <orderEntry type="library" name="Maven: com.atilika.kuromoji:kuromoji-ipadic:0.9.0" level="project" />
     <orderEntry type="library" name="Maven: com.atilika.kuromoji:kuromoji-core:0.9.0" level="project" />
     <orderEntry type="library" name="Maven: com.atilika.kuromoji:kuromoji-unidic:0.9.0" level="project" />
-    <orderEntry type="library" name="Maven: com.github.fommil.netlib:netlib-native_system-win-x86_64:1.1" level="project" />
-    <orderEntry type="library" name="Maven: com.github.fommil.netlib:native_system-java:1.1" level="project" />
-    <orderEntry type="library" name="Maven: com.github.fommil:jniloader:1.1" level="project" />
-    <orderEntry type="library" name="Maven: net.sourceforge.f2j:arpack_combined_all:0.1" level="project" />
     <orderEntry type="library" name="Maven: org.codelibs:elasticsearch-analysis-kuromoji-neologd:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.codelibs:lucene-analyzers-kuromoji-ipadic-neologd:5.3.1-20151231" level="project" />
     <orderEntry type="library" name="Maven: org.codelibs:analyzers-ja:5.3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.lucene:lucene-analyzers-kuromoji:5.3.1" level="project" />
-    <orderEntry type="library" name="jfreechart-1.0.19" level="project" />
-    <orderEntry type="library" name="Maven: org.nd4j:nd4j-jblas:0.4-rc3.7" level="project" />
   </component>
 </module>

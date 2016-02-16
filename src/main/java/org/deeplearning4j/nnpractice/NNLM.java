@@ -38,7 +38,7 @@ public class NNLM {
     private Random rng;
     private IntToDoubleFunction learningType;
 
-    public NNLM(int vocab, int dim, int n, int nHidden, Random rng, double lr, double dr, String lrUpdateType){
+    public NNLM(int N, int vocab, int dim, int n, int nHidden, Random rng, double lr, double dr, String lrUpdateType){
         this.vocab = vocab;
         this.dim = dim;
         this.n = n;
@@ -52,9 +52,9 @@ public class NNLM {
         if(rng == null) this.rng = new Random(1234);
         else this.rng = rng;
 
-        this.pLayer = new ProjectionLayer(vocab, dim, null, rng);
-        this.hLayer = new HiddenLayer(this.nInput, nHidden, null, null, vocab, rng, "tanh");
-        this.logisticLayer = new LogisticRegression(dim, nHidden, this.nOutput, vocab, rng, "tanh");
+        this.pLayer = new ProjectionLayer(N, vocab, dim, null, rng);
+        this.hLayer = new HiddenLayer(this.nInput, nHidden, null, null, N, rng, "tanh");
+        this.logisticLayer = new LogisticRegression(dim, nHidden, this.nOutput, N, rng, "tanh");
 
         if (lrUpdateType == "UpdateLR" || lrUpdateType == null) {
             this.learningType = (int epoch) -> updateLR(this.learningRate, this.decayRate, epoch);
@@ -231,6 +231,7 @@ public class NNLM {
                 */
 
         NLP nlp = new NLP(text);
+        int word = nlp.getRet().size();
         int vocab = nlp.getWordToId().size();
         int dim = 30;
         int n = 3;
@@ -241,7 +242,7 @@ public class NNLM {
         double decayRate = 1E-2;
         Random rng = new Random(123);
 
-        log.info("Word Size: " + nlp.getRet().size());
+        log.info("Word Size: " + word);
         log.info("Vocabulary Size: " + vocab);
         log.info("Word Vector: " + dim);
         log.info("N-gram Size: " + map.size());
@@ -250,7 +251,7 @@ public class NNLM {
         log.info("Decay Rate" + decayRate);
 
         log.info("Creating NNLM Instance");
-        NNLM nnlm = new NNLM(vocab, dim, n, nHidden, rng, learningRate, decayRate, null);
+        NNLM nnlm = new NNLM(word, vocab, dim, n, nHidden, rng, learningRate, decayRate, null);
 
         log.info("Starting Train NNLM");
         nnlm.train(map, epochs, nlp);
