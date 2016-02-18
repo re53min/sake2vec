@@ -54,7 +54,7 @@ public class ProjectionLayer {
     public void backwardCal(int wordToId, double dProjection[]){
 
         for(int j = 0; j < dim; j++){
-            wDI[j][wordToId] += dProjection[j] / N;
+            wDI[j][wordToId] += dProjection[j];
         }
     }
 }

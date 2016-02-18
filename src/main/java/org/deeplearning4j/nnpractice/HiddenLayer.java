@@ -165,7 +165,7 @@ public class HiddenLayer {
         for(int i = 0; i < nOut; i++) {
             dOutput[i] = 0;
             //次層の誤差勾配と次層への重み行列との積
-            dOutput[i] += dActivation.apply(prevInput[i]) * dhOutput[i] / N;
+            dOutput[i] += dActivation.apply(prevInput[i]) * dhOutput[i];
 
             for(int n = 0; n < dProjection.length; n++) {
                 for (int j = 0; j < nIn; j++) {
@@ -177,10 +177,10 @@ public class HiddenLayer {
             //今層の誤差勾配を用いて重み行列及びバイアスの更新
             for(int j = 0; j < nIn; j++){
                 //重み行列の更新
-                wIO[i][j] += learningLate * dOutput[i] * input[j]  / N;
+                wIO[i][j] += learningLate * dOutput[i] * input[j];
             }
             //バイアスの更新
-            bias[i] += learningLate * dOutput[i] / N;
+            bias[i] += learningLate * dOutput[i];
         }
     }
 

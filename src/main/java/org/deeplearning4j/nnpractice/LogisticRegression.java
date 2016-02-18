@@ -176,8 +176,6 @@ public class LogisticRegression {
         System.out.println();
         */
 
-
-
         /*
         ロジスティック回帰の逆方向学習
         確率的勾配降下法を用いてパラメータ更新
@@ -190,11 +188,11 @@ public class LogisticRegression {
                 //中間層→出力層の誤差勾配
                 dhOutput[j] += dOutput[i] * wIO[i][j];
                 //中間層→出力層の重み行列更新
-                wIO[i][j] += learningLate * dOutput[i] * input[j] / N;
+                wIO[i][j] += learningLate * dOutput[i] * input[j];
             }
 
             //バイアスの更新
-            bias[i] += learningLate * dOutput[i] / N;
+            bias[i] += learningLate * dOutput[i];
 
             for(int n = 0; n < projection.length; n++) {
                 for (int k = 0; k < dim; k++) {
@@ -202,7 +200,7 @@ public class LogisticRegression {
                     dProjection[n][k] += dOutput[i] * wPO[i][k];
 
                     //投影層→出力層の重み行列更新
-                    wPO[i][k] += learningLate * dOutput[i] * projection[n][k] / N;
+                    wPO[i][k] += learningLate * dOutput[i] * projection[n][k];
                 }
             }
         }

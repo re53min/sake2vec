@@ -179,17 +179,15 @@ public class NNLM {
         try {
             BufferedWriter write = new BufferedWriter(new FileWriter(new File("test1.txt"), false));
             boolean flag = true;
+            StringBuilder sb = new StringBuilder();
+            sb.append(vocab);
+            sb.append(" ");
+            sb.append(dim);
+            sb.append("\n");
+            write.write(sb.toString());
+
             for (String key : nlp.getWordToId().keySet()) {
-                StringBuilder sb = new StringBuilder();
-                if(flag){
-                    sb.append(vocab);
-                    sb.append(" ");
-                    sb.append(dim);
-                    sb.append("\n");
-                    write.write(sb.toString());
-                    flag = false;
-                    sb = new StringBuilder();
-                }
+                sb = new StringBuilder();
                 sb.append(key);
                 sb.append(" ");
 
