@@ -40,9 +40,9 @@ public class MultiLayerPerceptron {
      * Training Method
      * @param input 入力データ
      * @param teach 教師データ
-     * @param learningLate 学習率
+     * @param learningRate 学習率
      */
-    public void train(double input[][], int teach[][], double learningLate){
+    public void train(double input[][], int teach[][], double learningRate){
         double[] hiddenInput;
         double[] outLayerInput;
         double[] dOutput;
@@ -54,9 +54,9 @@ public class MultiLayerPerceptron {
 
             for(int j = 0; j < nInput; j++) hiddenInput[j] = input[n][j];
             hLayer.forwardCal(hiddenInput, outLayerInput);
-            dOutput = logisticLayer.train(outLayerInput, teach[n], learningLate);
+            dOutput = logisticLayer.train(outLayerInput, teach[n], learningRate);
 
-            hLayer.backwardCal(hiddenInput, null, outLayerInput, dOutput, logisticLayer.wIO, learningLate);
+            hLayer.backwardCal(hiddenInput, null, outLayerInput, dOutput, logisticLayer.wIO, learningRate);
         }
     }
 
@@ -293,7 +293,7 @@ public class MultiLayerPerceptron {
         int epochs = 200;
         int nTest = testData.length;
         int N = inputData.length;
-        double learningLate = 0.1;
+        double learningRate = 0.1;
         Random rng = new Random(123);
 
         //インスタンス生成
@@ -301,9 +301,9 @@ public class MultiLayerPerceptron {
 
         //Training
         for (int epoch = 0; epoch < epochs; epoch++) {
-            bp.train(inputData, teachData, learningLate);
-            //if(learningLate > 1e-5) learningLate *= 0.995;
-            //log.info(String.valueOf(learningLate));
+            bp.train(inputData, teachData, learningRate);
+            //if(learningRate > 1e-5) learningRate *= 0.995;
+            //log.info(String.valueOf(learningRate));
         }
 
         double testOutput[][] = new double[nTest][nOutput];

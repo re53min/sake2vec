@@ -235,7 +235,7 @@ public class NNLM {
         int n = 3;
         Map<String, Integer> map = nlp.createNgram(n);
         int nHidden = 60;
-        int epochs = 10;
+        int epochs = 5;
         double learningRate = 0.1;
         double decayRate = 1E-2;
         Random rng = new Random(123);

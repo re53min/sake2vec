@@ -116,38 +116,45 @@ public class RecurrentHLayer {
     }
 
     /**
-     *
-     * @param input
-     * @param prevInput
-     * @param dProjection
-     * @param dhOutput
-     * @param learningLate
+     * Backward Calculation
+     * @param wordToId 今層への入力(前層の出力)
+     * @param dOutput 今層の誤差勾配
+     * @param prevInput 次層への入力(今層の出力)
+     * @param prevdOutput　次層の誤差勾配
+     * @param prevWIO 次層の重み行列(今層→次層への重み行列)
+     * @param learningRate 学習率
      */
-    public void backwardCal(double input[], double prevInput[],
-                             double dProjection[][], double dhOutput[], double learningLate){
+    public void backwardCal(int wordToId, double dOutput[], double prevInput[],
+                            double prevdOutput[], double prevWIO[][], double rhInput[], double learningRate){
 
-        double dOutput[] = new double[nOut];
+        if(dOutput == null) dOutput = new double[nOut];
 
         //今層の誤差勾配
         for(int i = 0; i < nOut; i++) {
             dOutput[i] = 0;
-            //次層の誤差勾配と次層への重み行列との積
-            dOutput[i] += dActivation.apply(prevInput[i]) * dhOutput[i];
-
-            for(int n = 0; n < dProjection.length; n++) {
-                for (int j = 0; j < nIn; j++) {
-                    //活性化関数の微分との積により誤差勾配(修正量)を求める
-                    dProjection[n][j] += wIH[i][j] * dOutput[i];
-                }
+            for (int j = 0; j < prevdOutput.length; j++) {
+                //次層の誤差勾配と次層への重み行列との積
+                dOutput[i] += prevdOutput[j] * prevWIO[j][i];
             }
+            //活性化関数の微分との積により誤差勾配(修正量)を求める
+            dOutput[i] *= dActivation.apply(prevInput[i]);
+        }
 
-            //今層の誤差勾配を用いて重み行列及びバイアスの更新
+        //今層の誤差勾配を用いて重み行列及びバイアスの更新
+        for(int i = 0; i < nOut; i++){
             for(int j = 0; j < nIn; j++){
                 //重み行列の更新
-                wIH[i][j] += learningLate * dOutput[i] * input[j];
+                wIH[i][j] += learningRate * dOutput[i] * this.lookUpTable(wordToId)[j] / N;
             }
+
+            for(int k = 0; k < nOut; k++){
+                //再帰
+                wRH[i][k] += learningRate * rhInput[k] * dOutput[i] / N;
+            }
+
             //バイアスの更新
-            bIH[i] += learningLate * dOutput[i];
+            bIH[i] += learningRate * dOutput[i] / N;
+            bRH[i] += learningRate * dOutput[i] / N;
         }
     }
 

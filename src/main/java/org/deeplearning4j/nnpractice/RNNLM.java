@@ -58,7 +58,7 @@ public class RNNLM {
     }
 
     private void train(Map<String, Integer> nGramm, int epochs, NLP nlp){
-        double output[];
+        double outLayerInput[];
         double rhLayer[];
         int[] teachInput = new int[vocab];
         int vocabNumber = 0;
@@ -81,13 +81,13 @@ public class RNNLM {
                     }
                 }
 
-                output = new double[nHidden];
+                outLayerInput = new double[nHidden];
                 rhLayer = new double[nHidden];
 
                 lr = learningType.applyAsDouble(epoch);
-                rLayer.forwardCal(vocabNumber, rhLayer, output);
-                dOutput = logisticLayer.train(output, teachInput, lr);
-                //rLayer.backwardCal();
+                rLayer.forwardCal(vocabNumber, rhLayer, outLayerInput);
+                dOutput = logisticLayer.train(outLayerInput, teachInput, lr);
+                rLayer.backwardCal(vocabNumber, null, outLayerInput, dOutput, logisticLayer.wIO, rhLayer, lr);
             }
         }
     }

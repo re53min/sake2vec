@@ -97,10 +97,10 @@ public class LogisticRegression {
      * Training Method
      * @param input
      * @param teach
-     * @param learningLate
+     * @param learningRate
      * @return
      */
-    public double[] train(double input[], int teach[], double learningLate){
+    public double[] train(double input[], int teach[], double learningRate){
         double output[] = new double[nOut];
         double dOutput[] = new double[nOut];
 
@@ -129,17 +129,17 @@ public class LogisticRegression {
 
             for(int j = 0; j < nIn; j++){
                 //重み行列の更新
-                wIO[i][j] += learningLate * dOutput[i] * input[j] / N;
+                wIO[i][j] += learningRate * dOutput[i] * input[j] / N;
             }
             //バイアスの更新
-            bias[i] += learningLate * dOutput[i] / N;
+            bias[i] += learningRate * dOutput[i] / N;
         }
 
         return dOutput;
     }
 
     public void train2(double input[], double projection[][], int teach[],
-                       double dProjection[][], double dhOutput[], double learningLate){
+                       double dProjection[][], double dhOutput[], double learningRate){
 
         double output[] = new double[nOut];
         double dOutput[] = new double[nOut];
@@ -187,11 +187,11 @@ public class LogisticRegression {
                 //中間層→出力層の誤差勾配
                 dhOutput[j] += dOutput[i] * wIO[i][j];
                 //中間層→出力層の重み行列更新
-                wIO[i][j] += learningLate * dOutput[i] * input[j];
+                wIO[i][j] += learningRate * dOutput[i] * input[j];
             }
 
             //バイアスの更新
-            bias[i] += learningLate * dOutput[i];
+            bias[i] += learningRate * dOutput[i];
 
             for(int n = 0; n < projection.length; n++) {
                 for (int k = 0; k < dim; k++) {
@@ -199,7 +199,7 @@ public class LogisticRegression {
                     dProjection[n][k] += dOutput[i] * wPO[i][k];
 
                     //投影層→出力層の重み行列更新
-                    wPO[i][k] += learningLate * dOutput[i] * projection[n][k];
+                    wPO[i][k] += learningRate * dOutput[i] * projection[n][k];
                 }
             }
         }
@@ -263,7 +263,7 @@ public class LogisticRegression {
         int nOutput = 2;
         int nTest = 2;
         int epochs = 500;
-        double learningLate = 0.1;
+        double learningRate = 0.1;
         Random rng = new Random(123);
 
         double inputData[][] = {
@@ -296,9 +296,9 @@ public class LogisticRegression {
 
         for(int epoch = 0; epoch < epochs; epoch++){
             for(int i = 0; i < inputData.length; i++){
-                logReg.train(inputData[i], teachData[i], learningLate);
-                //if(learningLate > 1e-5) learningLate *= 0.995;
-                //log.info(String.valueOf(learningLate));
+                logReg.train(inputData[i], teachData[i], learningRate);
+                //if(learningRate > 1e-5) learningRate *= 0.995;
+                //log.info(String.valueOf(learningRate));
             }
         }
 

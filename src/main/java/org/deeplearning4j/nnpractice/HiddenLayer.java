@@ -119,10 +119,10 @@ public class HiddenLayer {
      * @param prevInput 次層への入力(今層の出力)
      * @param prevdOutput　次層の誤差勾配
      * @param prevWIO 次層の重み行列(今層→次層への重み行列)
-     * @param learningLate 学習率
+     * @param learningRate 学習率
      */
     public void backwardCal(double input[], double dOutput[], double prevInput[],
-                            double prevdOutput[], double prevWIO[][], double learningLate){
+                            double prevdOutput[], double prevWIO[][], double learningRate){
 
         if(dOutput == null) dOutput = new double[nOut];
 
@@ -141,10 +141,10 @@ public class HiddenLayer {
         for(int i = 0; i < nOut; i++){
             for(int j = 0; j < nIn; j++){
                 //重み行列の更新
-                wIO[i][j] += learningLate * dOutput[i] * input[j] / N;
+                wIO[i][j] += learningRate * dOutput[i] * input[j] / N;
             }
             //バイアスの更新
-            bias[i] += learningLate * dOutput[i] / N;
+            bias[i] += learningRate * dOutput[i] / N;
         }
     }
 
@@ -154,10 +154,10 @@ public class HiddenLayer {
      * @param prevInput
      * @param dProjection
      * @param dhOutput
-     * @param learningLate
+     * @param learningRate
      */
     public void backwardCal2(double input[], double prevInput[],
-                             double dProjection[][], double dhOutput[], double learningLate){
+                             double dProjection[][], double dhOutput[], double learningRate){
 
         double dOutput[] = new double[nOut];
 
@@ -177,10 +177,10 @@ public class HiddenLayer {
             //今層の誤差勾配を用いて重み行列及びバイアスの更新
             for(int j = 0; j < nIn; j++){
                 //重み行列の更新
-                wIO[i][j] += learningLate * dOutput[i] * input[j];
+                wIO[i][j] += learningRate * dOutput[i] * input[j];
             }
             //バイアスの更新
-            bias[i] += learningLate * dOutput[i];
+            bias[i] += learningRate * dOutput[i];
         }
     }
 
