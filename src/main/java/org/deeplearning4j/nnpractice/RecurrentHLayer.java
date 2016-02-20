@@ -83,10 +83,10 @@ public class RecurrentHLayer {
         }
     }
 
-    private double[] lookUpTable(int wordToId){
+    public double[] lookUpTable(int wordToId){
         double[] lookUp = new double[nIn];
 
-        for(int j = 0; j < nIn; j++){
+        for(int j = 0; j < nOut; j++){
             lookUp[j] = wIH[j][wordToId];
         }
         return lookUp;
@@ -96,7 +96,6 @@ public class RecurrentHLayer {
         for(int i = 0; i < nOut; i++) {
             output[i] = this.output(wordToId, rInput, wRH[i], bIH[i], bRH[i]);
         }
-        rInput = output;
     }
 
     private double output(int wordToId, double rInput[],
@@ -125,7 +124,7 @@ public class RecurrentHLayer {
      * @param learningRate 学習率
      */
     public void backwardCal(int wordToId, double dOutput[], double prevInput[],
-                            double prevdOutput[], double prevWIO[][], double rhInput[], double learningRate){
+                            double prevdOutput[], double prevWIO[][], double rInput[], double learningRate){
 
         if(dOutput == null) dOutput = new double[nOut];
 
@@ -149,13 +148,17 @@ public class RecurrentHLayer {
 
             for(int k = 0; k < nOut; k++){
                 //再帰
-                wRH[i][k] += learningRate * rhInput[k] * dOutput[i] / N;
+                wRH[i][k] += learningRate * rInput[k] * dOutput[i] / N;
             }
 
             //バイアスの更新
             bIH[i] += learningRate * dOutput[i] / N;
             bRH[i] += learningRate * dOutput[i] / N;
         }
+    }
+
+    public double[][] getwIH(){
+        return this.wIH;
     }
 
     /*

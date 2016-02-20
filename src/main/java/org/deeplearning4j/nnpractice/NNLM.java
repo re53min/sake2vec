@@ -6,9 +6,6 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -175,32 +172,8 @@ public class NNLM {
      * @param dim
      * @param nlp
      */
-    public void writeWordVectors(int vocab, int dim, NLP nlp, String fileName){
-        try {
-            BufferedWriter write = new BufferedWriter(new FileWriter(new File(fileName + ".txt"), false));
-            boolean flag = true;
-            StringBuilder sb = new StringBuilder();
-            sb.append(vocab);
-            sb.append(" ");
-            sb.append(dim);
-            sb.append("\n");
-            write.write(sb.toString());
-
-            for (String key : nlp.getWordToId().keySet()) {
-                sb = new StringBuilder();
-                sb.append(key);
-                sb.append(" ");
-
-                for(int i = 0; i < dim; i++){
-                    sb.append(pLayer.lookUpTable(nlp.getWordToId().get(key))[i]);
-                    if(i < dim - 1) sb.append(" ");
-                }
-                sb.append("\n");
-                write.write(sb.toString());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void writeWord(int vocab, int dim, NLP nlp, String fileName){
+        writeWordVectors(vocab, dim, nlp, pLayer.getwDI(), fileName);
     }
 
     private static void testNNLM(){
@@ -239,7 +212,7 @@ public class NNLM {
         double learningRate = 0.1;
         double decayRate = 1E-2;
         Random rng = new Random(123);
-        String fileName = "natsume-Model";
+        String fileName = "natsume-Model_nnlm";
 
         log.info("Word Size: " + word);
         log.info("Vocabulary Size: " + vocab);
@@ -256,7 +229,7 @@ public class NNLM {
         nnlm.train(map, epochs, nlp);
 
         log.info("Saving Word Vectors");
-        nnlm.writeWordVectors(vocab, dim, nlp, fileName);
+        nnlm.writeWord(vocab, dim, nlp, fileName);
 
         System.out.println("-------TEST-------");
 
@@ -280,7 +253,7 @@ public class NNLM {
                 word2 = scan2.next();
                 nnlm.reconstruct(nlp, word1, word2);
             case "保存":
-                nnlm.writeWordVectors(vocab, dim, nlp, fileName);
+                nnlm.writeWord(vocab, dim, nlp, fileName);
             case "終了":
                 break;
             default:

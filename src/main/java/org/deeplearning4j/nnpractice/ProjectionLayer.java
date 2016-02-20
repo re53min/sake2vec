@@ -51,6 +51,10 @@ public class ProjectionLayer {
         return lookUp;
     }
 
+    public double[][] getwDI(){
+        return  this.wDI;
+    }
+
     public void backwardCal(int wordToId, double dProjection[]){
 
         for(int j = 0; j < dim; j++){
