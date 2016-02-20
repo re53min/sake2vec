@@ -95,10 +95,9 @@ public class RecurrentHLayer {
     public void forwardCal(int wordToId, double rInput[], double output[]){
         for(int i = 0; i < nOut; i++) {
             output[i] = this.output(wordToId, rInput, wRH[i], bIH[i], bRH[i]);
-            rInput[i] = output[i];
         }
+        rInput = output;
     }
-
 
     private double output(int wordToId, double rInput[],
                           double r[], double bIH, double bRH){

@@ -58,8 +58,8 @@ public class RNNLM {
     }
 
     private void train(Map<String, Integer> nGramm, int epochs, NLP nlp){
-        double output[] = new double[vocab];
-        double rhLayer[] = new double[nHidden];
+        double output[];
+        double rhLayer[];
         int[] teachInput = new int[vocab];
         int vocabNumber = 0;
         double lr;
@@ -80,6 +80,9 @@ public class RNNLM {
                         }
                     }
                 }
+
+                output = new double[nHidden];
+                rhLayer = new double[nHidden];
 
                 lr = learningType.applyAsDouble(epoch);
                 rLayer.forwardCal(vocabNumber, rhLayer, output);

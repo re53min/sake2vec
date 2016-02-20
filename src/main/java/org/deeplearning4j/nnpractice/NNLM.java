@@ -175,9 +175,9 @@ public class NNLM {
      * @param dim
      * @param nlp
      */
-    public void writeWordVectors(int vocab, int dim, NLP nlp){
+    public void writeWordVectors(int vocab, int dim, NLP nlp, String fileName){
         try {
-            BufferedWriter write = new BufferedWriter(new FileWriter(new File("test1.txt"), false));
+            BufferedWriter write = new BufferedWriter(new FileWriter(new File(fileName + ".txt"), false));
             boolean flag = true;
             StringBuilder sb = new StringBuilder();
             sb.append(vocab);
@@ -239,6 +239,7 @@ public class NNLM {
         double learningRate = 0.1;
         double decayRate = 1E-2;
         Random rng = new Random(123);
+        String fileName = "natsume-Model";
 
         log.info("Word Size: " + word);
         log.info("Vocabulary Size: " + vocab);
@@ -255,7 +256,7 @@ public class NNLM {
         nnlm.train(map, epochs, nlp);
 
         log.info("Saving Word Vectors");
-        nnlm.writeWordVectors(vocab, dim, nlp);
+        nnlm.writeWordVectors(vocab, dim, nlp, fileName);
 
         System.out.println("-------TEST-------");
 
@@ -279,7 +280,7 @@ public class NNLM {
                 word2 = scan2.next();
                 nnlm.reconstruct(nlp, word1, word2);
             case "保存":
-                nnlm.writeWordVectors(vocab, dim, nlp);
+                nnlm.writeWordVectors(vocab, dim, nlp, fileName);
             case "終了":
                 break;
             default:

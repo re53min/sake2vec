@@ -144,7 +144,6 @@ public class LogisticRegression {
         double output[] = new double[nOut];
         double dOutput[] = new double[nOut];
 
-
         /*
         ロジスティック回帰の順方向計算
          */
