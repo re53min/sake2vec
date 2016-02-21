@@ -149,8 +149,8 @@ public class Converter {
      * Tester
      */
     private static void testConverter(){
-        //String sentence = "『報酬』の在り方を巡って、脳内にある報酬系のエージェント群が相互に意志によって選択されようとする過程が、葛藤や選択と呼ばれる。";
-        String sentence = "フルーティ";
+        String sentence = "『報酬』の在り方を巡って、脳内にある報酬系のエージェント群が相互に意志によって選択されようとする過程が、葛藤や選択と呼ばれる。";
+        //String sentence = "フルーティ";
         Converter conv = new Converter(sentence);
         conv.convSentence();
 

@@ -155,10 +155,10 @@ public class RNNLM {
         log.info("Learning Rate: " + learningRate);
         log.info("Decay Rate" + decayRate);
 
-        log.info("Creating NNLM Instance");
+        log.info("Creating RNNLM Instance");
         RNNLM rnnlm = new RNNLM(word, vocab, dim, rng, learningRate, decayRate, null);
 
-        log.info("Starting Train NNLM");
+        log.info("Starting Train RNNLM");
         rnnlm.train(map, epochs, nlp);
 
         log.info("Saving Word Vectors");
