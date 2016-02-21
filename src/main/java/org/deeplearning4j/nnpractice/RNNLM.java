@@ -58,18 +58,19 @@ public class RNNLM {
         double rhInput[] = new double[nHidden];
         int[] teachInput = new int[vocab];
         int vocabNumber = 0;
-        double lr = learningRate;
+        double lr;
         double dOutput[];
 
         log.info("Get LookUpTable and Create TeachData");
         for(int epoch = 0; epoch < epochs; epoch++) {
-            log.info(String.valueOf(lr));
+            lr = learningType.applyAsDouble(epoch);
+            log.info("LearningRate: " + lr);
             for (Map.Entry<String, Integer> entry : nGramm.entrySet()) {
                 String[] words = entry.getKey().split(" ", 0);
                 for (int i = 0; i < words.length; i++) {
                     if (i < words.length - 1) {
                         vocabNumber = nlp.getWordToId().get(words[i]);
-                        //log.info("LookUpTable " + vocabNumber + "th word");
+                        log.info("LookUpTable " + vocabNumber + "th word");
                     } else {
                         for (int v = 0; v < vocab; v++) {
                             if (v == nlp.getWordToId().get(words[i])) teachInput[v] = 1;
@@ -79,7 +80,6 @@ public class RNNLM {
                 }
 
                 outLayerInput = new double[nHidden];
-                lr = learningType.applyAsDouble(epoch);
 
                 rLayer.forwardCal(vocabNumber, rhInput, outLayerInput);
                 dOutput = logisticLayer.train(outLayerInput, teachInput, lr);

@@ -168,6 +168,18 @@ public class LogisticRegression {
         //Softmax関数
         //log.info("Softmax Function:");
         funSoftmax(output, nOut);
+
+        for(int z = 0; z < nOut; z++) {
+            if (Double.isInfinite(output[z])) {
+
+            } else if (Double.isNaN(output[z])) {
+
+            } else if (output[z] >= Double.MAX_VALUE) {
+
+            } else if (output[z] <= Double.MIN_VALUE) {
+
+            }
+        }
         /*
         for(int i = 0; i < nOut; i++) {
             System.out.print(output[i] + " ");
