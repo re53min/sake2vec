@@ -13,7 +13,7 @@ import static org.deeplearning4j.nnpractice.utils.*;
  * Created by b1012059 on 2015/09/09.
  */
 public class HiddenLayer {
-    private static Logger log = LoggerFactory.getLogger(HiddenLayer.class);
+    //private static Logger log = LoggerFactory.getLogger(HiddenLayer.class);
     private int nIn;
     private int nOut;
     private double wIO[][];
@@ -38,7 +38,7 @@ public class HiddenLayer {
         this.nOut = nOut;
         this.N = N;
 
-        log.info("Initialize HiddenLayer");
+        //log.info("Initialize HiddenLayer");
 
         if(rng == null) this.rng = new Random(1234);
         else this.rng = rng;
@@ -79,7 +79,7 @@ public class HiddenLayer {
             this.activation = (double tmpOut) -> funReLU(tmpOut);
             this.dActivation = (double tmpOut) -> dfunReLU(tmpOut);
         } else {
-            log.info("Activation function not supported!");
+            //log.info("Activation function not supported!");
         }
 
     }
@@ -181,6 +181,24 @@ public class HiddenLayer {
             }
             //バイアスの更新
             bias[i] += learningRate * dOutput[i];
+        }
+
+        for(int x = 0; x < nOut; x++) {
+            for(int y= 0; y < nIn; y++) {
+                try {
+                    if (Double.isInfinite(wIO[x][y])) {
+                        throw new Exception("OutputがInfinityになりました");
+                    } else if (Double.isNaN(wIO[x][y])) {
+                        throw new Exception("OutputがNaNになりました");
+                    } else if (wIO[x][y] >= Double.MAX_VALUE) {
+                        throw new Exception("Outputがオーバーフローしました");
+                    } else if (wIO[x][y] <= Double.MIN_VALUE) {
+                        throw new Exception("Outputがアンダーフローしました");
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 

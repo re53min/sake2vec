@@ -20,7 +20,7 @@ import static org.deeplearning4j.nnpractice.utils.*;
  * Created by b1012059 on 2016/01/31.
  */
 public class NNLM {
-    private static Logger log = LoggerFactory.getLogger(NNLM.class);
+    //private static Logger log = LoggerFactory.getLogger(NNLM.class);
     private int nInput;
     private int nHidden;
     private int nOutput;
@@ -60,7 +60,7 @@ public class NNLM {
         } else if(lrUpdateType == "RMSProp"){
             this.learningType = (int epoch) -> rmsProp(this.learningRate);
         } else {
-            log.info("Learning Update Type not supported!");
+            //log.info("Learning Update Type not supported!");
         }
 
     }
@@ -79,15 +79,15 @@ public class NNLM {
         N-gramの袋から着目単語の前n-1単語の分散表現を取り出す
         着目単語のときは教師データの作成
          */
-        log.info("Get LookUpTable and Create TeachData");
+        //log.info("Get LookUpTable and Create TeachData");
         for (Map.Entry<String, Integer> entry : nGram.entrySet()) {
-            log.info("Set " + count + "th N-gram");
+            //log.info("Set " + count + "th N-gram");
             String[] words = entry.getKey().split(" ", 0);
             for (int i = 0; i < n; i++) {
                 if (i < n - 1) {
                     int vocabNumber = nlp.getWordToId().get(words[i]);
                     lookUpInput[i] = pLayer.lookUpTable(vocabNumber);
-                    log.info("LookUpTable " + vocabNumber + "th word");
+                    //log.info("LookUpTable " + vocabNumber + "th word");
                 } else {
                     //log.info("TeachData:");
                     for (int v = 0; v < vocab; v++) {
@@ -101,7 +101,7 @@ public class NNLM {
             /*
             N-gram N回の学習
              */
-            log.info("Training N-gram");
+            //log.info("Training N-gram");
             for (int epoch = 0; epoch < epochs; epoch++) {
                 //初期化
                 hiddenInput = ArrayUtils.addAll(lookUpInput[0], lookUpInput[1]);
@@ -109,7 +109,7 @@ public class NNLM {
                 dhOutput = new double[nHidden];
                 dProjection = new double[n-1][nInput];
                 lr = learningType.applyAsDouble(epoch);
-                log.info(String.valueOf(lr));
+                //log.info(String.valueOf(lr));
 
                 hLayer.forwardCal(hiddenInput, outLayerInput);
                 logisticLayer.train2(outLayerInput, lookUpInput, teachInput,
@@ -124,7 +124,7 @@ public class NNLM {
             }
             count++;
         }
-        log.info("Finish N-gram");
+        //log.info("Finish N-gram");
     }
 
     /**
@@ -214,21 +214,21 @@ public class NNLM {
         Random rng = new Random(123);
         String fileName = "natsume-Model_nnlm";
 
-        log.info("Word Size: " + word);
+        /*log.info("Word Size: " + word);
         log.info("Vocabulary Size: " + vocab);
         log.info("Word Vector: " + dim);
         log.info("N-gram Size: " + map.size());
         log.info("Epoch: " + epochs);
         log.info("Learning Rate: " + learningRate);
-        log.info("Decay Rate" + decayRate);
+        log.info("Decay Rate" + decayRate);*/
 
-        log.info("Creating NNLM Instance");
+        //log.info("Creating NNLM Instance");
         NNLM nnlm = new NNLM(word, vocab, dim, n, nHidden, rng, learningRate, decayRate, null);
 
-        log.info("Starting Train NNLM");
+        //log.info("Starting Train NNLM");
         nnlm.train(map, epochs, nlp);
 
-        log.info("Saving Word Vectors");
+        //log.info("Saving Word Vectors");
         nnlm.writeWord(vocab, dim, nlp, fileName);
 
         System.out.println("-------TEST-------");
@@ -262,7 +262,7 @@ public class NNLM {
     }
 
     public static void main(String[] args){
-        log.info("Let's Start NNLM!!");
+        //log.info("Let's Start NNLM!!");
         testNNLM();
     }
 }

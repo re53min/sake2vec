@@ -13,7 +13,7 @@ import static org.deeplearning4j.nnpractice.utils.uniform;
  * Created by b1012059 on 2015/11/23.
  */
 public class LogisticRegression {
-    private static Logger log = LoggerFactory.getLogger(LogisticRegression.class);
+    //private static Logger log = LoggerFactory.getLogger(LogisticRegression.class);
     private int nIn;
     private int nOut;
     private int dim;
@@ -74,7 +74,7 @@ public class LogisticRegression {
         this.wPO = new double[nOut][dim];
         this.bias = new double[nOut];
 
-        log.info("Initialize LogisticLayer");
+        //log.info("Initialize LogisticLayer");
 
         //ランダムの種
         if(rng == null) this.rng = new Random(1234);
@@ -170,14 +170,18 @@ public class LogisticRegression {
         funSoftmax(output, nOut);
 
         for(int z = 0; z < nOut; z++) {
-            if (Double.isInfinite(output[z])) {
-
-            } else if (Double.isNaN(output[z])) {
-
-            } else if (output[z] >= Double.MAX_VALUE) {
-
-            } else if (output[z] <= Double.MIN_VALUE) {
-
+            try {
+                if (Double.isInfinite(output[z])) {
+                    throw new Exception("OutputがInfinityになりました");
+                } else if (Double.isNaN(output[z])) {
+                    throw new Exception("OutputがNaNになりました");
+                } else if (output[z] >= Double.MAX_VALUE) {
+                    throw new Exception("Outputがオーバーフローしました");
+                } else if (output[z] <= Double.MIN_VALUE) {
+                    throw new Exception("Outputがアンダーフローしました");
+                }
+            } catch (Exception e){
+                e.printStackTrace();
             }
         }
         /*

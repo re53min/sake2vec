@@ -14,7 +14,7 @@ import java.util.Map;
  * Created by b1012059 on 2016/02/04.
  */
 public class NLP {
-    private static Logger log = LoggerFactory.getLogger(NLP.class);
+    //private static Logger log = LoggerFactory.getLogger(NLP.class);
     private Tokenizer tokenizer;
     private List<Token> tokens;
     private HashMap<String, Integer> wordCount;
@@ -37,7 +37,7 @@ public class NLP {
     private void createVector(){
         int id = 0;
 
-        log.info("Stating Morphological Analysis");
+        //log.info("Stating Morphological Analysis");
         tokens.forEach(token -> {
             String[] features = token.getAllFeaturesArray();
 
@@ -69,7 +69,7 @@ public class NLP {
         StringBuilder ngramSb = new StringBuilder();
 
         // n-gramとその出現回数を格納したMapを生成
-        log.info("Creating N-gram");
+        //log.info("Creating N-gram");
         for(int i = 0; i < numberOfNgram; i++) {
             // ngramを1つ生成
             for (int j = i; j < i + n; j++) {
