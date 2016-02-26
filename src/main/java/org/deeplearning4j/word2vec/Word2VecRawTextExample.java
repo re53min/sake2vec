@@ -20,7 +20,7 @@ public class Word2VecRawTextExample {
 
     public static void main(String[] args) throws Exception {
 
-        String filePath = new ClassPathResource("corpusB.txt").getFile().getAbsolutePath();
+        String filePath = new ClassPathResource("wakati_kankore2.txt").getFile().getAbsolutePath();
 
         log.info("Load & Vectorize Sentences....");
         // Strip white space before and after for each line
@@ -50,7 +50,8 @@ public class Word2VecRawTextExample {
         log.info("Writing word vectors to text file....");
 
         // Write word vectors
-        WordVectorSerializer.writeWordVectors(vec, "corpus_B_Model.txt");
+        WordVectorSerializer.writeWordVectors(vec, "kankore_Model.txt");
+        WordVectorSerializer.writeFullModel(vec, "kankore_Full_Model");
 
         //log.info("Closest Words:");
         //Collection<String> lst = vec.wordsNearest("day", 10);

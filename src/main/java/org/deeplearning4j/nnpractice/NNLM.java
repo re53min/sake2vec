@@ -110,6 +110,7 @@ public class NNLM {
                 dProjection = new double[n-1][nInput];
                 lr = learningType.applyAsDouble(epoch);
                 //log.info(String.valueOf(lr));
+                System.out.println(String.valueOf(lr));
 
                 hLayer.forwardCal(hiddenInput, outLayerInput);
                 logisticLayer.train2(outLayerInput, lookUpInput, teachInput,
@@ -199,7 +200,7 @@ public class NNLM {
                 +"また、原始仏教は宗教的側面もあったが、四諦や十二因縁という自然の摂理を観ずる哲学的側面の方がより強かったという理由も挙げられる。さらに釈迦は「自灯明・法灯明」（自らを依り所とし、法を依り所とせよ）という基本的理念から、釈迦本人は、自身が根本的な信仰対象であるとは考えていなかった。したがって初期仏教においては仏像というものは存在しなかった。"
                 +"しかし、釈迦が入滅し時代を経ると、仏の教えを伝えるために図画化していくことになる。"
                 +"仏陀となった偉大な釈迦の姿は、もはや人の手で表現できないと思われていた。そのため人々は釈迦の象徴としてストゥーパ（卒塔婆、釈迦の遺骨を祀ったもの）、法輪（仏の教えが広まる様子を輪で表現したもの））や、仏足石（釈迦の足跡を刻んだ石）、菩提樹などを礼拝していた。インドの初期仏教美術には仏伝図（釈迦の生涯を表した浮き彫りなど）は多数あるが、釈迦の姿は表されず、足跡、菩提樹、台座などによってその存在が暗示されるのみであった。";
-                */
+        */
 
         NLP nlp = new NLP(text);
         int word = nlp.getRet().size();

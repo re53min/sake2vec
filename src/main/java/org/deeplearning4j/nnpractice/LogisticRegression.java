@@ -172,27 +172,31 @@ public class LogisticRegression {
         for(int z = 0; z < nOut; z++) {
             if (Double.isInfinite(output[z])) {
                 try {
-                    throw new Exception("OutputがInfinityになりました");
+                    throw new RuntimeException("Infinityになりました");
                 } catch (Exception e) {
                     e.printStackTrace();
+                    System.out.println(output[z]);
                 }
             }else if (Double.isNaN(output[z])) {
                 try {
-                    throw new Exception("OutputがNaNになりました");
+                    throw new RuntimeException("NaNになりました");
                 } catch (Exception e) {
                     e.printStackTrace();
+                    System.out.println(output[z]);
                 }
             } else if (output[z] >= Double.MAX_VALUE) {
                 try {
-                    throw new Exception("Outputがオーバーフローしました");
+                    throw new RuntimeException("オーバーフローしました");
                 } catch (Exception e) {
                     e.printStackTrace();
+                    System.out.println(output[z]);
                 }
             } else if (output[z] <= Double.MIN_VALUE) {
                 try {
-                    throw new Exception("Outputがアンダーフローしました");
+                    throw new RuntimeException("アンダーフローしました");
                 } catch (Exception e) {
                     e.printStackTrace();
+                    System.out.println(output[z]);
                 }
             }
         }
