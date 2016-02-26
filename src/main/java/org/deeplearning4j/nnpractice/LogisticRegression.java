@@ -139,7 +139,7 @@ public class LogisticRegression {
     }
 
     public void train2(double input[], double projection[][], int teach[],
-                       double dProjection[][], double dhOutput[], double learningRate){
+                       double dProjection[][], double dhOutput[], double learningRate) {
 
         double output[] = new double[nOut];
         double dOutput[] = new double[nOut];
@@ -170,18 +170,30 @@ public class LogisticRegression {
         funSoftmax(output, nOut);
 
         for(int z = 0; z < nOut; z++) {
-            try {
-                if (Double.isInfinite(output[z])) {
+            if (Double.isInfinite(output[z])) {
+                try {
                     throw new Exception("OutputがInfinityになりました");
-                } else if (Double.isNaN(output[z])) {
-                    throw new Exception("OutputがNaNになりました");
-                } else if (output[z] >= Double.MAX_VALUE) {
-                    throw new Exception("Outputがオーバーフローしました");
-                } else if (output[z] <= Double.MIN_VALUE) {
-                    throw new Exception("Outputがアンダーフローしました");
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            } catch (Exception e){
-                e.printStackTrace();
+            }else if (Double.isNaN(output[z])) {
+                try {
+                    throw new Exception("OutputがNaNになりました");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else if (output[z] >= Double.MAX_VALUE) {
+                try {
+                    throw new Exception("Outputがオーバーフローしました");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else if (output[z] <= Double.MIN_VALUE) {
+                try {
+                    throw new Exception("Outputがアンダーフローしました");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
         /*

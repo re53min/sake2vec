@@ -183,6 +183,7 @@ public class HiddenLayer {
             bias[i] += learningRate * dOutput[i];
         }
 
+        /*
         for(int x = 0; x < nOut; x++) {
             for(int y= 0; y < nIn; y++) {
                 try {
@@ -200,6 +201,7 @@ public class HiddenLayer {
                 }
             }
         }
+        */
     }
 
     /*
