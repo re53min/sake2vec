@@ -84,20 +84,15 @@ public class NNLM {
             //log.info("Set " + count + "th N-gram");
             String[] words = entry.getKey().split(" ", 0);
             for (int i = 0; i < n; i++) {
+                int vocabNumber = nlp.getWordToId().get(words[i]);
                 if (i < n - 1) {
-                    int vocabNumber = nlp.getWordToId().get(words[i]);
                     lookUpInput[i] = pLayer.lookUpTable(vocabNumber);
                     //log.info("LookUpTable " + vocabNumber + "th word");
                 } else {
                     //log.info("TeachData:");
-                    for (int v = 0; v < vocab; v++) {
-                        if (v == nlp.getWordToId().get(words[i])) teachInput[v] = 1;
-                        else teachInput[v] = 0;
-                        //System.out.print(teachInput[v] + " ");
-                    }
+                    teachInput[vocabNumber] = 1;
                 }
             }
-            //System.out.println();
             /*
             N-gram N回の学習
              */

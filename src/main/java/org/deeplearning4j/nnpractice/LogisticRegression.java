@@ -3,6 +3,7 @@ package org.deeplearning4j.nnpractice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.math.BigDecimal;
 import java.util.Random;
 
 import static org.deeplearning4j.nnpractice.utils.funSoftmax;
@@ -170,33 +171,20 @@ public class LogisticRegression {
         funSoftmax(output, nOut);
 
         for(int z = 0; z < nOut; z++) {
-            if (Double.isInfinite(output[z])) {
+           if (Double.isNaN(output[z])) {
                 try {
-                    throw new RuntimeException("Infinityになりました");
+                    throw new RuntimeException("NaNになりました" + output[z]);
                 } catch (Exception e) {
                     e.printStackTrace();
-                    System.out.println(output[z]);
+                    output[z] = (int)output[z];
                 }
-            }else if (Double.isNaN(output[z])) {
+            } else if (output[z] < Double.MIN_VALUE) {
                 try {
-                    throw new RuntimeException("NaNになりました");
+                    throw new RuntimeException("アンダーフローしました: " + output[z]);
                 } catch (Exception e) {
                     e.printStackTrace();
-                    System.out.println(output[z]);
-                }
-            } else if (output[z] >= Double.MAX_VALUE) {
-                try {
-                    throw new RuntimeException("オーバーフローしました");
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    System.out.println(output[z]);
-                }
-            } else if (output[z] <= Double.MIN_VALUE) {
-                try {
-                    throw new RuntimeException("アンダーフローしました");
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    System.out.println(output[z]);
+                    BigDecimal aaa = BigDecimal.valueOf(output[z]);
+                    output[z] = (int)output[z];
                 }
             }
         }

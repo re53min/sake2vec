@@ -72,10 +72,7 @@ public class RNNLM {
                         vocabNumber = nlp.getWordToId().get(words[i]);
                         log.info("LookUpTable " + vocabNumber + "th word");
                     } else {
-                        for (int v = 0; v < vocab; v++) {
-                            if (v == nlp.getWordToId().get(words[i])) teachInput[v] = 1;
-                            else teachInput[v] = 0;
-                        }
+                        teachInput[nlp.getWordToId().get(words[i])] = 1;
                     }
                 }
 
