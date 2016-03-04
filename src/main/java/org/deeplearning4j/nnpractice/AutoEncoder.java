@@ -16,8 +16,8 @@ public class AutoEncoder {
     private int nOut;
     private Random rng;
     private double wIO[][];    //出力層の重み配列
-    private double encodeThO[];    //出力層の閾値配列
-    private double decodeThO[];    //decode用の各層配列
+    private double encodeBias[];    //出力層の閾値配列
+    private double decodeBias[];    //decode用の各層配列
     private DoubleFunction<Double> activation;
     private DoubleFunction<Double> dActivation;
 
@@ -31,14 +31,13 @@ public class AutoEncoder {
         this.N = N;
         this.nIn = INPUT;
         this.nOut = OUTPUT;
-        this.decodeThO = new double[INPUT];
+        this.decodeBias = new double[INPUT];
 
         //randomの種
         if(rng == null) this.rng = new Random(1234);
         else this.rng  = rng;
 
-
-        //入力層→出力層の重み配列をランダム(-0.5~0.5)
+        //入力層→出力層の重み配列をランダム
         if(wIO == null) {
             this.wIO = new double[this.nOut][this.nIn];
             //double element = 1.0 / nIn;
@@ -52,17 +51,8 @@ public class AutoEncoder {
         }
 
         //入力層→出力層の閾値配列を0で初期化
-        if(threshOut == null){
-            this.encodeThO = new double[this.nOut];
-            for(int i = 0; i < this.nOut; i++){
-                this.encodeThO[i] = 0;
-            }
-        } else {
-            this.encodeThO = threshOut;
-        }
-
-        //出力層→入力層の閾値配列を0で初期化
-        for(int i = 0; i < INPUT; i++) decodeThO[i] = 0;
+        if(threshOut == null) this.encodeBias = new double[this.nOut];
+        else this.encodeBias = threshOut;
 
         /*
         ここラムダ式で記述
@@ -116,7 +106,7 @@ public class AutoEncoder {
             for(j = 0; j < lengthIn; j++){
                 output[i] += input[j] * wIO[i][j];
             }
-            output[i] += encodeThO[i];
+            output[i] += encodeBias[i];
             output[i] = activation.apply(output[i]);
         }
     }
@@ -141,7 +131,7 @@ public class AutoEncoder {
             for (j = 0; j < lengthDeIn; j++) {
                 dInput[i] += output[j] * wIO[j][i];
             }
-            dInput[i] += decodeThO[i];
+            dInput[i] += decodeBias[i];
             dInput[i] = activation.apply(dInput[i]);
         }
     }
@@ -181,7 +171,7 @@ public class AutoEncoder {
         //閾値decodeThOの変更(decodeのbiasの変更)
         for(int i = 0; i < nIn; i++){
             tempDeThO[i] = x[i] - dInput[i];
-            decodeThO[i] += learningRate * tempDeThO[i] / N;
+            decodeBias[i] += learningRate * tempDeThO[i] / N;
         }
 
         //閾値threshOutの変更(encodeのbiasの変更)
@@ -191,7 +181,7 @@ public class AutoEncoder {
                 tempThO[i] += wIO[i][j] * tempDeThO[j];
             }
             tempThO[i] *= dActivation.apply(output[i]);
-            encodeThO[i] += learningRate * tempThO[i] / N;
+            encodeBias[i] += learningRate * tempThO[i] / N;
         }
 
         //重みwIOの変更
@@ -200,6 +190,14 @@ public class AutoEncoder {
                 wIO[i][j] += learningRate * (tempThO[i] * noiseX[j] + tempDeThO[j] * output[i]) / N;
             }
         }
+    }
+
+    public double[][] getwIO(){
+        return this.wIO;
+    }
+
+    public double[] getEncodeBias(){
+        return this.encodeBias;
     }
 
     /**

@@ -1,7 +1,9 @@
 package org.deeplearning4j.nnpractice;
 
 import java.util.Random;
-import static org.deeplearning4j.nnpractice.utils.*;
+
+import static org.deeplearning4j.nnpractice.utils.binomial;
+import static org.deeplearning4j.nnpractice.utils.uniform;
 
 /**
  * Created by b1012059 on 2015/11/22.
@@ -14,7 +16,6 @@ public class SimpleHiddenLayer extends HiddenLayer{
     public int N;
     public Random rng;
 
-
     /**
      *
      * @param nIn
@@ -24,8 +25,9 @@ public class SimpleHiddenLayer extends HiddenLayer{
      * @param N
      * @param rng
      */
-    public SimpleHiddenLayer(int nIn, int nOut, double wIO[][], double bias[], int N, Random rng){
-        super(nIn, nOut, wIO, bias, N, rng, null);
+    public SimpleHiddenLayer(int nIn, int nOut, double wIO[][], double bias[],
+                             int N, Random rng, String activation){
+        super(nIn, nOut, wIO, bias, N, rng, activation);
         this.nIn = nIn;
         this.nOut = nOut;
         this.N = N;
@@ -44,16 +46,8 @@ public class SimpleHiddenLayer extends HiddenLayer{
             this.wIO = wIO;
         }
 
-        if(bias == null){
-            this.bias = new double[nOut];
-            for(int i = 0; i < nOut; i++){
-                this.bias[i] = 0;
-            }
-        } else {
-            this.bias = bias;
-        }
-
-
+        if(bias == null) this.bias = new double[nOut];
+        else this.bias = bias;
     }
 
     /**
@@ -69,7 +63,7 @@ public class SimpleHiddenLayer extends HiddenLayer{
             tmpData += input[i] * w[i];
         }
         tmpData += bias;
-        return funSigmoid(tmpData);
+        return activation.apply(tmpData);
     }
 
     /**
@@ -78,6 +72,10 @@ public class SimpleHiddenLayer extends HiddenLayer{
      * @param sample
      */
     public void sampleHgive(double input[], double sample[]){
-        for(int i = 0; i < nOut; i++) sample[i] = binomial(1, hOutput(input, wIO[i], bias[i]), rng);
+        for(int i = 0; i < nOut; i++) {
+            if(activation.equals("sigmoid") || activation.equals(null))
+                sample[i] = binomial(1, hOutput(input, wIO[i], bias[i]), rng);
+            else sample[i] = hOutput(input, wIO[i], bias[i]);
+        }
     }
 }

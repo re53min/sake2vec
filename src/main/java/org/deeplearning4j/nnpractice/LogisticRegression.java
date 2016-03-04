@@ -1,8 +1,5 @@
 package org.deeplearning4j.nnpractice;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Random;
 
 import static org.deeplearning4j.nnpractice.utils.funSoftmax;
@@ -48,12 +45,6 @@ public class LogisticRegression {
                 wIO[i][j] = uniform(nIn, nOut, rng, activation);
             }
         }
-
-        //バイアスの初期化
-        for(int i = 0; i < nOut; i++){
-            bias[i] = 0;
-        }
-
     }
 
     /**
@@ -85,11 +76,6 @@ public class LogisticRegression {
             for(int j = 0; j < nIn; j++){
                 wIO[i][j] = uniform(nIn, nOut, rng, activation);
             }
-        }
-
-        //バイアスの初期化
-        for(int i = 0; i < nOut; i++){
-            bias[i] = 0;
         }
     }
 

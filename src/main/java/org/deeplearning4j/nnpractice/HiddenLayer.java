@@ -17,8 +17,8 @@ public class HiddenLayer {
     private double bias[];
     private int N;
     private Random rng;
-    private DoubleFunction<Double> activation;
-    private DoubleFunction<Double> dActivation;
+    public DoubleFunction<Double> activation;
+    public DoubleFunction<Double> dActivation;
 
 
     /**
@@ -30,7 +30,8 @@ public class HiddenLayer {
      * @param N
      * @param rng
      */
-    public HiddenLayer(int nIn, int nOut, double wIO[][], double bias[], int N, Random rng, String activation){
+    public HiddenLayer(int nIn, int nOut, double wIO[][], double bias[],
+                       int N, Random rng, String activation){
         this.nIn = nIn;
         this.nOut = nOut;
         this.N = N;
@@ -53,15 +54,8 @@ public class HiddenLayer {
         }
 
         //バイアスを0で初期化
-        if(bias == null){
-            this.bias = new double[nOut];
-            for(int i = 0; i < nOut; i++){
-                this.bias[i] = 0;
-            }
-        } else {
-            this.bias = bias;
-        }
-
+        if(bias == null) this.bias = new double[nOut];
+        else this.bias = bias;
 
         /*
         ここラムダ式で記述
