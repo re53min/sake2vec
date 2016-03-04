@@ -83,9 +83,10 @@ public class CustomWord2VecExample {
         log.info("Save vectors....");
         WordVectorSerializer.writeWordVectors(vec, "corpus_v2_Model.txt");
 
+
         log.info("Writing word vectors to text file....");
         // Write word
-        WordVectorSerializer.writeFullModel(vec, "corpus_v2_FullModel.txt");
+        //WordVectorSerializer.writeFullModel(vec, "corpus_v2_FullModel.txt");
 
         /*log.info("Closest Words:");
         Collection<String> lst = vec.wordsNearest("day", 10);

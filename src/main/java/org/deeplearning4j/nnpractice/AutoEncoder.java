@@ -1,6 +1,8 @@
 package org.deeplearning4j.nnpractice;
 
 import java.util.Random;
+import java.util.function.DoubleFunction;
+
 import static org.deeplearning4j.nnpractice.utils.*;
 
 /**
@@ -13,21 +15,19 @@ public class AutoEncoder {
     private int nIn;
     private int nOut;
     private Random rng;
-    //出力層の重み配列
-    private double wIO[][];
-    //出力層の閾値配列
-    private double encodeThO[];
-    //decode用の各層配列
-    private double decodeThO[];
-    //学習率
-    private final double alpha = 0.1;
+    private double wIO[][];    //出力層の重み配列
+    private double encodeThO[];    //出力層の閾値配列
+    private double decodeThO[];    //decode用の各層配列
+    private DoubleFunction<Double> activation;
+    private DoubleFunction<Double> dActivation;
 
     /**
      * AutoEncoder Constructor
      * @param INPUT
      * @param OUTPUT
      */
-    public AutoEncoder(int N, int INPUT, int OUTPUT, double wIO[][], double threshOut[], Random rng){
+    public AutoEncoder(int N, int INPUT, int OUTPUT, double wIO[][], double threshOut[],
+                       Random rng, String activation){
         this.N = N;
         this.nIn = INPUT;
         this.nOut = OUTPUT;
@@ -44,7 +44,7 @@ public class AutoEncoder {
             //double element = 1.0 / nIn;
             for (int i = 0; i < this.nOut; i++) {
                 for (int j = 0; j < this.nIn; j++) {
-                    this.wIO[i][j] = uniform(nOut, nIn, rng, null);
+                    this.wIO[i][j] = uniform(nOut, nIn, rng, activation);
                 }
             }
         } else {
@@ -63,6 +63,22 @@ public class AutoEncoder {
 
         //出力層→入力層の閾値配列を0で初期化
         for(int i = 0; i < INPUT; i++) decodeThO[i] = 0;
+
+        /*
+        ここラムダ式で記述
+         */
+        if (activation == "sigmoid" || activation == null) {
+            this.activation = (double tmpOut) -> funSigmoid(tmpOut);
+            this.dActivation = (double tmpOut) -> dfunSigmoid(tmpOut);
+        } else if(activation == "tanh"){
+            this.activation = (double tmpOut) -> funTanh(tmpOut);
+            this.dActivation = (double tmpOut) -> dfunTanh(tmpOut);
+        } else if(activation == "ReLU"){
+            this.activation = (double tmpOut) -> funReLU(tmpOut);
+            this.dActivation = (double tmpOut) -> dfunReLU(tmpOut);
+        } else {
+            //log.info("Activation function not supported!");
+        }
     }
 
     /**
@@ -101,7 +117,7 @@ public class AutoEncoder {
                 output[i] += input[j] * wIO[i][j];
             }
             output[i] += encodeThO[i];
-            output[i] = funSigmoid(output[i]);
+            output[i] = activation.apply(output[i]);
         }
     }
 
@@ -126,7 +142,7 @@ public class AutoEncoder {
                 dInput[i] += output[j] * wIO[j][i];
             }
             dInput[i] += decodeThO[i];
-            dInput[i] = funSigmoid(dInput[i]);
+            dInput[i] = activation.apply(dInput[i]);
         }
     }
 
@@ -148,7 +164,7 @@ public class AutoEncoder {
      * @param x 学習データ
      * @param corruptionLevel 損傷率
      */
-    public void train(double x[], double corruptionLevel){
+    public void train(double x[], double learningRate, double corruptionLevel){
         double noiseX[] = new double[nIn];
         double output[] = new double[nOut];
         double dInput[] = new double[nIn];
@@ -165,7 +181,7 @@ public class AutoEncoder {
         //閾値decodeThOの変更(decodeのbiasの変更)
         for(int i = 0; i < nIn; i++){
             tempDeThO[i] = x[i] - dInput[i];
-            decodeThO[i] += alpha * tempDeThO[i] / N;
+            decodeThO[i] += learningRate * tempDeThO[i] / N;
         }
 
         //閾値threshOutの変更(encodeのbiasの変更)
@@ -174,14 +190,14 @@ public class AutoEncoder {
             for(int j = 0; j < nIn; j++){
                 tempThO[i] += wIO[i][j] * tempDeThO[j];
             }
-            tempThO[i] *= output[i] * (1 - output[i]);
-            encodeThO[i] += alpha * tempThO[i] / N;
+            tempThO[i] *= dActivation.apply(output[i]);
+            encodeThO[i] += learningRate * tempThO[i] / N;
         }
 
         //重みwIOの変更
         for(int i = 0; i < nOut; i++){
             for(int j  = 0; j < nIn; j++){
-                wIO[i][j] += alpha * (tempThO[i] * noiseX[j] + tempDeThO[j] * output[i]) / N;
+                wIO[i][j] += learningRate * (tempThO[i] * noiseX[j] + tempDeThO[j] * output[i]) / N;
             }
         }
     }
@@ -326,15 +342,16 @@ public class AutoEncoder {
         int inputSize = inputData.length;
         Random r = new Random(123);
         int epochs = 400;
+        double alpha = 0.1;
         double corruptionLevel = 0.3;
 
         //インスタンスの生成
-        AutoEncoder ae = new AutoEncoder(inputSize, nIn, nOut, null, null, r);
+        AutoEncoder ae = new AutoEncoder(inputSize, nIn, nOut, null, null, r, null);
 
         //train
         for(int epoch = 0; epoch < epochs; epoch++){
             for (int i = 0; i < inputData.length; i++) {
-                ae.train(inputData[i], corruptionLevel);
+                ae.train(inputData[i], alpha, corruptionLevel);
             }
         }
 
