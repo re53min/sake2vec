@@ -23,7 +23,7 @@ public class CustomWord2VecExample {
 
     public static void main(String[] args) throws Exception {
 
-        String filePath = new ClassPathResource("corpus_v2.txt").getFile().getAbsolutePath();
+        String filePath = new ClassPathResource("wakati_kankore.txt").getFile().getAbsolutePath();
 
         log.info("Load & Vectorize Sentences....");
         // Strip white space before and after for each line
@@ -64,6 +64,7 @@ public class CustomWord2VecExample {
         log.info("Fitting Word2Vec model....");
         vec.fit();
 
+        /*
         double[] sim = new double[10];
         sim[0] = vec.similarity("獺祭", "薫酒");
         sim[1] = vec.similarity("久保田", "薫酒");
@@ -77,13 +78,15 @@ public class CustomWord2VecExample {
         sim[9] = vec.similarity("〆張鶴", "薫酒");
 
         for(int i = 0; i < sim.length; i++) System.out.println(sim[i]);
+        */
 
         log.info("Save vectors....");
         WordVectorSerializer.writeWordVectors(vec, "corpus_v2_Model.txt");
 
+
         log.info("Writing word vectors to text file....");
         // Write word
-        WordVectorSerializer.writeFullModel(vec, "corpus_v2_FullModel.txt");
+        //WordVectorSerializer.writeFullModel(vec, "corpus_v2_FullModel.txt");
 
         /*log.info("Closest Words:");
         Collection<String> lst = vec.wordsNearest("day", 10);

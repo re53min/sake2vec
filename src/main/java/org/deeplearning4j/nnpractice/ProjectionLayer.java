@@ -61,6 +61,7 @@ public class ProjectionLayer {
             wDI[j][wordToId] += dProjection[j];
         }
 
+        /*
         for(int x = 0; x < vocab; x++) {
             for(int y= 0; y < dim; y++) {
                 try {
@@ -77,6 +78,6 @@ public class ProjectionLayer {
                     e.printStackTrace();
                 }
             }
-        }
+        }*/
     }
 }

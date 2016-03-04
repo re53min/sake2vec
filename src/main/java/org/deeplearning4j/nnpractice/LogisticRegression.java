@@ -1,8 +1,6 @@
 package org.deeplearning4j.nnpractice;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import java.math.BigDecimal;
 import java.util.Random;
 
 import static org.deeplearning4j.nnpractice.utils.funSoftmax;
@@ -139,7 +137,7 @@ public class LogisticRegression {
     }
 
     public void train2(double input[], double projection[][], int teach[],
-                       double dProjection[][], double dhOutput[], double learningRate){
+                       double dProjection[][], double dhOutput[], double learningRate) {
 
         double output[] = new double[nOut];
         double dOutput[] = new double[nOut];
@@ -170,18 +168,21 @@ public class LogisticRegression {
         funSoftmax(output, nOut);
 
         for(int z = 0; z < nOut; z++) {
-            try {
-                if (Double.isInfinite(output[z])) {
-                    throw new Exception("OutputがInfinityになりました");
-                } else if (Double.isNaN(output[z])) {
-                    throw new Exception("OutputがNaNになりました");
-                } else if (output[z] >= Double.MAX_VALUE) {
-                    throw new Exception("Outputがオーバーフローしました");
-                } else if (output[z] <= Double.MIN_VALUE) {
-                    throw new Exception("Outputがアンダーフローしました");
+           if (Double.isNaN(output[z])) {
+                try {
+                    throw new RuntimeException("NaNになりました" + output[z]);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    output[z] = (int)output[z];
                 }
-            } catch (Exception e){
-                e.printStackTrace();
+            } else if (output[z] < Double.MIN_VALUE) {
+                try {
+                    throw new RuntimeException("アンダーフローしました: " + output[z]);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    BigDecimal aaa = BigDecimal.valueOf(output[z]);
+                    output[z] = (int)output[z];
+                }
             }
         }
         /*

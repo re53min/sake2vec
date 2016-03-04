@@ -11,31 +11,35 @@ import java.util.Random;
 public class StackedAutoEncoder {
 
     private int layerSize;
+    private int nIn;
     private int input[];
     private int hiddenSize[];
     private double output[];
     private int N;
     private SimpleHiddenLayer hLayer[];
     private AutoEncoder aeLayer[];
+    private LogisticRegression logLayer;
     private Random rng;
 
-    public StackedAutoEncoder(int INPUT, int HIDDEN[], int OUTPUT, int layer_size , int N, Random rng, String activation){
-        int inputLayer;
+    public StackedAutoEncoder(int INPUT, int HIDDEN[], int OUTPUT, int layerSize ,
+                              int N, Random rng, String activation){
 
+        int inputLayer;
         this.N = N;
-        this.layerSize = layer_size;
+        this.nIn = INPUT;
+        this.layerSize = layerSize;
         this.hiddenSize = HIDDEN;
-        this.aeLayer = new AutoEncoder[layer_size];
-        this.hLayer = new SimpleHiddenLayer[layer_size];
-        input = new int[INPUT];
-        output = new double[OUTPUT];
+        this.aeLayer = new AutoEncoder[layerSize];
+        this.hLayer = new SimpleHiddenLayer[layerSize];
+        this.input = new int[INPUT];
+        this.output = new double[OUTPUT];
 
         //randomの種
         if(rng == null) this.rng = new Random(1234);
         else this.rng = rng;
 
         //Hidden layerとAutoEncoder layerの初期化
-        for(int i = 0; i < layer_size; i++){
+        for(int i = 0; i < layerSize; i++){
             if(i == 0){
                 inputLayer = input.length;
             } else {
@@ -46,57 +50,73 @@ public class StackedAutoEncoder {
             this.hLayer[i] = new SimpleHiddenLayer(inputLayer, this.hiddenSize[i], null, null, this.N, rng);
 
             //AutoEncoder layer
-            this.aeLayer[i] = new AutoEncoder(this.N, inputLayer, this.hiddenSize[i], hLayer[i].wIO, hLayer[i].bias, rng);
+            this.aeLayer[i] = new AutoEncoder(this.N, inputLayer, this.hiddenSize[i],
+                    hLayer[i].wIO, hLayer[i].bias, rng, activation);
         }
+        this.logLayer = new LogisticRegression()
 
     }
 
     /**
      * pretrainingメソッド
      * AutoEncoder layerの学習を行う
-     * @param x 学習データ
+     * @param inputData
+     * @param learningRate
+     * @param corruptionLevel
      */
-    public void pretrain(int x[][]){
-        double[] layerInput = new double[0];
+    public void preTraining(int inputData[][], double learningRate, double corruptionLevel){
+        double[] inputLayer = new double[0];
         int prevInputSize;
         double[] prevInput;
-        double corruptionLevel = 0.3;
 
         for(int i = 0; i < layerSize; i++){
             for(int count = 0; count < 600; count++){
                 for(int n = 0; n < N; n++){
                     for(int j = 0; j <= i; j++){
                         if(j == 0){
-                            layerInput = new double[input.length];
-                            for(int k = 0; k < input.length; k++) layerInput[k] = x[n][k];
+                            inputLayer = new double[input.length];
+                            for(int k = 0; k < input.length; k++) inputLayer[k] = inputData[n][k];
                         } else {
                             if(j == 1) prevInputSize = input.length;
                             else prevInputSize = hiddenSize[j-2];
 
                             prevInput = new double[prevInputSize];
-                            for(int k = 0; k < prevInputSize; k++) prevInput[k] = layerInput[k];
+                            for(int k = 0; k < prevInputSize; k++) prevInput[k] = inputLayer[k];
 
-                            layerInput = new double[hiddenSize[j-1]];
-                            hLayer[j-1].sampleHgive(prevInput, layerInput);
+                            inputLayer = new double[hiddenSize[j-1]];
+                            hLayer[j-1].sampleHgive(prevInput, inputLayer);
                         }
                     }
-                    aeLayer[i].train(layerInput, corruptionLevel);
+                    aeLayer[i].train(inputLayer, learningRate, corruptionLevel);
                 }
             }
         }
     }
 
-    public void finetune(int input[][], int teach[]){
+    public void fineTuning(int inputData[][], int teach[], double learningRate, int epochs){
+        double inputLayer[] = new double[0];
+        double prevLayerInput[] = new double[0];
 
+        for (int epoch = 0; epoch < epochs; epoch++){
+            for(int n = 0; n < N; n++){
+                for(int i = 0; i < layerSize; i++){
+                    if(i == 0){
+                        prevLayerInput = new double[nIn];
+                        for(int j = 0; j < nIn; j++) prevLayerInput[j] = inputData[n][j];
+                    } else {
+                        prevLayerInput = new double[hiddenSize[i-1]];
+                        for(int j=0; j<hiddenSize[i-1]; j++) prevLayerInput[j] = inputLayer[j];
+                    }
+
+                    inputLayer = new double[hiddenSize[i]];
+                    hLayer[i].sampleHgive(prevLayerInput, inputLayer);
+                }
+            }
+        }
 
     }
 
     private static void test_StackedaAE(){
-        int nInput = 10;
-        int nHidden[] = {5, 2};
-        int nOutput = 1;
-        int nLayer = nHidden.length;
-        Random rng = new Random(123);
 
         //入力データ
         int inputData[][] = {
@@ -128,11 +148,20 @@ public class StackedAutoEncoder {
                  */
         };
 
+        int nInput = 10;
+        int nHidden[] = {5, 2};
+        int nOutput = 1;
+        int nLayer = nHidden.length;
+        Random rng = new Random(123);
+        double corruptionLevel = 0.3;
+        double alpha = 0.1;
+
         //インスタンスの生成
-        StackedAutoEncoder sAE = new StackedAutoEncoder(nInput, nHidden, nOutput, nLayer, inputData.length, rng, null);
+        StackedAutoEncoder sAE = new StackedAutoEncoder(nInput, nHidden, nOutput, nLayer,
+                inputData.length, rng, null);
 
         //pretraining
-        sAE.pretrain(inputData);
+        sAE.preTraining(inputData, alpha, corruptionLevel);
 
 
     }

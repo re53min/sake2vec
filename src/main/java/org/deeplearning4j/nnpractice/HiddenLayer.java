@@ -1,8 +1,5 @@
 package org.deeplearning4j.nnpractice;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Random;
 import java.util.function.DoubleFunction;
 
@@ -183,6 +180,7 @@ public class HiddenLayer {
             bias[i] += learningRate * dOutput[i];
         }
 
+        /*
         for(int x = 0; x < nOut; x++) {
             for(int y= 0; y < nIn; y++) {
                 try {
@@ -200,6 +198,7 @@ public class HiddenLayer {
                 }
             }
         }
+        */
     }
 
     /*
