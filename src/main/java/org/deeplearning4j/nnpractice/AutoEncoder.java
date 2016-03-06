@@ -192,7 +192,7 @@ public class AutoEncoder {
         }
     }
 
-    public double[][] getwIO(){
+    public double[][] getWightIO(){
         return this.wIO;
     }
 

@@ -111,9 +111,9 @@ public class StackedAutoEncoder {
             for(int n = 0; n < N; n++){
                 for(int i = 0; i < layerSize; i++){
                     if(i == 0){
-                        nLayer = nIn;
                         prevLayerInput = new double[nIn];
                         for(int j = 0; j < nIn; j++) prevLayerInput[j] = inputData[n][j];
+                        nLayer = prevLayerInput.length;
                     } else {
                         nLayer = hiddenSize[i-1];
                         prevLayerInput = new double[hiddenSize[i-1]];
@@ -122,7 +122,7 @@ public class StackedAutoEncoder {
                     input.add(prevLayerInput);
                     //Hidden layer
                     hLayer[i] = new HiddenLayer(nLayer, hiddenSize[i],
-                            aeLayer[i].getwIO(), aeLayer[i].getEncodeBias(), N, rng, activation);
+                            aeLayer[i].getWightIO(), aeLayer[i].getEncodeBias(), N, rng, activation);
                     layerInput = new double[hiddenSize[i]];
                     hLayer[i].forwardCal(prevLayerInput, layerInput);
                     output.add(layerInput);
