@@ -56,9 +56,9 @@ public class NNLM {
         if (lrUpdateType == "UpdateLR" || lrUpdateType == null) {
             this.learningType = (int epoch) -> updateLR(this.learningRate, this.decayRate, epoch);
         } else if(lrUpdateType == "AdaGrad") {
-            this.learningType = (int epoch) -> adaGrad(this.learningRate);
+            //this.learningType = (int epoch) -> adaGrad(this.learningRate);
         } else if(lrUpdateType == "RMSProp"){
-            this.learningType = (int epoch) -> rmsProp(this.learningRate);
+            //this.learningType = (int epoch) -> rmsProp(this.learningRate);
         } else {
             //log.info("Learning Update Type not supported!");
         }
