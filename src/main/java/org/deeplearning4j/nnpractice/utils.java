@@ -161,20 +161,25 @@ public class utils {
 
     /**
      * AdaGradの実装予定
-     * @param learningLate
+     * @param learningRate
+     * @param prevRT
+     * @param error
+     * @param ada
      * @return
      */
-    public static double adaGrad(double learningLate){
-        return 0.1;
+    public static double adaGrad(double learningRate, double prevRT, double error, double ada){
+        double tmpLearningRate = prevRT + Math.pow(error, 2);
+        return learningRate / Math.sqrt(tmpLearningRate + ada);
     }
 
     /**
      * RMSPropの実装予定
-     * @param learningLate
+     * @param learningRate
      * @return
      */
-    public static double rmsProp(double learningLate){
-        return 0.1;
+    public static double rmsProp(double learningRate, double prevRT, double hyperP, double error, double rms){
+        double tmpLearningRate = hyperP*prevRT + (1-hyperP)*Math.pow(error, 2);
+        return learningRate / Math.sqrt(tmpLearningRate + rms);
     }
 
     /**

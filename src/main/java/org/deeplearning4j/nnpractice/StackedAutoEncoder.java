@@ -78,10 +78,10 @@ public class StackedAutoEncoder {
                 for(int n = 0; n < N; n++){
                     for(int j = 0; j <= i; j++){
                         if(j == 0){
-                            inputLayer = new double[input.length];
-                            for(int k = 0; k < input.length; k++) inputLayer[k] = inputData[n][k];
+                            inputLayer = new double[nIn];
+                            for(int k = 0; k < nIn; k++) inputLayer[k] = inputData[n][k];
                         } else {
-                            if(j == 1) prevInputSize = input.length;
+                            if(j == 1) prevInputSize = nIn;
                             else prevInputSize = hiddenSize[j-2];
 
                             prevInput = new double[prevInputSize];
