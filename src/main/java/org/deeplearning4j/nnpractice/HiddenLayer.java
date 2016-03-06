@@ -115,7 +115,8 @@ public class HiddenLayer {
     public void backwardCal(double input[], double dOutput[], double prevInput[],
                             double prevdOutput[], double prevWIO[][], double learningRate){
 
-        if(dOutput == null) dOutput = new double[nOut];
+        //if(dOutput == null) dOutput = new double[nOut];
+        dOutput = new double[nOut];
 
         //今層の誤差勾配
         for(int i = 0; i < nOut; i++) {
@@ -173,26 +174,10 @@ public class HiddenLayer {
             //バイアスの更新
             bias[i] += learningRate * dOutput[i];
         }
+    }
 
-        /*
-        for(int x = 0; x < nOut; x++) {
-            for(int y= 0; y < nIn; y++) {
-                try {
-                    if (Double.isInfinite(wIO[x][y])) {
-                        throw new Exception("OutputがInfinityになりました");
-                    } else if (Double.isNaN(wIO[x][y])) {
-                        throw new Exception("OutputがNaNになりました");
-                    } else if (wIO[x][y] >= Double.MAX_VALUE) {
-                        throw new Exception("Outputがオーバーフローしました");
-                    } else if (wIO[x][y] <= Double.MIN_VALUE) {
-                        throw new Exception("Outputがアンダーフローしました");
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        */
+    public double[][] getwIO(){
+        return this.wIO;
     }
 
     /*

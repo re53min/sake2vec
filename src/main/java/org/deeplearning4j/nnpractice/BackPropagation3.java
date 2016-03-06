@@ -2,8 +2,7 @@ package org.deeplearning4j.nnpractice;
 
 import org.deeplearning4j.CreateGraph;
 
-import javax.swing.JFrame;
-import java.awt.*;
+import javax.swing.*;
 import java.util.ArrayList;
 
 /**
@@ -518,8 +517,8 @@ public class BackPropagation3 {
             System.out.println("INPUT:" + advanceResult[i] + " -> " + bp.output[0] + "(" + advanceResult[i] + ")");
         }
         //グラフ表示
-        frame.getContentPane().add(frame.createGraphPanel2(count, tmpError, tmpZero, tmpOne, tmpTwo,
-                tmpThree, tmpFour, tmpFive, tmpSix, tmpSeven, tmpEight, tmpNine), BorderLayout.CENTER);
+        //frame.getContentPane().add(frame.createGraphPanel2(count, tmpError, tmpZero, tmpOne, tmpTwo,
+        //        tmpThree, tmpFour, tmpFive, tmpSix, tmpSeven, tmpEight, tmpNine), BorderLayout.CENTER);
         frame.setVisible(true);
     }
 }

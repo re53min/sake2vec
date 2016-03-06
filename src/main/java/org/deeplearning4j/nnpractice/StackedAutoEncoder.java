@@ -1,5 +1,6 @@
 package org.deeplearning4j.nnpractice;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import static org.deeplearning4j.nnpractice.utils.updateLR;
@@ -24,13 +25,13 @@ public class StackedAutoEncoder {
     private Random rng;
     private String activation;
 
-    public StackedAutoEncoder(int INPUT, int HIDDEN[], int OUTPUT, int layerSize ,
+    public StackedAutoEncoder(int INPUT, int HIDDEN[], int OUTPUT,
                               int N, Random rng, String activation){
 
         int inputLayer;
         this.N = N;
         this.nIn = INPUT;
-        this.layerSize = layerSize;
+        this.layerSize = HIDDEN.length;
         this.hiddenSize = HIDDEN;
         this.aeLayer = new AutoEncoder[layerSize];
         this.hLayer = new SimpleHiddenLayer[layerSize];
@@ -60,7 +61,7 @@ public class StackedAutoEncoder {
     }
 
     /**
-     * pretrainingメソッド
+     * pre-trainingメソッド
      * AutoEncoder layerの学習を行う
      * @param inputData
      * @param learningRate
@@ -97,10 +98,14 @@ public class StackedAutoEncoder {
         }
     }
 
-    public void fineTuning(int inputData[][], int teach[], double learningRate, int epochs, double decayRate){
+    public void fineTuning(int inputData[][], int teach[][], double learningRate, int epochs, double decayRate){
         int nLayer;
-        double inputLayer[] = new double[0];
+        double layerInput[] = new double[0];
         double prevLayerInput[];
+        double dOutput[];
+        double dhOutput[] = null;
+        ArrayList<double[]> input = new ArrayList<>();
+        ArrayList<double[]> output = new ArrayList<>();
 
         for (int epoch = 0; epoch < epochs; epoch++){
             for(int n = 0; n < N; n++){
@@ -112,15 +117,25 @@ public class StackedAutoEncoder {
                     } else {
                         nLayer = hiddenSize[i-1];
                         prevLayerInput = new double[hiddenSize[i-1]];
-                        for(int j = 0; j < hiddenSize[i-1]; j++) prevLayerInput[j] = inputLayer[j];
+                        for(int j = 0; j < hiddenSize[i-1]; j++) prevLayerInput[j] = layerInput[j];
                     }
+                    input.add(prevLayerInput);
                     //Hidden layer
                     hLayer[i] = new HiddenLayer(nLayer, hiddenSize[i],
                             aeLayer[i].getwIO(), aeLayer[i].getEncodeBias(), N, rng, activation);
-                    inputLayer = new double[hiddenSize[i]];
-                    hLayer[i].forwardCal(prevLayerInput, inputLayer);
+                    layerInput = new double[hiddenSize[i]];
+                    hLayer[i].forwardCal(prevLayerInput, layerInput);
+                    output.add(layerInput);
                 }
-                logLayer.train(inputLayer, teach, learningRate);
+                dOutput = logLayer.train(layerInput, teach[n], learningRate);
+                for(int k = layerSize-1; k <= 0; k--){
+                    if(k == layerSize-1){
+                        hLayer[k].backwardCal(input.get(k), dhOutput, output.get(k), dOutput, logLayer.wIO, learningRate);
+                    } else {
+                        hLayer[k].backwardCal(input.get(k), dhOutput, output.get(k), dhOutput, hLayer[k+1].getwIO(), learningRate);
+                    }
+                }
+
             }
             updateLR(learningRate, decayRate, epoch);
         }
@@ -148,6 +163,16 @@ public class StackedAutoEncoder {
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0}*/
         };
 
+        //教師データ
+        int teachData[][] = {
+                {1, 0},
+                {1, 0},
+                {1, 0},
+                {0, 1},
+                {0, 1},
+                {0, 1}
+        };
+
         //testデータ
         int testData[][] = {
                 {1, 1, 1, 1, 1, 0, 0, 0, 0, 0},
@@ -161,18 +186,20 @@ public class StackedAutoEncoder {
         int nInput = 10;
         int nHidden[] = {5, 2};
         int nOutput = 1;
-        int nLayer = nHidden.length;
         Random rng = new Random(123);
+        int epoch = 100;
         double corruptionLevel = 0.3;
         double alpha = 0.1;
         double decayRate = 1E-2;
 
         //インスタンスの生成
-        StackedAutoEncoder sAE = new StackedAutoEncoder(nInput, nHidden, nOutput, nLayer,
+        StackedAutoEncoder sAE = new StackedAutoEncoder(nInput, nHidden, nOutput,
                 inputData.length, rng, "ReLU");
 
-        //pretraining
-        sAE.preTraining(inputData, alpha, corruptionLevel);
+        //pre-training
+        sAE.preTraining(inputData, alpha, epoch, corruptionLevel);
+        //fine-tuning
+        sAE.fineTuning(inputData, teachData, alpha, epoch, decayRate);
 
 
     }
