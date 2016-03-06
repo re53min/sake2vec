@@ -9,3 +9,4 @@ word2vec-index/
 /.idea
 /src/assemble
 *.bin
+/classes
