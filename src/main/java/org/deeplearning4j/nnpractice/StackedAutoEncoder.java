@@ -149,7 +149,7 @@ public class StackedAutoEncoder {
             //学習率更新
             if(learningRate > 1E-3)
                 learningRate = updateLR(defaultLR, decayRate, epoch);
-            System.out.println(learningRate);
+            //System.out.println(learningRate);
         }
     }
 
