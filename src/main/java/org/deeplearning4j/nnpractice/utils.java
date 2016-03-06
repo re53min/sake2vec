@@ -155,12 +155,19 @@ public class utils {
         }
     }
 
+    /**
+     *
+     * @param learningRate
+     * @param decayRate
+     * @param epoch
+     * @return
+     */
     public static double updateLR(double learningRate, double decayRate, int epoch){
         return learningRate / (1 + decayRate * epoch);
     }
 
     /**
-     * AdaGradの実装予定
+     * AdaGradの実装
      * @param learningRate
      * @param prevRT
      * @param error
@@ -173,8 +180,12 @@ public class utils {
     }
 
     /**
-     * RMSPropの実装予定
+     * RMSPropの実装
      * @param learningRate
+     * @param prevRT
+     * @param hyperP
+     * @param error
+     * @param rms
      * @return
      */
     public static double rmsProp(double learningRate, double prevRT, double hyperP, double error, double rms){
