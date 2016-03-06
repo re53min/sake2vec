@@ -25,8 +25,7 @@ public class StackedAutoEncoder {
     private Random rng;
     private String activation;
 
-    public StackedAutoEncoder(int INPUT, int HIDDEN[], int OUTPUT,
-                              int N, Random rng, String activation){
+    public StackedAutoEncoder(int INPUT, int HIDDEN[], int OUTPUT, int N, Random rng, String activation){
 
         int inputLayer;
         this.N = N;
