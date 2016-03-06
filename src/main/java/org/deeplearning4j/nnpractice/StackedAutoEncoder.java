@@ -34,7 +34,7 @@ public class StackedAutoEncoder {
         this.layerSize = HIDDEN.length;
         this.hiddenSize = HIDDEN;
         this.aeLayer = new AutoEncoder[layerSize];
-        this.hLayer = new SimpleHiddenLayer[layerSize];
+        this.hLayer = new HiddenLayer[layerSize];
         this.input = new int[INPUT];
         this.output = new double[OUTPUT];
         this.activation = activation;
@@ -56,7 +56,7 @@ public class StackedAutoEncoder {
                     null, null, rng, activation);
                     //hLayer[i].wIO, hLayer[i].bias, rng, activation);
         }
-        this.logLayer = new LogisticRegression(INPUT, OUTPUT, this.N, rng, activation);
+        this.logLayer = new LogisticRegression(this.hiddenSize[this.layerSize-1], OUTPUT, this.N, rng, activation);
 
     }
 
@@ -98,12 +98,21 @@ public class StackedAutoEncoder {
         }
     }
 
+    /**
+     * fine-tuningメソッド
+     * @param inputData
+     * @param teach
+     * @param learningRate
+     * @param epochs
+     * @param decayRate
+     */
     public void fineTuning(int inputData[][], int teach[][], double learningRate, int epochs, double decayRate){
         int nLayer;
         double layerInput[] = new double[0];
         double prevLayerInput[];
         double dOutput[];
         double dhOutput[] = null;
+        double defaultLR = learningRate;
         ArrayList<double[]> input = new ArrayList<>();
         ArrayList<double[]> output = new ArrayList<>();
 
@@ -127,6 +136,7 @@ public class StackedAutoEncoder {
                     hLayer[i].forwardCal(prevLayerInput, layerInput);
                     output.add(layerInput);
                 }
+
                 dOutput = logLayer.train(layerInput, teach[n], learningRate);
                 for(int k = layerSize-1; k <= 0; k--){
                     if(k == layerSize-1){
@@ -137,8 +147,37 @@ public class StackedAutoEncoder {
                 }
 
             }
-            updateLR(learningRate, decayRate, epoch);
+            //学習率更新
+            if(learningRate > 1E-3)
+                learningRate = updateLR(defaultLR, decayRate, epoch);
+            System.out.println(learningRate);
         }
+    }
+
+    /**
+     * Testing Data Method
+     * @param input
+     * @param output
+     */
+    public void reconstruct(int input[], double output[]) {
+        double layerInput[] = new double[0];
+        double prevLayerInput[] = new double[nIn];
+
+        for (int i = 0; i < nIn; i++) prevLayerInput[i] = input[i];
+
+        //Hidden Layer
+        for (int i = 0; i < layerSize; i++) {
+            layerInput = new double[hiddenSize[i]];
+            hLayer[i].forwardCal(prevLayerInput, layerInput);
+
+            if(i < layerSize){
+                prevLayerInput = new double[hiddenSize[i]];
+                for (int j = 0; j < hiddenSize[i]; j++) prevLayerInput[j] = layerInput[j];
+            }
+        }
+
+        //Output Layer
+        logLayer.reconstruct(layerInput, output);
     }
 
     private static void test_StackedaAE(){
@@ -184,10 +223,10 @@ public class StackedAutoEncoder {
         };
 
         int nInput = 10;
-        int nHidden[] = {5, 2};
-        int nOutput = 1;
+        int nHidden[] = {8, 4};
+        int nOutput = 2;
         Random rng = new Random(123);
-        int epoch = 100;
+        int epoch = 1000;
         double corruptionLevel = 0.3;
         double alpha = 0.1;
         double decayRate = 1E-2;
@@ -201,7 +240,17 @@ public class StackedAutoEncoder {
         //fine-tuning
         sAE.fineTuning(inputData, teachData, alpha, epoch, decayRate);
 
+        //test
+        int nTest = 2;
+        double testOut[][] = new double[nTest][nOutput];
 
+        for(int i = 0; i < nTest; i++) {
+            sAE.reconstruct(testData[i], testOut[i]);
+            for(int j = 0; j < nOutput; j++) {
+                System.out.print(testOut[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
     public static void main(String args[]){
