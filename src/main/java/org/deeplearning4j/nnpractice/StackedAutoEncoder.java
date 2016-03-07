@@ -15,9 +15,7 @@ public class StackedAutoEncoder {
 
     private int layerSize;
     private int nIn;
-    private int input[];
     private int hiddenSize[];
-    private double output[];
     private int N;
     private HiddenLayer hLayer[];
     private AutoEncoder aeLayer[];
@@ -34,8 +32,6 @@ public class StackedAutoEncoder {
         this.hiddenSize = HIDDEN;
         this.aeLayer = new AutoEncoder[layerSize];
         this.hLayer = new HiddenLayer[layerSize];
-        this.input = new int[INPUT];
-        this.output = new double[OUTPUT];
         this.activation = activation;
 
         //randomの種
@@ -61,7 +57,7 @@ public class StackedAutoEncoder {
 
     /**
      * pre-trainingメソッド
-     * AutoEncoder layerの学習を行う
+     * AutoEncoderの学習を行う
      * @param inputData
      * @param learningRate
      * @param epochs
@@ -99,6 +95,8 @@ public class StackedAutoEncoder {
 
     /**
      * fine-tuningメソッド
+     * pre-trainingの結果を使い、出力層を追加して
+     * バックプロパゲーション
      * @param inputData
      * @param teach
      * @param learningRate
@@ -136,6 +134,7 @@ public class StackedAutoEncoder {
                     output.add(layerInput);
                 }
 
+                //Output Layer
                 dOutput = logLayer.train(layerInput, teach[n], learningRate);
                 for(int k = layerSize-1; k <= 0; k--){
                     if(k == layerSize-1){
@@ -146,7 +145,7 @@ public class StackedAutoEncoder {
                 }
 
             }
-            //学習率更新
+            //Update LearningRate
             if(learningRate > 1E-3)
                 learningRate = updateLR(defaultLR, decayRate, epoch);
             //System.out.println(learningRate);
@@ -213,7 +212,7 @@ public class StackedAutoEncoder {
 
         //testデータ
         int testData[][] = {
-                {1, 0, 0, 0, 1, 0, 0, 0, 0, 1},
+                {1, 0, 0, 0, 1, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0, 0, 1}
                 /*
                 {1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -222,7 +221,7 @@ public class StackedAutoEncoder {
         };
 
         int nInput = 10;
-        int nHidden[] = {8, 4};
+        int nHidden[] = {8, 6, 4};
         int nOutput = 2;
         Random rng = new Random(123);
         int epoch = 1000;
