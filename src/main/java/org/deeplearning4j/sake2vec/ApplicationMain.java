@@ -40,6 +40,8 @@ class OpenFrame extends Frame implements ActionListener {
     private JTextField tf1;
     private Panel panel1, panel2;
     private Button button1;
+    private String fileName;
+    private boolean flag = true;
 
     /**
      * OpenFrameメソッド
@@ -102,14 +104,13 @@ class OpenFrame extends Frame implements ActionListener {
      * @param e Actionイベントの発生
      */
     public void actionPerformed(ActionEvent e) {
-        String fileName = null;
-        boolean flag = true;
         Object obj = e.getSource();
 
         //action処理
         if (obj == mil1) {
             try {
                 fileName = sendFileName();
+                log.info("トラップ1: "+ fileName);
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
@@ -117,6 +118,7 @@ class OpenFrame extends Frame implements ActionListener {
             try {
                 flag = false;
                 fileName = sendFileName();
+                log.info("トラップ2: "+ fileName);
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
@@ -125,6 +127,7 @@ class OpenFrame extends Frame implements ActionListener {
                 String query = tf1.getText();
                 tf1.setText("");
                 log.info("入力:" + query);
+                log.info("トラップ3: "+ fileName);
                 Sake2Vec sake2vec = new Sake2Vec(query, fileName, flag);
                 sakeChangerRun(sake2vec);
             } catch (Exception e1) {

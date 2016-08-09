@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.Map.Entry;
+
 
 /**
  * Created by b1012059 on 2015/10/21.
@@ -66,21 +68,20 @@ public class SakeUtilsVec extends Word2Vec {
 
     public static ArrayList<String> sakeNearest(Word2Vec vec, String word) throws Exception {
         String[] sake = {"獺祭", "久保田", "八海山", "黒龍", "飛露喜", "田酒", "出羽桜", "〆張鶴", "蓬莱泉", "天狗舞"};
-        String[] sakeCategory = {"薫酒", "爽酒", "醇酒", "熟酒"};
+        //String[] sakeCategory = {"薫酒", "爽酒", "醇酒", "熟酒"};
         ArrayList<String> result = new ArrayList<>();
-        HashMap<String, Double> map = new HashMap<>();
-        List<HashMap.Entry> entries = new ArrayList<>(map.entrySet());
+        Map<String, Double> map = new HashMap<>();
+        //List<HashMap.Entry> entries = new ArrayList<>(map.entrySet());
 
         for(int i = 0; i < sake.length; i++){
             map.put(sake[i], sakeSimilarity(vec, sake[i], word));
         }
 
-        Collections.sort(entries, new Comparator(){
-            public int compare(Object o1, Object o2){
-                HashMap.Entry e1 =(HashMap.Entry)o1;
-                HashMap.Entry e2 =(HashMap.Entry)o2;
-                return ((Integer)e1.getValue()).compareTo((Integer)e2.getValue());
-            }
+        List<Entry<String, Double>> entries = new ArrayList<>(map.entrySet());
+
+        Collections.sort(entries, (o1, o2) -> {
+            //return o1.getValue().compareTo(o2.getValue());    //昇順
+            return o2.getValue().compareTo(o1.getValue());    //降順
         });
 
         result.addAll(map.keySet().stream().collect(Collectors.toList()));
@@ -115,7 +116,7 @@ public class SakeUtilsVec extends Word2Vec {
         Word2Vec vec = new Word2Vec("words.txt", true);
 
         try {
-            vec.runSake2vec2();
+            vec.runWord2Vec();
             System.out.println(sakeNearest(vec, Arrays.asList("加賀"), Arrays.asList("おっぱい"), 3));
         } catch (Exception e) {
             e.printStackTrace();

@@ -49,7 +49,7 @@ public class Word2Vec {
      *
      * @throws Exception
      */
-    public void runSake2vec2() throws Exception {
+    public void runWord2Vec() throws Exception {
 
         if(flag){
 
@@ -111,7 +111,6 @@ public class Word2Vec {
      */
     public double sakeSimilar(String word1,  String word2) {
         double result = 0.0;
-        double sim;
 
         if(vec != null){
             try {
@@ -124,7 +123,7 @@ public class Word2Vec {
         } else {
             try {
                 log.info("***********************vec null***********************");
-                runSake2vec2();
+                runWord2Vec();
                 result = vec.similarity(word1, word2);
             } catch (Exception e){
                 e.printStackTrace();
@@ -167,7 +166,7 @@ public class Word2Vec {
         } else {
             try {
                 log.info("***********************vec null***********************");
-                runSake2vec2();
+                runWord2Vec();
                 result = vec.wordsNearest(positive, negative, number);
             } catch (Exception e){
                 e.printStackTrace();

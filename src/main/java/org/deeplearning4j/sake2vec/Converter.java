@@ -63,20 +63,17 @@ public class Converter {
                 this.ret.add(token.getSurface());
             }
         }
-
         //System.out.println();
         wordFormula(this.ret);
     }
 
 
     private void wordFormula(ArrayList<String> ret){
-
         ret.forEach(s -> {
            if (s.equals("、")) negative.add((String) stack.pop());
            else if(s.equals("ない")) negative.add((String) stack.pop());
            else stack.push(s);
         });
-
         positive = stack;
     }
 

@@ -21,7 +21,6 @@ public class Sake2Vec {
     private boolean flag;
     private Word2Vec vec;
     private Converter conv;
-    private ArrayList<String> result;
 
     /**
      *
@@ -30,6 +29,8 @@ public class Sake2Vec {
      * @param flag
      */
     public Sake2Vec(String query, String fileName, boolean flag){
+        log.info(fileName);
+
         this.query = query;
         this.fileName = fileName;
         this.flag = flag;
@@ -44,23 +45,30 @@ public class Sake2Vec {
      * @return
      * @throws Exception
      */
-    private void output(int mode) throws Exception {
-
+    private ArrayList<String> output(int mode) throws Exception {
+        ArrayList<String> result = new ArrayList<>();
 
         log.info("Starting Output Method!");
         if(vec != null) {
-            vec.runSake2vec2();
+            vec.runWord2Vec();
         }
 
         switch (mode){
             case 0:
+                // 演算結果のみ
+                result = (ArrayList<String>) sakeNearest(vec, conv.getPositiveList(), conv.getNegativeList(), 5);
+            case 1:
+                // 演算結果から最も近い日本酒名
                 ArrayList<String> formula = (ArrayList<String>) sakeNearest(vec,
                         conv.getPositiveList(), conv.getNegativeList(), 5);
                 result = sakeNearest(vec, formula.get(0));
-            case 1:
+            case 2:
+                // 類似度のみ
                 result.add(calculate(sakeSimilarity(vec,
                         conv.getPositiveList().toString(), conv.getNegativeList().toString())));
         }
+
+        return result;
     }
 
     /**
@@ -77,10 +85,11 @@ public class Sake2Vec {
 
 
     public String getQuery(){
+
         return this.query;
     }
-    public ArrayList<String> getResult(){
-        return  this.result;
+    public ArrayList<String> getResult() throws Exception {
+        return  this.output(1);
     }
 
     /**
